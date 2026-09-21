@@ -1,0 +1,158 @@
+{
+  "datasets": {
+    "pud9": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 64,
+        "trace_batch_size": 32,
+        "sampled_rollout_prompt_batch_size": 4
+      },
+      "models": {
+        "meta-llama/Llama-2-7b-hf": {
+          "sampled_rollout_prompt_batch_size": 4
+        },
+        "swiss-ai/Apertus-8B-Instruct-2509": {
+          "sampled_rollout_prompt_batch_size": 4
+        },
+        "mistralai/Mistral-Nemo-Instruct-2407": {
+          "sampled_rollout_prompt_batch_size": 4
+        }
+      }
+    },
+    "pud21": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 64,
+        "trace_batch_size": 32,
+        "sampled_rollout_prompt_batch_size": 4
+      },
+      "models": {
+        "meta-llama/Llama-2-7b-hf": {
+          "sampled_rollout_prompt_batch_size": 4
+        },
+        "swiss-ai/Apertus-8B-Instruct-2509": {
+          "sampled_rollout_prompt_batch_size": 4
+        },
+        "mistralai/Mistral-Nemo-Instruct-2407": {
+          "sampled_rollout_prompt_batch_size": 4
+        }
+      }
+    },
+    "pud9_ud6": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 64,
+        "trace_batch_size": 32,
+        "sampled_rollout_prompt_batch_size": 4
+      },
+      "models": {
+        "meta-llama/Llama-2-7b-hf": {
+          "sampled_rollout_prompt_batch_size": 4
+        },
+        "swiss-ai/Apertus-8B-Instruct-2509": {
+          "sampled_rollout_prompt_batch_size": 4
+        },
+        "mistralai/Mistral-Nemo-Instruct-2407": {
+          "sampled_rollout_prompt_batch_size": 4
+        }
+      }
+    },
+    "pud21_ud6": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 64,
+        "trace_batch_size": 32,
+        "sampled_rollout_prompt_batch_size": 4
+      },
+      "models": {
+        "meta-llama/Llama-2-7b-hf": {
+          "sampled_rollout_prompt_batch_size": 4
+        },
+        "swiss-ai/Apertus-8B-Instruct-2509": {
+          "sampled_rollout_prompt_batch_size": 4
+        },
+        "mistralai/Mistral-Nemo-Instruct-2407": {
+          "sampled_rollout_prompt_batch_size": 4
+        }
+      }
+    },
+    "include_10lang_3domain_cap30": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 0,
+        "trace_batch_size": 1,
+        "sampled_rollout_prompt_batch_size": 4
+      },
+      "models": {
+        "CohereLabs/aya-23-8B": {
+          "sampled_rollout_prompt_batch_size": 1,
+          "trace_batch_size": 1
+        },
+        "utter-project/EuroLLM-9B": {
+          "sampled_rollout_prompt_batch_size": 1,
+          "trace_batch_size": 1
+        },
+        "utter-project/EuroLLM-9B-Instruct": {
+          "sampled_rollout_prompt_batch_size": 1,
+          "trace_batch_size": 1
+        },
+        "meta-llama/Llama-3.1-8B-Instruct": {
+          "sampled_rollout_prompt_batch_size": 1,
+          "trace_batch_size": 1
+        },
+        "swiss-ai/Apertus-8B-Instruct-2509": {
+          "sampled_rollout_prompt_batch_size": 1,
+          "trace_batch_size": 1
+        },
+        "meta-llama/Llama-2-7b-hf": {
+          "sampled_rollout_prompt_batch_size": 1,
+          "trace_batch_size": 1
+        },
+        "mistralai/Mistral-Nemo-Instruct-2407": {
+          "trace_batch_size": 1,
+          "sampled_rollout_prompt_batch_size": 1
+        }
+      }
+    },
+    "include_10lang_3domain_all": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 0,
+        "trace_batch_size": 1,
+        "sampled_rollout_prompt_batch_size": 1
+      },
+      "models": {
+        "mistralai/Mistral-Nemo-Instruct-2407": {
+          "trace_batch_size": 1
+        }
+      }
+    },
+    "copy": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 0,
+        "trace_batch_size": 32,
+        "sampled_rollout_prompt_batch_size": 32
+      },
+      "models": {}
+    },
+    "cloze": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 0,
+        "trace_batch_size": 32,
+        "sampled_rollout_prompt_batch_size": 32
+      },
+      "models": {}
+    },
+    "translation": {
+      "default": {
+        "max_prompts": 0,
+        "max_prompts_per_lang": 0,
+        "trace_batch_size": 32,
+        "sampled_rollout_prompt_batch_size": 32
+      },
+      "models": {}
+    }
+  }
+}

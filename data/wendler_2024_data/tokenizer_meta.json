@@ -1,0 +1,611 @@
+{
+  "version": 1,
+  "tokenizers": {
+    "swiss-ai/Apertus-8B-Instruct-2509": {
+      "status": "ok",
+      "model_name": "swiss-ai/Apertus-8B-Instruct-2509",
+      "revision": "default",
+      "tokenizer_class": "PreTrainedTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 131072,
+      "space_prefix_markers": [
+        "Ġ"
+      ],
+      "start_token_strategy": "tokenizer_encode_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 0,
+        "Ġ": 74416
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": false,
+        "ru": false
+      },
+      "model_max_length": 1000000000000000019884624838656,
+      "special_tokens_map": {
+        "bos_token": "<s>",
+        "eos_token": "<|assistant_end|>",
+        "unk_token": "<unk>",
+        "pad_token": "<pad>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            94297
+          ],
+          "tokens": [
+            "flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            33936
+          ],
+          "tokens": [
+            "Ġflower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            49504
+          ],
+          "tokens": [
+            "èĬ±"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            95631,
+            1177
+          ],
+          "tokens": [
+            "ĠèĬ",
+            "±"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:11.479516+00:00"
+    },
+    "meta-llama/Llama-2-7b-hf": {
+      "status": "ok",
+      "model_name": "meta-llama/Llama-2-7b-hf",
+      "revision": "default",
+      "tokenizer_class": "LlamaTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 32000,
+      "space_prefix_markers": [
+        "▁"
+      ],
+      "start_token_strategy": "vocab_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 16408,
+        "Ġ": 0
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": true,
+        "ru": true
+      },
+      "model_max_length": 1000000000000000019884624838656,
+      "special_tokens_map": {
+        "bos_token": "<s>",
+        "eos_token": "</s>",
+        "unk_token": "<unk>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            28149
+          ],
+          "tokens": [
+            "▁flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            29871,
+            28149
+          ],
+          "tokens": [
+            "▁",
+            "▁flower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            29871,
+            30830
+          ],
+          "tokens": [
+            "▁",
+            "花"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            259,
+            30830
+          ],
+          "tokens": [
+            "▁▁",
+            "花"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:09.391403+00:00"
+    },
+    "meta-llama/Llama-3.1-8B": {
+      "status": "ok",
+      "model_name": "meta-llama/Llama-3.1-8B",
+      "revision": "default",
+      "tokenizer_class": "PreTrainedTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 128256,
+      "space_prefix_markers": [
+        "Ġ"
+      ],
+      "start_token_strategy": "tokenizer_encode_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 0,
+        "Ġ": 57874
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": false,
+        "ru": false
+      },
+      "model_max_length": 131072,
+      "special_tokens_map": {
+        "bos_token": "<|begin_of_text|>",
+        "eos_token": "<|end_of_text|>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            39853
+          ],
+          "tokens": [
+            "flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            23153
+          ],
+          "tokens": [
+            "Ġflower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            102185
+          ],
+          "tokens": [
+            "èĬ±"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            118111
+          ],
+          "tokens": [
+            "ĠèĬ±"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:09.885050+00:00"
+    },
+    "meta-llama/Llama-3.1-8B-Instruct": {
+      "status": "ok",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "default",
+      "tokenizer_class": "PreTrainedTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 128256,
+      "space_prefix_markers": [
+        "Ġ"
+      ],
+      "start_token_strategy": "tokenizer_encode_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 0,
+        "Ġ": 57874
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": false,
+        "ru": false
+      },
+      "model_max_length": 131072,
+      "special_tokens_map": {
+        "bos_token": "<|begin_of_text|>",
+        "eos_token": "<|eot_id|>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            39853
+          ],
+          "tokens": [
+            "flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            23153
+          ],
+          "tokens": [
+            "Ġflower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            102185
+          ],
+          "tokens": [
+            "èĬ±"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            118111
+          ],
+          "tokens": [
+            "ĠèĬ±"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:10.335696+00:00"
+    },
+    "swiss-ai/Apertus-8B-2509": {
+      "status": "ok",
+      "model_name": "swiss-ai/Apertus-8B-2509",
+      "revision": "default",
+      "tokenizer_class": "PreTrainedTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 131072,
+      "space_prefix_markers": [
+        "Ġ"
+      ],
+      "start_token_strategy": "tokenizer_encode_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 0,
+        "Ġ": 74416
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": false,
+        "ru": false
+      },
+      "model_max_length": 1000000000000000019884624838656,
+      "special_tokens_map": {
+        "bos_token": "<s>",
+        "eos_token": "</s>",
+        "unk_token": "<unk>",
+        "pad_token": "<pad>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            94297
+          ],
+          "tokens": [
+            "flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            33936
+          ],
+          "tokens": [
+            "Ġflower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            49504
+          ],
+          "tokens": [
+            "èĬ±"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            95631,
+            1177
+          ],
+          "tokens": [
+            "ĠèĬ",
+            "±"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:10.946106+00:00"
+    },
+    "mistralai/Mistral-Nemo-Instruct-2407": {
+      "status": "ok",
+      "model_name": "mistralai/Mistral-Nemo-Instruct-2407",
+      "revision": "default",
+      "tokenizer_class": "PreTrainedTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 131072,
+      "space_prefix_markers": [
+        "Ġ"
+      ],
+      "start_token_strategy": "tokenizer_encode_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 0,
+        "Ġ": 74416
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": false,
+        "ru": false
+      },
+      "model_max_length": 1000000000000000019884624838656,
+      "special_tokens_map": {
+        "bos_token": "<s>",
+        "eos_token": "</s>",
+        "unk_token": "<unk>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            94297
+          ],
+          "tokens": [
+            "flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            33936
+          ],
+          "tokens": [
+            "Ġflower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            49504
+          ],
+          "tokens": [
+            "èĬ±"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            95631,
+            1177
+          ],
+          "tokens": [
+            "ĠèĬ",
+            "±"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:11.905888+00:00"
+    },
+    "CohereLabs/aya-23-8B": {
+      "status": "ok",
+      "model_name": "CohereLabs/aya-23-8B",
+      "revision": "default",
+      "tokenizer_class": "CohereTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 255029,
+      "space_prefix_markers": [
+        "Ġ"
+      ],
+      "start_token_strategy": "tokenizer_encode_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 0,
+        "Ġ": 148055
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": false,
+        "ru": false
+      },
+      "model_max_length": 1000000000000000019884624838656,
+      "special_tokens_map": {
+        "bos_token": "<BOS_TOKEN>",
+        "eos_token": "<|END_OF_TURN_TOKEN|>",
+        "pad_token": "<PAD>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            55277
+          ],
+          "tokens": [
+            "flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            31042
+          ],
+          "tokens": [
+            "Ġflower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            10423
+          ],
+          "tokens": [
+            "èĬ±"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            103384
+          ],
+          "tokens": [
+            "ĠèĬ±"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:12.672234+00:00"
+    },
+    "utter-project/EuroLLM-9B": {
+      "status": "ok",
+      "model_name": "utter-project/EuroLLM-9B",
+      "revision": "default",
+      "tokenizer_class": "LlamaTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 128000,
+      "space_prefix_markers": [
+        "▁"
+      ],
+      "start_token_strategy": "vocab_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 76927,
+        "Ġ": 0
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": true,
+        "ru": true
+      },
+      "model_max_length": 1000000000000000019884624838656,
+      "special_tokens_map": {
+        "bos_token": "<s>",
+        "eos_token": "</s>",
+        "unk_token": "<unk>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            58750
+          ],
+          "tokens": [
+            "▁flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            534,
+            84764
+          ],
+          "tokens": [
+            "▁▁",
+            "flower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            119715,
+            120943
+          ],
+          "tokens": [
+            "▁",
+            "花"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            534,
+            120943
+          ],
+          "tokens": [
+            "▁▁",
+            "花"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:14.399980+00:00"
+    },
+    "utter-project/EuroLLM-9B-Instruct": {
+      "status": "ok",
+      "model_name": "utter-project/EuroLLM-9B-Instruct",
+      "revision": "default",
+      "tokenizer_class": "LlamaTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 128000,
+      "space_prefix_markers": [
+        "▁"
+      ],
+      "start_token_strategy": "vocab_prefix",
+      "space_prefix_marker_counts": {
+        "▁": 76927,
+        "Ġ": 0
+      },
+      "byte_fallback_probe_tokens_present": {
+        "zh": true,
+        "ru": true
+      },
+      "model_max_length": 1000000000000000019884624838656,
+      "special_tokens_map": {
+        "bos_token": "<s>",
+        "eos_token": "<|im_end|>",
+        "unk_token": "<unk>",
+        "pad_token": "</s>"
+      },
+      "probes": [
+        {
+          "text": "flower",
+          "input_ids": [
+            84764
+          ],
+          "tokens": [
+            "flower"
+          ]
+        },
+        {
+          "text": " flower",
+          "input_ids": [
+            58750
+          ],
+          "tokens": [
+            "▁flower"
+          ]
+        },
+        {
+          "text": "花",
+          "input_ids": [
+            120943
+          ],
+          "tokens": [
+            "花"
+          ]
+        },
+        {
+          "text": " 花",
+          "input_ids": [
+            119715,
+            120943
+          ],
+          "tokens": [
+            "▁",
+            "花"
+          ]
+        }
+      ],
+      "observed_at_utc": "2026-05-20T17:15:16.067433+00:00"
+    }
+  }
+}

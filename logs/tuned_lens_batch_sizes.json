@@ -1,0 +1,137 @@
+{
+  "meta-llama/Llama-2-7b-hf": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 1308
+    },
+    "fineweb27": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "dataset_source": "fineweb",
+      "fineweb_dataset_dir": "data/fineweb_lens_27lang_55m",
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 3920
+    }
+  },
+  "CohereLabs/aya-23-8B": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 831
+    },
+    "fineweb27": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "dataset_source": "fineweb",
+      "fineweb_dataset_dir": "data/fineweb_lens_27lang_55m",
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 2462
+    }
+  },
+  "gpt2": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 32,
+      "layers_per_step": 1,
+      "max_length": 1024,
+      "n_probe_rows": 576
+    }
+  },
+  "gpt2-xl": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 16,
+      "layers_per_step": 1,
+      "max_length": 1024,
+      "n_probe_rows": 576
+    }
+  },
+  "meta-llama/Llama-3.1-8B": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 1021
+    }
+  },
+  "meta-llama/Llama-3.1-8B-Instruct": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 1021
+    }
+  },
+  "mistralai/Mistral-Nemo-Instruct-2407": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 576
+    }
+  },
+  "swiss-ai/Apertus-8B-2509": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 576
+    },
+    "fineweb27": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "dataset_source": "fineweb",
+      "fineweb_dataset_dir": "data/fineweb_lens_27lang_55m",
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 1732
+    }
+  },
+  "swiss-ai/Apertus-8B-Instruct-2509": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 576
+    }
+  },
+  "utter-project/EuroLLM-9B": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 933
+    },
+    "fineweb27": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "dataset_source": "fineweb",
+      "fineweb_dataset_dir": "data/fineweb_lens_27lang_55m",
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 2612
+    }
+  },
+  "utter-project/EuroLLM-9B-Instruct": {
+    "fineweb": {
+      "amp_dtype": "bfloat16",
+      "batch_size": 1,
+      "layers_per_step": 1,
+      "max_length": 2048,
+      "n_probe_rows": 931
+    }
+  }
+}

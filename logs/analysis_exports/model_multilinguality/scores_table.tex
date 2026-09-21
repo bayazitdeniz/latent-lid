@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Model} & \textbf{INCLUDE 0-shot} & \textbf{PUD+UD BPB} & \textbf{PUD+UD bpc} & \textbf{PUD+UD token NLL} & \textbf{PUD line NLL} \\
+\midrule
+GPT-2 \citep{radford2019gpt2} & 26.2 & 2.62 & 3.80 & 3.47 & 365.4 \\
+GPT-2-XL & 25.9 & 2.20 & 3.20 & 2.93 & 302.3 \\
+Llama-2-7B \citep{touvron2023llama2} & 27.7 & 1.22 & 1.78 & 2.23 & 170.0 \\
+Llama-3.1-8B \citep{grattafiori2024llama3herdmodels} & 48.9 & 1.05 & 1.53 & 2.87 & 148.8 \\
+Llama-3.1-8B-Instruct & 52.8 & 1.09 & 1.58 & 2.96 & 152.9 \\
+OLMo-2-1124-7B \citep{walsh2025olmo2} & 33.8 & 1.30 & 1.90 & 2.61 & 181.1 \\
+Apertus-8B \citep{apertus2025apertus} & 53.1 & 0.97 & 1.41 & 2.96 & 138.3 \\
+Apertus-8B-Instruct & 55.0 & 1.19 & 1.73 & 3.63 & 169.8 \\
+Mistral-Nemo-Instruct-2407 \citep{mistralai2024mistralnemo} & 52.2 & 1.20 & 1.74 & 3.66 & 166.7 \\
+Aya-23-8B \citep{aryabumi2024aya23} & 40.1 & 1.26 & 1.84 & 3.59 & 172.0 \\
+EuroLLM-9B \citep{martins2025eurollm} & 43.3 & 1.11 & 1.62 & 3.00 & 149.2 \\
+EuroLLM-9B-Instruct & 47.8 & 1.17 & 1.70 & 3.13 & 156.0 \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Model-level multilingual capacity diagnostics.} INCLUDE 0-shot is macro-average accuracy over the 44 upstream INCLUDE language groups, reported as a percentage. PUD+UD BPB is bits per UTF-8 byte on the combined PUD21+UD6 corpus; bpc is negative log-likelihood in bits per Unicode codepoint; token NLL is mean token negative log-likelihood in nats. PUD line NLL is the mean summed sentence negative log-likelihood in bits on PUD-only parallel rows. Lower is better for the PUD likelihood metrics.}
+\label{tab:model-include-scores}
+\end{table*}

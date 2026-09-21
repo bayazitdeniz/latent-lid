@@ -1,0 +1,1382 @@
+# Test inventory
+
+This document inventories every Python function and method under `tests/`. Test cases list their concrete assertions; support-only helpers and local test-double methods are identified explicitly. Nested fake methods are included because they are still functions in the test files.
+
+- Test functions: **243**
+- Support/helper functions: **105**
+
+## Files
+
+- `test_analysis.py`
+- `test_build_data_archives.py`
+- `test_build_fineweb_data.py`
+- `test_build_include_data.py`
+- `test_build_pud_data.py`
+- `test_compare_smoke_artifacts.py`
+- `test_decode_then_classify.py`
+- `test_fit_gmm.py`
+- `test_fit_tuned_lens.py`
+- `test_gmm_setup.py`
+- `test_latents.py`
+- `test_lenses.py`
+- `test_lid.py`
+- `test_metrics.py`
+- `test_pud_data_source.py`
+- `test_repr_posteriors.py`
+- `test_run_eval_helpers.py`
+- `test_target_string.py`
+- `test_target_string_artifacts.py`
+
+
+## `test_analysis.py`
+
+- `AnalysisArtifactTests.test_discover_and_load_selected_runs`
+  - Purpose: verifies **discover and load selected runs**.
+  - Confirms `len(manifest)` equals `1`.
+  - Confirms `len(loaded)` equals `1`.
+  - Confirms `loaded.iloc[0]['model_name']` equals `'demo/model'`.
+- `AnalysisArtifactTests.test_select_latest_unique_runs`
+  - Purpose: verifies **select latest unique runs**.
+  - Confirms `selected['exp_id'].tolist()` equals `['exp-2', 'exp-3']`.
+- `AnalysisArtifactTests.test_load_lang_probs_artifact`
+  - Purpose: verifies **load lang probs artifact**.
+  - Confirms `'repr_gmm'` is contained in `loaded['methods']`.
+- `LangDistSummaryTests.test_build_undetermined_langdist_rows`
+  - Purpose: verifies **build undetermined langdist rows**.
+  - Confirms `len(df)` equals `2`.
+  - Confirms `df.iloc[0]['assigned_lang']` equals `'undet'`.
+  - Confirms `df.iloc[0]['undetermined']` is true.
+  - Confirms `df.iloc[1]['assigned_lang']` equals `'en'`.
+  - Confirms `df.iloc[1]['undetermined']` is false.
+- `LangDistSummaryTests.test_micro_story_averaging_pools_language_values`
+  - Purpose: verifies **micro story averaging pools language values**.
+  - Confirms `pooled['mean_prob']` approximately equals `0.3`.
+  - Confirms `pooled['std_prob']` approximately equals `0.2`.
+  - Confirms `pooled['stderr_prob']` approximately equals `0.2 / np.sqrt(3)`.
+  - Confirms `pooled['n_values']` equals `3`.
+  - Confirms `pooled['n_prompts']` equals `2`.
+  - Confirms `maxima['mean_prob']` approximately equals `0.4`.
+  - Confirms `maxima['stderr_prob']` approximately equals `0.1`.
+  - Confirms `maxima['n_values']` equals `2`.
+- `OpenEndedMethodLabelTests.test_labels_representation_raw_and_tuned_methods`
+  - Purpose: verifies **labels representation raw and tuned methods**.
+  - Confirms `openended_method_label_from_config(config)` equals `expected`.
+- `TargetStringMenuDataFrameTests.test_load_target_string_menu_dataframe_expands_menu_scores`
+  - Purpose: verifies **load target string menu dataframe expands menu scores**.
+  - Confirms `len(df)` equals `2`.
+  - Confirms `df['layer'].tolist()` equals `[4, 8]`.
+  - Confirms `df['tgt_lang'].tolist()` equals `['fr', 'fr']`.
+  - Confirms `df['menu_group_lang_count'].tolist()` equals `[2, 2]`.
+  - Confirms `math.isclose(df.iloc[0]['menu_prob'], 0.25, rel_tol=1e-06)` is true.
+  - Confirms `math.isclose(df.iloc[0]['menu_prob_share'], 0.125, rel_tol=1e-06)` is true.
+  - Confirms `math.isclose(df.iloc[0]['menu_mean_prob'], 0.5, rel_tol=1e-06)` is true.
+  - Confirms `math.isclose(df.iloc[0]['menu_mean_prob_share'], 0.25, rel_tol=1e-06)` is true.
+  - Confirms `math.isclose(df.iloc[0]['menu_first_token_prob'], 0.5, rel_tol=1e-06)` is true.
+  - Confirms `math.isclose(df.iloc[0]['menu_first_token_prob_share'], 0.25, rel_tol=1e-06)` is true.
+  - Confirms `math.isclose(df.iloc[0]['menu_start_token_prob'], 0.4, rel_tol=1e-06)` is true.
+  - Confirms `math.isclose(df.iloc[0]['menu_start_token_prob_share'], 0.2, rel_tol=1e-06)` is true.
+- `TargetStringMenuDataFrameTests.test_load_target_string_menu_dataframe_maps_nonfinite_logprobs_to_zero`
+  - Purpose: verifies **load target string menu dataframe maps nonfinite logprobs to zero**.
+  - Confirms `len(df)` equals `2`.
+  - Confirms `df['menu_first_token_prob'].tolist()` equals `[0.0, 0.0]`.
+  - Confirms `df['menu_first_token_prob_share'].tolist()` equals `[0.0, 0.0]`.
+  - Confirms `df['menu_start_token_prob'].tolist()` equals `[0.0, 0.0]`.
+  - Confirms `df['menu_start_token_prob_share'].tolist()` equals `[0.0, 0.0]`.
+- `BaseInstructSummaryTests.test_method_summary_keeps_estimators_and_computes_prompt_level_agreement`
+  - Purpose: verifies **method summary keeps estimators and computes prompt level agreement**.
+  - Confirms `len(base)` equals `5`.
+  - Confirms `set(base['method_label'])` equals `{'repr', 'raw-rtopp', 'agreement_repr_vs_raw-rtopp'}`.
+  - Confirms `agreement['n']` equals `2`.
+  - Confirms `math.isclose(agreement['value'], 0.5)` is true.
+
+## `test_build_data_archives.py`
+
+- `BuildDataArchivesTest._write`
+  - Writes one fixture file beneath the temporary repository.
+- `BuildDataArchivesTest._make_repo`
+  - Builds the temporary runtime/build-time archive fixture tree.
+- `BuildDataArchivesTest.test_archive_selections_are_disjoint_and_exclude_caches`
+  - Purpose: verifies **archive selections are disjoint and exclude caches**.
+  - Confirms `runtime & buildtime` is false.
+  - Confirms `'data/wendler_2024_data/common69/copy.csv'` is contained in `runtime`.
+  - Confirms `'data/ud_cache/ud-treebanks-v2.17.tgz'` is contained in `buildtime`.
+  - Confirms `'data/fineweb_lens_27lang_55m/window_cache/model/cache.arrow'` is absent from `runtime`.
+  - Confirms `'data/fineweb_lens_27lang_55m_lang_cache/train/en/cache.arrow'` is absent from `buildtime`.
+  - Confirms `'data/wendler_2024_data/llm-latent-language/.git/config'` is absent from `buildtime`.
+- `BuildDataArchivesTest.test_runtime_archive_contains_data_root_and_manifest`
+  - Purpose: verifies **runtime archive contains data root and manifest**.
+  - Confirms `all((name.startswith('data/') for name in names))` is true.
+  - Confirms `manifest_name` is contained in `names`.
+  - Confirms `manifest['archive_kind']` equals `'runtime'`.
+  - Confirms `manifest['extract_at']` equals `'repository root'`.
+  - Confirms `manifest['datasets']['pud']['train_prompts']` equals `1`.
+  - Confirms `len(manifest['files'])` equals `manifest['file_count']`.
+
+## `test_build_fineweb_data.py`
+
+- `BuildFinewebLensCorpusTests.test_rebalance_split_rows_trims_to_smallest_language`
+  - Purpose: verifies **rebalance split rows trims to smallest language**.
+  - Confirms `len(rows)` equals `4`.
+  - Confirms `warning` is not `None`.
+  - Confirms `warning['effective_chunks_per_lang']` equals `2`.
+  - Confirms `warning['limiting_languages']` equals `['fr']`.
+  - Confirms `per_language_stats[0]['trimmed_chunks']` equals `1`.
+  - Confirms `per_language_stats[1]['trimmed_chunks']` equals `0`.
+
+## `test_build_include_data.py`
+
+- `_row`
+  - Builds a reusable INCLUDE source-row fixture for the tests in this file.
+- `BuildIncludeEvalSubsetTests.test_get_options_accepts_option_columns`
+  - Purpose: verifies **get options accepts option columns**.
+  - Confirms `get_options(_row())` equals `['Alpha', 'Beta', 'Gamma', 'Delta']`.
+- `BuildIncludeEvalSubsetTests.test_get_options_accepts_choices_list`
+  - Purpose: verifies **get options accepts choices list**.
+  - Confirms `get_options(row)` equals `['one', 'two', 'three', 'four']`.
+- `BuildIncludeEvalSubsetTests.test_get_options_accepts_choices_json_string`
+  - Purpose: verifies **get options accepts choices JSON string**.
+  - Confirms `get_options(row)` equals `['one', 'two', 'three', 'four']`.
+- `BuildIncludeEvalSubsetTests.test_get_options_rejects_non_four_option_rows`
+  - Purpose: verifies **get options rejects non four option rows**.
+  - Confirms the operation raises `ValueError` matching `'exactly four'`.
+- `BuildIncludeEvalSubsetTests.test_prompt_rendering`
+  - Purpose: verifies **prompt rendering**.
+  - Confirms `render_question_only(row)` equals `'What is item 0?'`.
+  - Confirms `render_minimal_mcq(row)` equals `'What is item 0?\n\nA. Alpha\nB. Beta\nC. Gamma\nD. Delta'`.
+- `BuildIncludeEvalSubsetTests.test_stable_hash_and_id_generation`
+  - Purpose: verifies **stable hash and ID generation**.
+  - Confirms `prompt_id` equals `make_prompt_id(row)`.
+  - Confirms `prompt_id.startswith('include_base_44-ar-social_science-')` is true.
+- `BuildIncludeEvalSubsetTests.test_prompt_payload_is_run_eval_compatible_and_style_specific`
+  - Purpose: verifies **prompt payload is run eval compatible and style specific**.
+  - Confirms `question['id']` equals `mcq['id']`.
+  - Confirms `question['prompt_style']` equals `'question_only'`.
+  - Confirms `mcq['prompt_style']` equals `'minimal_mcq'`.
+  - Confirms `payload['lang']` equals `'ar'`.
+  - Confirms `payload['source_lang']` equals `'ar'`.
+  - Confirms `payload['target_lang']` equals `'ar'`.
+  - Confirms `payload['surface_tokens']` is an instance of `list`.
+  - Confirms `payload['surface_tokens']` is true.
+- `BuildIncludeEvalSubsetTests.test_simple_surface_tokens_uses_character_tokens_for_unsegmented_scripts`
+  - Purpose: verifies **simple surface tokens uses character tokens for unsegmented scripts**.
+  - Confirms `simple_surface_tokens('今天天气 好', lang='zh')` equals `['今', '天', '天', '气', '好']`.
+  - Confirms `simple_surface_tokens('今日は 天気', lang='ja')` equals `['今', '日', 'は', '天', '気']`.
+  - Confirms `simple_surface_tokens('ภาษา ไทย', lang='th')` equals `['ภ', 'า', 'ษ', 'า', 'ไ', 'ท', 'ย']`.
+- `BuildIncludeEvalSubsetTests.test_simple_surface_tokens_keeps_korean_whitespace_tokens`
+  - Purpose: verifies **simple surface tokens keeps korean whitespace tokens**.
+  - Confirms `simple_surface_tokens('오늘 날씨가 좋다', lang='ko')` equals `['오늘', '날씨가', '좋다']`.
+- `BuildIncludeEvalSubsetTests.test_metadata_payload_keeps_include_specific_fields`
+  - Purpose: verifies **metadata payload keeps INCLUDE specific fields**.
+  - Confirms `meta['id']` equals `row['id']`.
+  - Confirms `meta['lang']` equals `'hi'`.
+  - Confirms `meta['domain']` equals `'Arts & Humanities'`.
+  - Confirms `meta['option_c']` equals `'Gamma'`.
+  - Confirms `meta['answer']` equals `2`.
+- `BuildIncludeEvalSubsetTests.test_balance_records_uses_min_cell_count_and_is_deterministic`
+  - Purpose: verifies **balance records uses min cell count and is deterministic**.
+  - Confirms `[row['id'] for row in selected_a]` equals `[row['id'] for row in selected_b]`.
+  - Confirms `stats_a` equals `stats_b`.
+  - Confirms `stats_a['target_per_cell']` equals `2`.
+  - Confirms `len(selected_a)` equals `8`.
+  - Confirms `all((count == 2 for count in stats_a['selected_by_cell'].values()))` is true.
+- `BuildIncludeEvalSubsetTests.test_balance_records_respects_max_per_cell`
+  - Purpose: verifies **balance records respects max per cell**.
+  - Confirms `stats['target_per_cell']` equals `1`.
+  - Confirms `len(selected)` equals `4`.
+- `BuildIncludeEvalSubsetTests.test_select_records_by_cell_all_keeps_every_cell_row`
+  - Purpose: verifies **select records by cell all keeps every cell row**.
+  - Confirms `stats['target_per_cell']` is `None`.
+  - Confirms `len(selected)` equals `len(rows)`.
+  - Confirms `stats['selected_by_cell']['es::STEM']` equals `2`.
+  - Confirms `stats['selected_by_cell']['ar::STEM']` equals `3`.
+- `BuildIncludeEvalSubsetTests.test_select_records_by_cell_cap_keeps_smaller_cells_uncut`
+  - Purpose: verifies **select records by cell cap keeps smaller cells uncut**.
+  - Confirms `stats['target_per_cell']` is `None`.
+  - Confirms `len(selected)` equals `8`.
+  - Confirms `all((count == 2 for count in stats['selected_by_cell'].values()))` is true.
+- `BuildIncludeEvalSubsetTests.test_select_records_by_cell_cap_requires_max_per_cell`
+  - Purpose: verifies **select records by cell cap requires max per cell**.
+  - Confirms the operation raises `ValueError` matching `'max-per-cell'`.
+- `BuildIncludeEvalSubsetTests.test_balance_records_rejects_missing_cell`
+  - Purpose: verifies **balance records rejects missing cell**.
+  - Confirms the operation raises `ValueError` matching `'Missing INCLUDE rows'`.
+- `BuildIncludeEvalSubsetTests.test_prepare_records_adds_unique_ids`
+  - Purpose: verifies **prepare records adds unique IDs**.
+  - Confirms `len(records)` equals `2`.
+  - Confirms `len({record['id'] for record in records})` equals `2`.
+  - Confirms `all((record['row_hash'] for record in records))` is true.
+- `BuildIncludeEvalSubsetTests.test_write_jsonl`
+  - Purpose: verifies **write JSONL**.
+  - Confirms `count` equals `2`.
+  - Confirms `rows` equals `[{'a': 1}, {'b': 'x'}]`.
+
+## `test_build_pud_data.py`
+
+- `BuildPudDataTests.test_resolve_split_sizes_uses_explicit_sizes`
+  - Purpose: verifies **resolve split sizes uses explicit sizes**.
+  - Confirms `train_size` equals `60`.
+  - Confirms `test_size` equals `40`.
+- `BuildPudDataTests.test_split_texts_is_deterministic`
+  - Purpose: verifies **split texts is deterministic**.
+  - Confirms `train_a` equals `train_b`.
+  - Confirms `test_a` equals `test_b`.
+- `BuildPudDataTests.test_split_texts_reuses_sentence_indices_across_languages`
+  - Purpose: verifies **split texts reuses sentence indices across languages**.
+  - Confirms `train_en` equals `train_fr`.
+  - Confirms `test_en` equals `test_fr`.
+- `BuildPudDataTests.test_resolve_output_paths_defaults_to_pud_holdout`
+  - Purpose: verifies **resolve output paths defaults to PUD holdout**.
+  - Confirms `str(paths['split_root'])` equals `'data/pud_holdout'`.
+  - Confirms `str(paths['out_prompts_test'])` equals `'data/pud_holdout/pud_prompts_test.jsonl'`.
+  - Confirms `str(paths['out_gmm_root_train'])` equals `'data/pud_holdout/pud_langs_train'`.
+  - Confirms `str(paths['out_prompts_train'])` equals `'data/pud_holdout/pud_prompts_train.jsonl'`.
+  - Confirms `str(paths['out_split_meta'])` equals `'data/pud_holdout/pud_split_meta.json'`.
+- `BuildPudDataTests.test_ud_holdout_split_records_is_deterministic_for_marathi_policy`
+  - Purpose: verifies **UD holdout split records is deterministic for marathi policy**.
+  - Confirms `train_a` equals `train_b`.
+  - Confirms `test_a` equals `test_b`.
+- `BuildPudDataTests.test_ud_holdout_prompt_payload_is_source_aware`
+  - Purpose: verifies **UD holdout prompt payload is source aware**.
+  - Confirms `payload['id']` equals `'uk_iu-train-0'`.
+  - Confirms `payload['source_lang']` equals `'uk'`.
+  - Confirms `payload['target_lang']` equals `'uk'`.
+  - Confirms `payload['treebank']` equals `'UD_Ukrainian-IU'`.
+  - Confirms `payload['is_parallel']` is false.
+- `BuildPudDataTests.test_ud_holdout_filter_reason_catches_numeric_list_item`
+  - Purpose: verifies **UD holdout filter reason catches numeric list item**.
+  - Confirms `_filter_reason({'text': '2.', 'surface_tokens': ['2', '.']})` equals `'list_item'`.
+- `BuildPudDataTests.test_ud_holdout_filter_reason_catches_fragment_patterns`
+  - Purpose: verifies **UD holdout filter reason catches fragment patterns**.
+  - Confirms `_filter_reason({'text': 'Усе знав.', 'surface_tokens': ['Усе', 'знав', '.']})` equals `'very_short'`.
+  - Confirms `_filter_reason({'text': 'А він:', 'surface_tokens': ['А', 'він', ':']})` equals `'trailing_colon'`.
+  - Confirms `_filter_reason({'text': 'Е, е, е.', 'surface_tokens': ['Е', ',', 'е', ',', 'е', '.']})` equals `'repeated_interjection'`.
+- `BuildPudDataTests.test_ud_holdout_filter_reason_keeps_longer_punctuation_sentences`
+  - Purpose: verifies **UD holdout filter reason keeps longer punctuation sentences**.
+  - Confirms `_filter_reason({'text': 'Він почав писати квапливими неохайними карлючками:', 'surface_tokens': ['Він', 'почав', 'писати', 'квапливими', 'неохайними', 'карлючками', ':']})` is `None`.
+- `BuildPudDataTests.test_ud_holdout_filter_records_returns_rejected_rows_with_reasons`
+  - Purpose: verifies **UD holdout filter records returns rejected rows with reasons**.
+  - Confirms `len(kept)` equals `1`.
+  - Confirms `counts` equals `{'list_item': 1}`.
+  - Confirms `filtered_rows` equals `[{'text': '2.', 'surface_tokens': ['2', '.'], 'ud_split': 'test', 'filter_reason': 'list_item'}]`.
+  - Confirms `_filter_reason({'text': 'Вас так багато людей сьогодні прийшло...', 'surface_tokens': ['Вас', 'так', 'багато', 'людей', 'сьогодні', 'прийшло', '...']})` is `None`.
+  - Confirms `_filter_reason({'text': '(Ми вже давно обговорили це питання.)', 'surface_tokens': ['(', 'Ми', 'вже', 'давно', 'обговорили', 'це', 'питання', '.', ')']})` is `None`.
+
+## `test_compare_smoke_artifacts.py`
+
+- `CompareSmokeArtifactsTests.test_cli_defaults_to_exact_numeric_comparison`
+  - Purpose: verifies **CLI defaults to exact numeric comparison**.
+  - Confirms `args.atol` equals `0.0`.
+  - Confirms `args.rtol` equals `0.0`.
+- `CompareSmokeArtifactsTests.test_exact_tensor_comparison_rejects_formerly_tolerated_difference`
+  - Purpose: verifies **exact tensor comparison rejects formerly tolerated difference**.
+  - Confirms `len(diffs)` equals `1`.
+  - Confirms `diffs[0]['kind']` equals `'tensor_values'`.
+  - Confirms `max_diff` is greater than `0.0`.
+- `CompareSmokeArtifactsTests.test_exact_tensor_comparison_rejects_dtype_change`
+  - Purpose: verifies **exact tensor comparison rejects dtype change**.
+  - Confirms `max_diff` equals `0.0`.
+  - Confirms `diffs` equals `[{'path': 'values.pt', 'kind': 'tensor_dtype', 'left': 'torch.float32', 'right': 'torch.float64'}]`.
+- `CompareSmokeArtifactsTests.test_max_diff_includes_tolerated_tensor_difference`
+  - Purpose: verifies **max diff includes tolerated tensor difference**.
+  - Confirms `diffs` equals `[]`.
+  - Confirms `max_diff` is greater than `0.0`.
+- `CompareSmokeArtifactsTests.test_max_diff_includes_tolerated_dataframe_difference`
+  - Purpose: verifies **max diff includes tolerated dataframe difference**.
+  - Confirms `diffs` equals `[]`.
+  - Confirms `max_diff` is greater than `0.0`.
+
+## `test_decode_then_classify.py`
+
+- `DecodeThenClassifyTests.test_classify_from_probs_argmax_topk`
+  - Purpose: verifies **classify from probs argmax topk**.
+  - Confirms `label` equals `'en'`.
+  - Confirms `label` is contained in `{'en', 'fr'}`.
+  - Confirms `votes` is true.
+  - Confirms `sum(weighted.values())` approximately equals `1.0`.
+  - Confirms `weighted['en']` is greater than `weighted['fr']`.
+- `DecodeThenClassifyTests.test_classify_from_probs_argmax_topk.FakeBackend.predict`
+  - Emulates `predict` for `test_classify_from_probs_argmax_topk`; it does not assert behavior independently.
+- `DecodeThenClassifyTests.test_classify_from_probs_argmax_topk.FakeBackend.predict_distribution`
+  - Emulates `predict distribution` for `test_classify_from_probs_argmax_topk`; it does not assert behavior independently.
+- `DecodeThenClassifyTests.test_classify_from_probs_argmax_topk.TinyTokenizer.decode`
+  - Emulates `decode` for `test_classify_from_probs_argmax_topk`; it does not assert behavior independently.
+- `DecodeThenClassifyTests.test_classify_text_passes_candidate_languages_to_backend`
+  - Purpose: verifies **classify text passes candidate languages to backend**.
+  - Confirms `label` equals `'en'`.
+  - Confirms `dist` equals `{'en': 1.0}`.
+  - Confirms `backend.last_languages` equals `['en', 'fr']`.
+- `DecodeThenClassifyTests.test_classify_text_passes_candidate_languages_to_backend.FakeBackend.__init__`
+  - Initializes the `FakeBackend` test double or fixture.
+- `DecodeThenClassifyTests.test_classify_text_passes_candidate_languages_to_backend.FakeBackend.predict`
+  - Emulates `predict` for `test_classify_text_passes_candidate_languages_to_backend`; it does not assert behavior independently.
+- `DecodeThenClassifyTests.test_classify_text_passes_candidate_languages_to_backend.FakeBackend.predict_distribution`
+  - Emulates `predict distribution` for `test_classify_text_passes_candidate_languages_to_backend`; it does not assert behavior independently.
+- `DecodeThenClassifyTests.test_classify_text_passes_candidate_languages_to_backend.TinyTokenizer.decode`
+  - Emulates `decode` for `test_classify_text_passes_candidate_languages_to_backend`; it does not assert behavior independently.
+
+## `test_fit_gmm.py`
+
+- `FitGmmTests.test_load_prompt_records_prefers_pud_jsonl_surface_tokens`
+  - Purpose: verifies **load prompt records prefers PUD JSONL surface tokens**.
+  - Confirms `len(records)` equals `1`.
+  - Confirms `records[0]['text']` equals `'hello world'`.
+  - Confirms `records[0]['surface_tokens']` equals `['hello', 'world']`.
+- `FitGmmTests.test_load_prompt_records_accepts_source_aware_ud_jsonl`
+  - Purpose: verifies **load prompt records accepts source aware UD JSONL**.
+  - Confirms `len(records)` equals `1`.
+  - Confirms `records[0]['text']` equals `'привіт світ'`.
+  - Confirms `records[0]['surface_tokens']` equals `['привіт', 'світ']`.
+- `FitGmmTests.test_load_prompt_records_sampling_order_is_seeded`
+  - Purpose: verifies **load prompt records sampling order is seeded**.
+  - Confirms `[record['text'] for record in records]` equals `['text-8', 'text-1', 'text-5', 'text-0']`.
+- `FitGmmTests.test_load_prompt_records_from_roots_falls_back_to_ud_root`
+  - Purpose: verifies **load prompt records from roots falls back to UD root**.
+  - Confirms `records[0]['text']` equals `'здравей'`.
+- `FitGmmTests.test_resolve_config_rejects_conflicting_explicit_languages`
+  - Purpose: verifies **resolve config rejects conflicting explicit languages**.
+  - Confirms the operation raises `ValueError`.
+- `FitGmmTests.test_resolve_config_detects_both_explicit_cli_forms`
+  - Purpose: verifies **resolve config detects both explicit CLI forms**.
+  - Confirms `'seed'` is contained in `explicit_keys`.
+  - Confirms the operation raises `ValueError`.
+
+## `test_fit_tuned_lens.py`
+
+- `FitTunedLensTests.test_build_balanced_train_rows_uses_rotating_round_robin_order`
+  - Purpose: verifies **build balanced train rows uses rotating round robin order**.
+  - Confirms `[row['lang'] for row in balanced]` equals `['en', 'fr', 'fr', 'en', 'en', 'fr']`.
+  - Confirms `counts` equals `{'en': 3, 'fr': 3}`.
+  - Confirms `examples_per_lang` equals `3`.
+- `FitTunedLensTests.test_load_tokenized_split_rows_filters_languages`
+  - Purpose: verifies **load tokenized split rows filters languages**.
+  - Confirms `len(rows)` equals `2`.
+  - Confirms `all((row['lang'] == 'en' for row in rows))` is true.
+  - Confirms `rows[0]['input_ids']` equals `[1, 2, 3]`.
+- `FitTunedLensTests.test_load_tokenized_split_rows_accepts_text_rows`
+  - Purpose: verifies **load tokenized split rows accepts text rows**.
+  - Confirms `rows[0]['text']` equals `'hello world'`.
+  - Confirms `_rows_contain_text(rows)` is true.
+- `FitTunedLensTests.test_build_padded_token_batch_uses_pad_token`
+  - Purpose: verifies **build padded token batch uses pad token**.
+  - Confirms `tuple(input_ids.shape)` equals `(2, 3)`.
+  - Confirms `tuple(attention_mask.shape)` equals `(2, 3)`.
+  - Confirms `input_ids.tolist()` equals `[[11, 12, 13], [21, 22, 0]]`.
+  - Confirms `attention_mask.tolist()` equals `[[1, 1, 1], [1, 1, 0]]`.
+- `FitTunedLensTests.test_infer_model_max_length_prefers_config_positions`
+  - Purpose: verifies **infer model max length prefers config positions**.
+  - Confirms `_infer_model_max_length(Wrapped(), DummyTokenizer())` equals `1024`.
+- `FitTunedLensTests.test_window_tokenize_text_rows_splits_long_examples`
+  - Purpose: verifies **window tokenize text rows splits long examples**.
+  - Confirms `[row['input_ids'] for row in rows]` equals `[[0, 1, 2], [3, 4, 5]]`.
+- `FitTunedLensTests.test_window_tokenize_text_rows_splits_long_examples.DummyTokenizer.__call__`
+  - Emulates `call` for `test_window_tokenize_text_rows_splits_long_examples`; it does not assert behavior independently.
+- `FitTunedLensTests.test_window_tokenize_text_rows_keeps_nontrivial_tail_window`
+  - Purpose: verifies **window tokenize text rows keeps nontrivial tail window**.
+  - Confirms `[row['input_ids'] for row in rows]` equals `[[0, 1, 2], [3, 4, 5], [6, 7]]`.
+- `FitTunedLensTests.test_window_tokenize_text_rows_keeps_nontrivial_tail_window.DummyTokenizer.__call__`
+  - Emulates `call` for `test_window_tokenize_text_rows_keeps_nontrivial_tail_window`; it does not assert behavior independently.
+- `FitTunedLensTests.test_resolve_fineweb_window_cache_dir_includes_model_revision_and_length`
+  - Purpose: verifies **resolve fineweb window cache dir includes model revision and length**.
+  - Confirms `cache_dir` equals `Path('data/fineweb_lens_27lang_55m/window_cache/gpt2/main/maxlen_1024')`.
+- `FitTunedLensTests.test_iter_layer_chunks_respects_requested_chunk_size`
+  - Purpose: verifies **iter layer chunks respects requested chunk size**.
+  - Confirms `chunks` equals `[[0, 1], [2, 3], [4]]`.
+- `FitTunedLensTests.test_resolve_trainable_tuned_lens_layers_skips_final_layer`
+  - Purpose: verifies **resolve trainable tuned lens layers skips final layer**.
+  - Confirms `requested` equals `[0, 2, 3]`.
+  - Confirms `trainable` equals `[0, 2]`.
+  - Confirms `final_layer_idx` equals `3`.
+- `FitTunedLensTests.test_resolve_trainable_tuned_lens_layers_rejects_final_only`
+  - Purpose: verifies **resolve trainable tuned lens layers rejects final only**.
+  - Confirms the operation raises `ValueError`.
+- `FitTunedLensTests.test_masked_kl_and_ce_matches_reference_implementation`
+  - Purpose: verifies **masked KL and CE matches reference implementation**.
+  - Confirms `torch.allclose(loss_kl, ref_kl, atol=1e-06, rtol=1e-06)` is true.
+  - Confirms `torch.allclose(loss_ce, ref_ce, atol=1e-06, rtol=1e-06)` is true.
+- `FitTunedLensTests.test_select_balanced_rows_uses_min_available_cap`
+  - Purpose: verifies **select balanced rows uses min available cap**.
+  - Confirms `effective_cap` equals `1`.
+  - Confirms `len(selected)` equals `2`.
+  - Confirms `sorted((row['lang'] for row in selected))` equals `['en', 'fr']`.
+- `FitTunedLensTests.test_compute_periodic_steps_includes_final_step`
+  - Purpose: verifies **compute periodic steps includes final step**.
+  - Confirms `_compute_periodic_steps(total_steps=950, every_steps=400)` equals `[400, 800, 950]`.
+
+## `test_gmm_setup.py`
+
+- `GMMSetupTests.test_infer_setup_name_matches_languages_without_order_or_duplicates`
+  - Purpose: verifies **infer setup name matches languages without order or duplicates**.
+  - Confirms `infer_gmm_setup_name(['fr', 'en', 'fr'], registry)` equals `'two_lang'`.
+- `GMMSetupTests.test_infer_setup_name_requires_a_unique_exact_match`
+  - Purpose: verifies **infer setup name requires a unique exact match**.
+  - Confirms the operation raises `ValueError` matching `'Multiple GMM setups match'`.
+  - Confirms the operation raises `ValueError` matching `'No GMM setup matches'`.
+- `GMMSetupTests.test_comparison_view_ignores_manifest_identity_fields`
+  - Purpose: verifies **comparison view ignores manifest identity fields**.
+  - Confirms `get_gmm_setup_comparison_view(manifest)` equals `get_gmm_setup_comparison_view(setup)`.
+
+## `test_latents.py`
+
+- `HFLayerHiddenStateTests.test_get_hf_layer_hidden_state_skips_embedding_output`
+  - Purpose: verifies **get Hugging Face layer hidden state skips embedding output**.
+  - Confirms `torch.equal(hidden, layer_1_output)` is true.
+- `LatentAggregationTests.test_mean_pool_latents_by_word`
+  - Purpose: verifies **mean pool latents by word**.
+  - Confirms `used` is true.
+  - Confirms `torch.allclose(aggregated, expected)` is true.
+- `LatentAggregationTests.test_mean_pool_latents_without_word_ids`
+  - Purpose: verifies **mean pool latents without word IDs**.
+  - Confirms `used` is false.
+  - Confirms `torch.allclose(aggregated, latents)` is true.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding`
+  - Purpose: verifies **collect position latents selects last token after left padding**.
+  - Confirms `layer_indices` equals `[0, 1]`.
+  - Confirms `tuple(latents.shape)` equals `(2, 2, 1)`.
+  - Confirms `torch.equal(latents, expected)` is true.
+  - Confirms `anchored_layer_indices` equals `[0, 1]`.
+  - Confirms `torch.equal(anchored_latents, anchored_expected)` is true.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeSaved.__init__`
+  - Initializes the `FakeSaved` test double or fixture.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeOutput.__init__`
+  - Initializes the `FakeOutput` test double or fixture.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeOutput.save`
+  - Emulates `save` for `test_collect_position_latents_selects_last_token_after_left_padding`; it does not assert behavior independently.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeLayer.__init__`
+  - Initializes the `FakeLayer` test double or fixture.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeInvoke.__init__`
+  - Initializes the `FakeInvoke` test double or fixture.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeInvoke.__enter__`
+  - Implements `__enter__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeInvoke.__exit__`
+  - Implements `__exit__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeTracer.__init__`
+  - Initializes the `FakeTracer` test double or fixture.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeTracer.__enter__`
+  - Implements `__enter__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeTracer.__exit__`
+  - Implements `__exit__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeTracer.invoke`
+  - Emulates `invoke` for `test_collect_position_latents_selects_last_token_after_left_padding`; it does not assert behavior independently.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `LatentCollectionTests.test_collect_position_latents_selects_last_token_after_left_padding.FakeModel.trace`
+  - Emulates `trace` for `test_collect_position_latents_selects_last_token_after_left_padding`; it does not assert behavior independently.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding`
+  - Purpose: verifies **collect sequence latents drops left padding**.
+  - Confirms `layer_indices` equals `[0, 1]`.
+  - Confirms `tuple(full_latents[0].shape)` equals `(2, 2, 1)`.
+  - Confirms `tuple(full_latents[1].shape)` equals `(2, 5, 1)`.
+  - Confirms `torch.equal(full_latents[0], expected_short)` is true.
+  - Confirms `torch.equal(full_latents[1], expected_long)` is true.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeSaved.__init__`
+  - Initializes the `FakeSaved` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeOutput.__init__`
+  - Initializes the `FakeOutput` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeOutput.save`
+  - Emulates `save` for `test_collect_sequence_latents_drops_left_padding`; it does not assert behavior independently.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeLayer.__init__`
+  - Initializes the `FakeLayer` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeInvoke.__init__`
+  - Initializes the `FakeInvoke` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeInvoke.__enter__`
+  - Implements `__enter__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeInvoke.__exit__`
+  - Implements `__exit__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeTracer.__init__`
+  - Initializes the `FakeTracer` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeTracer.__enter__`
+  - Implements `__enter__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeTracer.__exit__`
+  - Implements `__exit__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeTracer.invoke`
+  - Emulates `invoke` for `test_collect_sequence_latents_drops_left_padding`; it does not assert behavior independently.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_drops_left_padding.FakeModel.trace`
+  - Emulates `trace` for `test_collect_sequence_latents_drops_left_padding`; it does not assert behavior independently.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths`
+  - Purpose: verifies **collect sequence latents preserves per prompt sequence lengths**.
+  - Confirms `layer_indices` equals `[0, 1]`.
+  - Confirms `len(full_latents)` equals `2`.
+  - Confirms `tuple(full_latents[0].shape)` equals `(2, 2, 3)`.
+  - Confirms `tuple(full_latents[1].shape)` equals `(2, 5, 3)`.
+  - Confirms `full_latents[0].shape[1]` differs from `full_latents[1].shape[1]`.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeSaved.__init__`
+  - Initializes the `FakeSaved` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeOutput.__init__`
+  - Initializes the `FakeOutput` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeOutput.save`
+  - Emulates `save` for `test_collect_sequence_latents_preserves_per_prompt_sequence_lengths`; it does not assert behavior independently.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeLayer.__init__`
+  - Initializes the `FakeLayer` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeInvoke.__init__`
+  - Initializes the `FakeInvoke` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeInvoke.__enter__`
+  - Implements `__enter__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeInvoke.__exit__`
+  - Implements `__exit__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeTracer.__init__`
+  - Initializes the `FakeTracer` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeTracer.__enter__`
+  - Implements `__enter__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeTracer.__exit__`
+  - Implements `__exit__` for the local context-manager test double.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeTracer.invoke`
+  - Emulates `invoke` for `test_collect_sequence_latents_preserves_per_prompt_sequence_lengths`; it does not assert behavior independently.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `LatentCollectionTests.test_collect_sequence_latents_preserves_per_prompt_sequence_lengths.FakeModel.trace`
+  - Emulates `trace` for `test_collect_sequence_latents_preserves_per_prompt_sequence_lengths`; it does not assert behavior independently.
+- `NNsightBatchPositionRegressionTests._load_local_tiny_model`
+  - Loads a local NNsight GPT-2 model or skips when it is unavailable.
+- `NNsightBatchPositionRegressionTests._batched_short_prompt_layer_output`
+  - Captures the raw short-prompt layer output used as the NNsight padding reference.
+- `NNsightBatchPositionRegressionTests.test_batched_position_latents_use_nnsight_padding_coordinates`
+  - Purpose: verifies **batched position latents use NNsight padding coordinates**.
+  - Confirms `sequence_lengths[0]` is greater than `sequence_lengths[1]`.
+  - Confirms `batched_layer_indices` equals `[0]`.
+  - Confirms `tuple(batched_latents.shape[:2])` equals `(2, 1)`.
+  - Confirms `torch.allclose(batched_latents[1, 0].float(), expected.float(), atol=0.001, rtol=0.001)` is true.
+- `NNsightBatchPositionRegressionTests.test_batched_sequence_latents_use_nnsight_padding_coordinates`
+  - Purpose: verifies **batched sequence latents use NNsight padding coordinates**.
+  - Confirms `sequence_lengths[0]` is greater than `sequence_lengths[1]`.
+  - Confirms `batched_layer_indices` equals `[0]`.
+  - Confirms `tuple(batched_latents[1].shape)` equals `(1, sequence_lengths[1], raw_short.shape[-1])`.
+  - Confirms `torch.allclose(batched_latents[1][0].float(), expected.float(), atol=0.001, rtol=0.001)` is true.
+- `NNsightHFEquivalenceTests.test_collect_sequence_latents_matches_hf_hidden_states`
+  - Purpose: verifies **collect sequence latents matches Hugging Face hidden states**.
+  - Confirms `tuple(nnsight_hidden.shape)` equals `tuple(hf_hidden.shape)`.
+  - Confirms `torch.allclose(nnsight_hidden, hf_hidden, atol=0.001, rtol=0.001)` is true.
+
+## `test_lenses.py`
+
+- `_ToyModel.__init__`
+  - Initializes the `_ToyModel` test double or fixture.
+- `ToyNormHeadModel.__init__`
+  - Initializes the `ToyNormHeadModel` test double or fixture.
+- `UnembedProjectionTests.test_apply_unembed_with_final_norm_matches_model_norm_then_raw_lm_head`
+  - Purpose: verifies **apply unembed with final norm matches model norm then raw LM head**.
+  - Confirms `torch.allclose(logits, expected, atol=1e-06)` is true.
+  - Confirms `torch.allclose(logits, old_double_norm_logits, atol=1e-06)` is false.
+- `UnembedProjectionTests.test_apply_unembed_without_final_norm_uses_raw_lm_head`
+  - Purpose: verifies **apply unembed without final norm uses raw LM head**.
+  - Confirms `torch.allclose(logits, expected, atol=1e-06)` is true.
+- `TunedLensTests.test_training_config_hash_ignores_key_order`
+  - Purpose: verifies **training config hash ignores key order**.
+  - Confirms `hash_training_config({'model': 'gpt2', 'seed': 42})` equals `hash_training_config({'seed': 42, 'model': 'gpt2'})`.
+- `TunedLensTests.test_next_run_dir_adds_suffix_for_timestamp_collision`
+  - Purpose: verifies **next run dir adds suffix for timestamp collision**.
+  - Confirms `first.name` equals `'20260102_030405'`.
+  - Confirms `second.name` equals `'20260102_030405_01'`.
+- `TunedLensTests.test_build_decoding_lens_raw_uses_runtime_final_norm_and_raw_lm_head`
+  - Purpose: verifies **build decoding lens raw uses runtime final norm and raw LM head**.
+  - Confirms `torch.allclose(logits[:, 0, :], expected, atol=1e-06)` is true.
+  - Confirms `meta['decoding_lens']` equals `'raw_logitlens'`.
+- `TunedLensTests.test_load_tuned_lens_snapshot_reads_config_and_layers`
+  - Purpose: verifies **load tuned lens snapshot reads config and layers**.
+  - Confirms `loaded.training_config_hash` equals `'abc123'`.
+  - Confirms `0` is contained in `loaded.translators`.
+  - Confirms `loaded.validation_kl_by_layer[0]` equals `0.1`.
+  - Confirms `loaded.validation_ce_by_layer[0]` equals `1.5`.
+- `TunedLensTests.test_load_tuned_lens_snapshot_selects_latest_complete_run`
+  - Purpose: verifies **load tuned lens snapshot selects latest complete run**.
+  - Confirms `Path(loaded.snapshot_dir).name` equals `'20260102_000000'`.
+  - Confirms `loaded.training_config_hash` equals `'newer'`.
+- `TunedLensTests.test_build_decoding_lens_tuned_uses_layer_specific_translators`
+  - Purpose: verifies **build decoding lens tuned uses layer specific translators**.
+  - Confirms `tuple(logits.shape)` equals `(1, 2, 3)`.
+  - Confirms `torch.allclose(logits[:, 0, :], logits[:, 1, :])` is false.
+  - Confirms `meta['decoding_lens']` equals `'tuned_lens'`.
+  - Confirms `meta['tuned_lens_training_config_hash']` equals `'hash1'`.
+- `TunedLensTests.test_build_decoding_lens_tuned_uses_raw_projection_for_final_layer`
+  - Purpose: verifies **build decoding lens tuned uses raw projection for final layer**.
+  - Confirms `torch.allclose(logits[:, 0, :], expected_layer0, atol=1e-06)` is true.
+  - Confirms `torch.allclose(logits[:, 1, :], expected_final, atol=1e-06)` is true.
+
+## `test_lid.py`
+
+- `GlotLidHelperTests.test_normalize_glotlid_label`
+  - Purpose: verifies **normalize GlotLID label**.
+  - Confirms `normalize_glotlid_label('__label__eng_Latn')` equals `'en'`.
+  - Confirms `normalize_glotlid_label('arb_Arab')` equals `'ar'`.
+  - Confirms `normalize_glotlid_label('__label__und_Latn')` equals `'und_Latn'`.
+- `GlotLidHelperTests.test_build_lid_backend_langid`
+  - Purpose: verifies **build LID backend langid**.
+  - Confirms `type(backend).__name__` equals `'LangIdBackend'`.
+- `GlotLidHelperTests.test_build_lid_backend_glotlid`
+  - Purpose: verifies **build LID backend GlotLID**.
+  - Confirms `backend` is an instance of `GlotLidBackend`.
+- `GlotLidHelperTests.test_glotlid_distribution_is_project_normalized`
+  - Purpose: verifies **GlotLID distribution is project normalized**.
+  - Confirms `sum(dist.values())` approximately equals `1.0`.
+  - Confirms `set(dist.keys())` equals `{'en', 'fr'}`.
+  - Confirms `dist['en']` is greater than `dist['fr']`.
+- `GlotLidHelperTests.test_glotlid_distribution_is_project_normalized.FakeModel.get_sentence_vector`
+  - Emulates `get sentence vector` for `test_glotlid_distribution_is_project_normalized`; it does not assert behavior independently.
+- `GlotLidHelperTests.test_glotlid_distribution_conditions_on_allowed_normalized_langs`
+  - Purpose: verifies **GlotLID distribution conditions on allowed normalized langs**.
+  - Confirms `sum(dist.values())` approximately equals `1.0`.
+  - Confirms `set(dist.keys())` equals `{'en', 'fr'}`.
+  - Confirms `dist['en']` approximately equals `float(torch.softmax(torch.log(torch.tensor([0.24472847, 0.09003057])), dim=0)[0])`.
+  - Confirms `dist['fr']` approximately equals `float(torch.softmax(torch.log(torch.tensor([0.24472847, 0.09003057])), dim=0)[1])`.
+- `GlotLidHelperTests.test_glotlid_distribution_conditions_on_allowed_normalized_langs.FakeModel.get_sentence_vector`
+  - Emulates `get sentence vector` for `test_glotlid_distribution_conditions_on_allowed_normalized_langs`; it does not assert behavior independently.
+- `GlotLidHelperTests.test_glotlid_distribution_sums_script_variants_before_conditioning`
+  - Purpose: verifies **GlotLID distribution sums script variants before conditioning**.
+  - Confirms `sum(dist.values())` approximately equals `1.0`.
+  - Confirms `set(dist.keys())` equals `{'ar', 'en'}`.
+  - Confirms `dist['ar']` is greater than `dist['en']`.
+- `GlotLidHelperTests.test_glotlid_distribution_sums_script_variants_before_conditioning.FakeModel.get_sentence_vector`
+  - Emulates `get sentence vector` for `test_glotlid_distribution_sums_script_variants_before_conditioning`; it does not assert behavior independently.
+- `GlotLidHelperTests.test_glotlid_rewrites_newlines_before_fasttext`
+  - Purpose: verifies **GlotLID rewrites newlines before fasttext**.
+  - Confirms `backend._model.last_text` equals `'hello world'`.
+  - Confirms `sum(dist.values())` approximately equals `1.0`.
+- `GlotLidHelperTests.test_glotlid_rewrites_newlines_before_fasttext.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `GlotLidHelperTests.test_glotlid_rewrites_newlines_before_fasttext.FakeModel.get_sentence_vector`
+  - Emulates `get sentence vector` for `test_glotlid_rewrites_newlines_before_fasttext`; it does not assert behavior independently.
+- `LangIdBackendTests.test_predict_distribution_renormalizes_filtered_rank_probs`
+  - Purpose: verifies **predict distribution renormalizes filtered rank probs**.
+  - Confirms `dist['en']` approximately equals `2.0 / 3.0`.
+  - Confirms `dist['fr']` approximately equals `1.0 / 3.0`.
+  - Confirms `sum(dist.values())` approximately equals `1.0`.
+- `LangIdBackendTests.test_predict_distribution_renormalizes_filtered_rank_probs.FakeLangId.rank`
+  - Emulates `rank` for `test_predict_distribution_renormalizes_filtered_rank_probs`; it does not assert behavior independently.
+
+## `test_metrics.py`
+
+- `LangDistMetricsTests.test_concat_langdist_chunks_zero_fills_missing_language`
+  - Purpose: verifies **concat langdist chunks zero fills missing language**.
+  - Confirms `list(combined)` equals `['en', 'fr']`.
+  - Confirms `torch.equal(combined['en'], torch.tensor([[0.7, 0.6], [0.8, 0.9], [1.0, 1.0]]))` is true.
+  - Confirms `torch.equal(combined['fr'], torch.tensor([[0.3, 0.4], [0.2, 0.1], [0.0, 0.0]]))` is true.
+- `LangDistMetricsTests.test_langdist_metrics_normalize`
+  - Purpose: verifies **langdist metrics normalize**.
+  - Confirms `torch.all(metrics['dominance'] <= 1.0)` is true.
+  - Confirms `torch.all(metrics['entropy'] >= 0.0)` is true.
+- `LangDistMetricsTests.test_prompt_pivot_mask`
+  - Purpose: verifies **prompt pivot mask**.
+  - Confirms `torch.equal(pivot_mask, expected)` is true.
+
+## `test_pud_data_source.py`
+
+- `PudDataSourceTests.test_default_ud_cache_path`
+  - Purpose: verifies **default UD cache path**.
+  - Confirms `str(default_ud_cache_path('2.17'))` equals `'data/ud_cache/ud-treebanks-v2.17.tgz'`.
+- `PudDataSourceTests.test_treebank_map_contains_all_pud_languages`
+  - Purpose: verifies **treebank map contains all PUD languages**.
+  - Confirms `sorted(PUD_LANGS)` equals `expected`.
+  - Confirms `lang` is contained in `TREEBANK_MAP`.
+- `PudDataSourceTests.test_extra_ud_treebank_map_contains_nonparallel_languages`
+  - Purpose: verifies **extra UD treebank map contains nonparallel languages**.
+  - Confirms `sorted(UD_EXTRA_LANGS)` equals `expected`.
+  - Confirms `UD_EXTRA_TREEBANKS['uk']['treebank']` equals `'Ukrainian-IU'`.
+  - Confirms `UD_EXTRA_TREEBANKS['uk']['file_prefix']` equals `'uk_iu'`.
+- `PudDataSourceTests.test_read_conllu_sentence_records_uses_surface_multiword_tokens`
+  - Purpose: verifies **read conllu sentence records uses surface multiword tokens**.
+  - Confirms `len(records)` equals `1`.
+  - Confirms `records[0]['text']` equals `'aux amis.'`.
+  - Confirms `records[0]['surface_tokens']` equals `['aux', 'amis', '.']`.
+
+## `test_repr_posteriors.py`
+
+- `ReprPosteriorTests.test_sequence_langdist_reports_word_id_fallback`
+  - Purpose: verifies **sequence langdist reports word ID fallback**.
+  - Confirms `word_ids_used` is false.
+  - Confirms `torch.allclose(langdist['en'] + langdist['fr'], torch.ones_like(langdist['en']))` is true.
+- `ReprPosteriorTests.test_posteriors_sum_to_one`
+  - Purpose: verifies **posteriors sum to one**.
+  - Confirms `torch.allclose(totals, torch.ones_like(totals), atol=1e-06)` is true.
+- `ReprPosteriorTests.test_uniform_priors_override`
+  - Purpose: verifies **uniform priors override**.
+  - Checks `self.assertNotAlmostEqual(post_empirical['en'].item(), post_uniform['en'].item())`.
+  - Confirms `post_uniform['en'].item()` approximately equals `0.5`.
+
+## `test_run_eval_helpers.py`
+
+- `FakeDecodingLens.project_all_layers`
+  - Provides `project all layers` support for tests in this file; it does not assert behavior independently.
+- `FakeDecodingLens.project_layer`
+  - Provides `project layer` support for tests in this file; it does not assert behavior independently.
+- `RunEvalHelperTests.setUpClass`
+  - Loads the shared GPT-2, Llama-2, and Llama-3.1 tokenizers used by integration-style tests.
+- `RunEvalHelperTests.load_model_tokenizer`
+  - Loads a tokenizer for model-matrix subtests.
+- `RunEvalHelperTests.test_load_config`
+  - Purpose: verifies **load config**.
+  - Confirms `cfg['a']` equals `1`.
+- `RunEvalHelperTests.test_parser_accepts_setup_named_pud_sources_not_bare_pud`
+  - Purpose: verifies **parser accepts setup named PUD sources not bare PUD**.
+  - Confirms `parser.parse_args(['--data-source', 'pud21']).data_source` equals `'pud21'`.
+  - Confirms `parser.parse_args(['--data-source', 'translation_to_fr']).data_source` equals `'translation_to_fr'`.
+  - Confirms the operation raises `SystemExit`.
+- `RunEvalHelperTests.test_append_mean_layer_metric_rows`
+  - Purpose: verifies **append mean layer metric rows**.
+  - Confirms `len(rows)` equals `2`.
+  - Confirms `rows[0]['D']` equals `2.0`.
+  - Confirms `rows[1]['D']` equals `3.0`.
+- `RunEvalHelperTests.test_build_langdist_summary_rows`
+  - Purpose: verifies **build langdist summary rows**.
+  - Confirms `len(rows)` equals `2`.
+  - Confirms `list(rows[0].keys())` equals `['checkpoint_id', 'method', 'decoding_mapping', 'decoding_lid_backend', 'decoding_lens', 'layer', 'D', 'H', 'A', 'P', 'n_prompts']`.
+  - Confirms `rows[0]['method']` equals `'decoding'`.
+  - Confirms `rows[0]['decoding_mapping']` equals `'decode_then_classify'`.
+  - Confirms `rows[0]['D']` approximately equals `0.7`.
+  - Confirms `rows[1]['D']` approximately equals `0.85`.
+  - Confirms `rows[0]['P']` is `None`.
+- `RunEvalHelperTests.test_build_pivot_summary_rows`
+  - Purpose: verifies **build pivot summary rows**.
+  - Confirms `len(rows)` equals `2`.
+  - Confirms `rows[0]['method']` equals `'decoding_pivot'`.
+  - Confirms `rows[0]['P']` approximately equals `0.0`.
+  - Confirms `rows[1]['P']` approximately equals `1.0`.
+  - Confirms `rows[0]['D']` is `None`.
+- `RunEvalHelperTests.test_resolve_config_repr_defaults`
+  - Purpose: verifies **resolve config representation defaults**.
+  - Confirms `resolved['prompts_path']` equals `'data/pud_holdout/pud_prompts_test.jsonl'`.
+  - Confirms `resolved['data_source']` equals `'pud21'`.
+  - Confirms `resolved['repr_gmm_setup']` equals `'pud21'`.
+  - Confirms `resolved['repr_priors']` equals `'uniform'`.
+  - Confirms `resolved['repr_pca']` equals `'layerwise'`.
+  - Confirms `resolved['repr_cov']` equals `'diag'`.
+  - Confirms `resolved['repr_token_agg']` equals `'frac_50'`.
+  - Confirms `resolved['repr_unit']` equals `'token'`.
+- `RunEvalHelperTests.test_resolve_config_preserves_explicit_repr`
+  - Purpose: verifies **resolve config preserves explicit representation**.
+  - Confirms `resolved['repr_priors']` equals `'empirical'`.
+- `RunEvalHelperTests.test_resolve_config_preserves_explicit_repr_token_agg`
+  - Purpose: verifies **resolve config preserves explicit representation token agg**.
+  - Confirms `resolved['repr_token_agg']` equals `'frac_50'`.
+- `RunEvalHelperTests.test_resolve_config_applies_dataset_model_run_defaults`
+  - Purpose: verifies **resolve config applies dataset model run defaults**.
+  - Confirms `resolved['max_prompts']` is `None`.
+  - Confirms `resolved['max_prompts_per_lang']` is `None`.
+  - Confirms `resolved['trace_batch_size']` equals `1`.
+  - Confirms `resolved['sampled_rollout_prompt_batch_size']` equals `1`.
+- `RunEvalHelperTests.test_resolve_config_applies_pud_prompt_cap_default`
+  - Purpose: verifies **resolve config applies PUD prompt cap default**.
+  - Confirms `resolved['max_prompts']` is `None`.
+  - Confirms `resolved['max_prompts_per_lang']` equals `64`.
+- `RunEvalHelperTests.test_resolve_config_preserves_explicit_batch_sizes`
+  - Purpose: verifies **resolve config preserves explicit batch sizes**.
+  - Confirms `resolved['trace_batch_size']` equals `7`.
+  - Confirms `resolved['sampled_rollout_prompt_batch_size']` equals `3`.
+- `RunEvalHelperTests.test_resolve_config_rejects_combined_decoding_and_repr`
+  - Purpose: verifies **resolve config rejects combined decoding and representation**.
+  - Confirms the operation raises `ValueError` matching `'You can only run do_decoding or do_repr'`.
+- `RunEvalHelperTests.test_resolve_config_rejects_repr_rollout_with_all_tokens`
+  - Purpose: verifies **resolve config rejects representation rollout with all tokens**.
+  - Confirms the operation raises `ValueError` matching `'repr_token_agg=all_tokens'`.
+- `RunEvalHelperTests.test_resolve_config_allows_repr_rollout_with_token_unit`
+  - Purpose: verifies **resolve config allows representation rollout with token unit**.
+  - Confirms `resolved['repr_unit']` equals `'token'`.
+- `RunEvalHelperTests.test_resolve_config_accepts_tuned_lens`
+  - Purpose: verifies **resolve config accepts tuned lens**.
+  - Confirms `resolved['decoding_lens']` equals `'tuned_lens'`.
+  - Confirms `resolved['tuned_lens_dir']` equals `'logs/tuned_lens_fineweb27/org_model/{rev}'`.
+- `RunEvalHelperTests.test_resolve_config_accepts_custom_tuned_lens_root`
+  - Purpose: verifies **resolve config accepts custom tuned lens root**.
+  - Confirms `resolved['tuned_lens_dir']` equals `'artifacts/tuned_lenses/org_model/{rev}'`.
+- `RunEvalHelperTests.test_resolve_config_preserves_exact_tuned_lens_dir`
+  - Purpose: verifies **resolve config preserves exact tuned lens dir**.
+  - Confirms `resolved['tuned_lens_dir']` equals `'artifacts/exact/{rev}'`.
+- `RunEvalHelperTests.test_resolve_config_does_not_resolve_tuned_lens_dir_for_raw_lens`
+  - Purpose: verifies **resolve config does not resolve tuned lens dir for raw lens**.
+  - Confirms `resolved['tuned_lens_dir']` is `None`.
+- `RunEvalHelperTests.test_resolve_config_rejects_unknown_decoding_lens`
+  - Purpose: verifies **resolve config rejects unknown decoding lens**.
+  - Confirms the operation raises `NotImplementedError`.
+- `RunEvalHelperTests.test_resolve_config_rejects_unsupported_decoding_lid_backend`
+  - Purpose: verifies **resolve config rejects unsupported decoding LID backend**.
+  - Confirms the operation raises `ValueError`.
+- `RunEvalHelperTests.test_resolve_config_rejects_last_token_word_count_rollout_argmax`
+  - Purpose: verifies **resolve config rejects last token word count rollout argmax**.
+  - Confirms the operation raises `ValueError`.
+- `RunEvalHelperTests.test_resolve_config_rejects_last_token_word_count_rollout_sample`
+  - Purpose: verifies **resolve config rejects last token word count rollout sample**.
+  - Confirms the operation raises `ValueError`.
+- `RunEvalHelperTests.test_resolve_config_defaults_synthetic_to_start_token_scoring`
+  - Purpose: verifies **resolve config defaults synthetic to start token scoring**.
+  - Confirms `resolved['decoding_mapping']` equals `'target_string'`.
+  - Confirms `resolved['target_string_scoring_mode']` equals `'start_tokens_only'`.
+- `RunEvalHelperTests.test_resolve_config_rejects_target_string_for_openended_data`
+  - Purpose: verifies **resolve config rejects target string for openended data**.
+  - Confirms the operation raises `ValueError` matching `'requires a synthetic data source'`.
+- `RunEvalHelperTests.test_resolve_config_discards_legacy_decoding_targets_path`
+  - Purpose: verifies **resolve config discards legacy decoding targets path**.
+  - Confirms `'decoding_targets_path'` is absent from `resolved`.
+- `RunEvalHelperTests.test_target_string_scoring_mode_arg_replaces_old_source_arg`
+  - Purpose: verifies **target string scoring mode arg replaces old source arg**.
+  - Confirms `args.target_string_scoring_mode` equals `'start_tokens_only'`.
+  - Confirms the operation raises `SystemExit`.
+- `RunEvalHelperTests.test_lang_mass_normalization_sums_to_one_when_mass_nonzero`
+  - Purpose: verifies **lang mass normalization sums to one when mass nonzero**.
+  - Confirms `torch.allclose(stacked.sum(dim=-1), torch.ones(1, 2))` is true.
+  - Confirms `torch.allclose(masses['en'], torch.tensor([[0.45, 0.1]]))` is true.
+  - Confirms `torch.allclose(masses['fr'], torch.tensor([[0.55, 0.5]]))` is true.
+  - Confirms `torch.allclose(unique_masses['fr'], torch.tensor([[0.3, 0.4]]))` is true.
+  - Confirms `torch.allclose(ambiguous_mass, torch.tensor([[0.5, 0.2]]))` is true.
+  - Confirms `torch.allclose(unique_mass, torch.tensor([[0.5, 0.4]]))` is true.
+- `RunEvalHelperTests.test_lang_log_mass_normalization_handles_tiny_start_token_mass`
+  - Purpose: verifies **lang log mass normalization handles tiny start token mass**.
+  - Confirms `torch.allclose(stacked[:, 0].sum(dim=-1), torch.ones(1, dtype=torch.float64))` is true.
+  - Confirms `torch.allclose(stacked[:, 1], torch.full((1, 2), 0.5, dtype=torch.float64))` is true.
+  - Confirms `float(dist['en'][0, 0])` is greater than `float(dist['fr'][0, 0])`.
+- `RunEvalHelperTests.test_menu_lang_log_masses_match_probability_masses_without_underflow`
+  - Purpose: verifies **menu lang log masses match probability masses without underflow**.
+  - Confirms `torch.allclose(torch.exp(log_masses['en']), torch.tensor([[0.45]], dtype=torch.float64))` is true.
+  - Confirms `torch.allclose(torch.exp(log_masses['fr']), torch.tensor([[0.55]], dtype=torch.float64))` is true.
+  - Confirms `torch.allclose(torch.exp(unique_log_masses['fr']), torch.tensor([[0.3]], dtype=torch.float64))` is true.
+  - Confirms `torch.allclose(dist['en'], torch.tensor([[0.45]], dtype=torch.float64))` is true.
+  - Confirms `torch.allclose(dist['fr'], torch.tensor([[0.55]], dtype=torch.float64))` is true.
+- `RunEvalHelperTests.test_get_menu_langs`
+  - Purpose: verifies **get menu langs**.
+  - Confirms `get_menu_langs(records)` equals `['en', 'fr']`.
+- `RunEvalHelperTests.test_build_target_string_record_base_contains_shared_fields`
+  - Purpose: verifies **build target string record base contains shared fields**.
+  - Confirms `build_target_string_record_base(record)` equals `{'prompt_id': 'p1', 'concept_id': 'concept', 'prompt_lang': 'en', 'tgt_lang': 'fr', 'tgt_text': 'chat', 'menu_strings_grouped': [{'text': 'cat', 'langs': ['en']}], 'menu_strings_u…`.
+- `RunEvalHelperTests.test_build_target_string_artifact`
+  - Purpose: verifies **build target string artifact**.
+  - Confirms `payload` equals `{'checkpoint_id': 'rev', 'layer_indices': [0, 2], 'records': []}`.
+- `RunEvalHelperTests.test_add_menu_mass_summary`
+  - Purpose: verifies **add menu mass summary**.
+  - Confirms `meta['mean_menu_ambiguous_mass_by_layer'][0]` approximately equals `0.2`.
+  - Confirms `meta['mean_menu_ambiguous_mass_by_layer'][1]` approximately equals `0.3`.
+  - Confirms `meta['mean_menu_unique_mass_by_layer'][0]` approximately equals `0.8`.
+  - Confirms `meta['mean_menu_unique_mass_by_layer'][1]` approximately equals `0.7`.
+- `RunEvalHelperTests.test_build_teacher_forced_candidates_preserves_menu_order`
+  - Purpose: verifies **build teacher forced candidates preserves menu order**.
+  - Confirms `candidates.sequences` equals `['English: cat French:cat', 'English: cat French:chat']`.
+  - Confirms `[meta['group_idx'] for meta in candidates.metadata]` equals `[0, 1]`.
+  - Confirms `[bool(meta['is_tgt']) for meta in candidates.metadata]` equals `[False, True]`.
+  - Confirms `candidates.sequence_token_lengths` equals `[3, 3]`.
+  - Confirms `tuple(candidates.group_sum_logprobs_by_prompt[0].shape)` equals `(2, 2)`.
+  - Confirms `tuple(candidates.group_first_token_logprobs_by_prompt[0].shape)` equals `(2, 2)`.
+  - Confirms `candidates.group_token_counts_by_prompt` equals `[[0, 0]]`.
+- `RunEvalHelperTests.test_build_teacher_forced_candidates_preserves_menu_order.FakeTokenizer.__call__`
+  - Emulates `call` for `test_build_teacher_forced_candidates_preserves_menu_order`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_finite_exp_maps_non_finite_entries_to_zero`
+  - Purpose: verifies **finite exp maps non finite entries to zero**.
+  - Confirms `torch.allclose(actual[:2], torch.tensor([1.0, 0.0]))` is true.
+  - Confirms `float(actual[2])` equals `0.0`.
+- `RunEvalHelperTests.test_prepare_start_token_groups_returns_groups_and_counts`
+  - Purpose: verifies **prepare start token groups returns groups and counts**.
+  - Confirms `groups` equals `[[[1, 2], [3]]]`.
+  - Confirms `counts` equals `[[2, 1]]`.
+- `RunEvalHelperTests.test_prepare_start_token_groups_rejects_group_mismatch`
+  - Purpose: verifies **prepare start token groups rejects group mismatch**.
+  - Confirms the operation raises `ValueError` matching `'Start-token artifact group mismatch'`.
+- `RunEvalHelperTests.test_prepare_start_token_groups_rejects_wendler_keep_false`
+  - Purpose: verifies **prepare start token groups rejects wendler keep false**.
+  - Confirms the operation raises `ValueError` matching `'wendler_keep=false'`.
+- `RunEvalHelperTests.test_start_token_scoring_uses_start_token_keys_without_teacher_forced_outputs`
+  - Purpose: verifies **start token scoring uses start token keys without teacher forced outputs**.
+  - Confirms `'menu_start_token_logprobs'` is contained in `detail`.
+  - Confirms `'tgt_first_token_vocab_entropy_bits'` is contained in `detail`.
+  - Confirms `'lang_mass_start_tokens'` is contained in `detail`.
+  - Confirms `'lang_dist_start_tokens'` is contained in `detail`.
+  - Confirms `'menu_teacher_forced_sum_logprobs'` is absent from `detail`.
+  - Confirms `result.decoding_meta['target_string_scoring_mode']` equals `'start_tokens_only'`.
+  - Confirms `result.tgt_first_token_vocab_entropy_bits` is not `None`.
+  - Confirms `torch.allclose(result.tgt_first_token_vocab_entropy_bits, expected_entropy_bits.reshape(1, 1))` is true.
+  - Confirms `torch.allclose(detail['tgt_first_token_vocab_entropy_bits'], expected_entropy_bits.reshape(1))` is true.
+  - Confirms `torch.allclose(dist_sum, torch.ones_like(dist_sum))` is true.
+- `RunEvalHelperTests.test_start_token_scoring_uses_start_token_keys_without_teacher_forced_outputs.FakeLens.project_layer`
+  - Emulates `project layer` for `test_start_token_scoring_uses_start_token_keys_without_teacher_forced_outputs`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_start_token_scoring_streams_prompt_latent_batches`
+  - Purpose: verifies **start token scoring streams prompt latent batches**.
+  - Confirms `collect_calls` equals `[['Prompt 0:'], ['Prompt 1:']]`.
+  - Confirms `collect_positions` equals `[[3], [4]]`.
+  - Confirms `len(result.target_string_artifact['records'])` equals `2`.
+  - Confirms `torch.allclose(dist_sum, torch.ones_like(dist_sum))` is true.
+- `RunEvalHelperTests.test_start_token_scoring_streams_prompt_latent_batches.FakeTokenizer.__call__`
+  - Emulates `call` for `test_start_token_scoring_streams_prompt_latent_batches`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_start_token_scoring_streams_prompt_latent_batches.FakeLens.project_layer`
+  - Emulates `project layer` for `test_start_token_scoring_streams_prompt_latent_batches`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_start_token_scoring_streams_prompt_latent_batches.fake_collect`
+  - Emulates `fake collect` for `test_start_token_scoring_streams_prompt_latent_batches`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_scoring_builds_full_target_artifact`
+  - Purpose: verifies **teacher forced scoring builds full target artifact**.
+  - Confirms `'menu_teacher_forced_sum_logprobs'` is contained in `detail`.
+  - Confirms `'tgt_step_vocab_entropy_bits'` is contained in `detail`.
+  - Confirms `result.decoding_meta['target_string_scoring_mode']` equals `'multi_token_teacher_forced'`.
+  - Confirms `result.tgt_token_count_cpu` equals `[1]`.
+  - Confirms `torch.allclose(dist_sum, torch.ones_like(dist_sum))` is true.
+- `RunEvalHelperTests.test_teacher_forced_scoring_builds_full_target_artifact.FakeTokenizer.__call__`
+  - Emulates `call` for `test_teacher_forced_scoring_builds_full_target_artifact`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_scoring_builds_full_target_artifact.FakeTokenizer.convert_ids_to_tokens`
+  - Emulates `convert IDs to tokens` for `test_teacher_forced_scoring_builds_full_target_artifact`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_scoring_builds_full_target_artifact.FakeLens.project_layer`
+  - Emulates `project layer` for `test_teacher_forced_scoring_builds_full_target_artifact`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_scoring_builds_full_target_artifact.fake_collect`
+  - Emulates `fake collect` for `test_teacher_forced_scoring_builds_full_target_artifact`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_resolve_config_synthetic_decoding_only_does_not_require_repr_settings`
+  - Purpose: verifies **resolve config synthetic decoding only does not require representation settings**.
+  - Confirms `resolved['decoding_mapping']` equals `'target_string'`.
+- `RunEvalHelperTests.test_resolve_config_translation_to_inherits_translation_defaults`
+  - Purpose: verifies **resolve config translation to inherits translation defaults**.
+  - Confirms `resolved['max_prompts']` is `None`.
+  - Confirms `resolved['max_prompts_per_lang']` is `None`.
+  - Confirms `resolved['decoding_mapping']` equals `'target_string'`.
+- `RunEvalHelperTests.test_resolve_config_synthetic_repr_only_does_not_require_decoding_settings`
+  - Purpose: verifies **resolve config synthetic representation only does not require decoding settings**.
+  - Confirms `resolved['repr_token_agg']` equals `'last_token'`.
+- `RunEvalHelperTests.test_resolve_config_zero_max_prompts_disables_total_cap`
+  - Purpose: verifies **resolve config zero max prompts disables total cap**.
+  - Confirms `resolved['max_prompts']` is `None`.
+  - Confirms `resolved['max_prompts_per_lang']` equals `2`.
+- `RunEvalHelperTests.test_resolve_config_zero_max_prompts_per_lang_disables_lang_cap`
+  - Purpose: verifies **resolve config zero max prompts per lang disables lang cap**.
+  - Confirms `resolved['max_prompts']` equals `8`.
+  - Confirms `resolved['max_prompts_per_lang']` is `None`.
+- `RunEvalHelperTests.test_resolve_config_zero_zero_prompt_caps_disable_all_caps`
+  - Purpose: verifies **resolve config zero zero prompt caps disable all caps**.
+  - Confirms `resolved['max_prompts']` is `None`.
+  - Confirms `resolved['max_prompts_per_lang']` is `None`.
+- `RunEvalHelperTests.test_resolve_config_explicit_max_prompts_disables_default_per_lang_cap`
+  - Purpose: verifies **resolve config explicit max prompts disables default per lang cap**.
+  - Confirms `resolved['max_prompts']` equals `8`.
+  - Confirms `resolved['max_prompts_per_lang']` is `None`.
+- `RunEvalHelperTests.test_resolve_config_pud_setup_source_sets_matching_gmm_setup`
+  - Purpose: verifies **resolve config PUD setup source sets matching GMM setup**.
+  - Confirms `resolved['prompts_path']` equals `'data/pud_holdout/pud_prompts_test.jsonl'`.
+  - Confirms `resolved['repr_gmm_setup']` equals `'pud21'`.
+- `RunEvalHelperTests.test_resolve_config_pud_setup_rejects_conflicting_gmm_setup`
+  - Purpose: verifies **resolve config PUD setup rejects conflicting GMM setup**.
+  - Confirms the operation raises `ValueError` matching `'requires matching repr_gmm_setup'`.
+- `RunEvalHelperTests.test_resolve_config_ud6_source_appends_ud_prompts`
+  - Purpose: verifies **resolve config ud6 source appends UD prompts**.
+  - Confirms `resolved['repr_gmm_setup']` equals `'pud21_ud6'`.
+  - Confirms `resolved['extra_prompts_paths']` equals `['data/ud_holdout/ud_prompts_test.jsonl']`.
+- `RunEvalHelperTests.test_resolve_pud_prompts_path`
+  - Purpose: verifies **resolve PUD prompts path**.
+  - Confirms `str(resolve_pud_prompts_path('data/pud_holdout', 'overlap'))` equals `'data/pud_holdout/pud_prompts_train.jsonl'`.
+  - Confirms `str(resolve_pud_prompts_path('data/pud_holdout', 'heldout'))` equals `'data/pud_holdout/pud_prompts_test.jsonl'`.
+- `RunEvalHelperTests.test_resolve_ud_prompts_path`
+  - Purpose: verifies **resolve UD prompts path**.
+  - Confirms `str(resolve_ud_prompts_path('data/ud_holdout', 'overlap'))` equals `'data/ud_holdout/ud_prompts_train.jsonl'`.
+  - Confirms `str(resolve_ud_prompts_path('data/ud_holdout', 'heldout'))` equals `'data/ud_holdout/ud_prompts_test.jsonl'`.
+- `RunEvalHelperTests.test_resolve_include_prompts_path`
+  - Purpose: verifies **resolve INCLUDE prompts path**.
+  - Confirms `str(resolve_include_prompts_path('data', 'include_10lang_3domain_cap30', 'question_only'))` equals `'data/include_10lang_3domain_cap30/prompts_question_only.jsonl'`.
+  - Confirms `str(resolve_include_prompts_path('data', 'include_10lang_3domain_all', 'minimal_mcq'))` equals `'data/include_10lang_3domain_all/prompts_minimal_mcq.jsonl'`.
+- `RunEvalHelperTests.test_resolve_config_include_defaults_prompt_path`
+  - Purpose: verifies **resolve config INCLUDE defaults prompt path**.
+  - Confirms `resolved['prompts_path']` equals `'data/include_10lang_3domain_cap30/prompts_question_only.jsonl'`.
+  - Confirms `resolved['lid_candidate_langs']` equals `['ar', 'en', 'es', 'fi', 'fr', 'hi', 'id', 'pt', 'ru', 'tr', 'zh']`.
+- `RunEvalHelperTests.test_resolve_config_include_respects_prompt_style`
+  - Purpose: verifies **resolve config INCLUDE respects prompt style**.
+  - Confirms `resolved['prompts_path']` equals `'data/include_10lang_3domain_all/prompts_minimal_mcq.jsonl'`.
+  - Confirms `resolved['lid_candidate_langs']` equals `['ar', 'en', 'es', 'fi', 'fr', 'hi', 'id', 'pt', 'ru', 'tr', 'zh']`.
+- `RunEvalHelperTests.test_resolve_config_include_repr_uses_english_gmm_setup`
+  - Purpose: verifies **resolve config INCLUDE representation uses english GMM setup**.
+  - Confirms `resolved['repr_gmm_setup']` equals `'include_10lang_en'`.
+  - Confirms the operation raises `ValueError` matching `"requires repr_gmm_setup='include_10lang_en'"`.
+- `RunEvalHelperTests.test_resolve_config_include_rejects_candidates_without_english`
+  - Purpose: verifies **resolve config INCLUDE rejects candidates without english**.
+  - Confirms the operation raises `ValueError` matching `'must include English'`.
+- `RunEvalHelperTests.test_resolve_config_appends_ud_prompts_when_enabled`
+  - Purpose: verifies **resolve config appends UD prompts when enabled**.
+  - Confirms `resolved['prompts_path']` equals `'data/pud_holdout/pud_prompts_test.jsonl'`.
+  - Confirms `resolved['extra_prompts_paths']` equals `['data/ud_holdout/ud_prompts_test.jsonl']`.
+- `RunEvalHelperTests.test_load_gmm_setup_registry`
+  - Purpose: verifies **load GMM setup registry**.
+  - Confirms `'pud21'` is contained in `registry`.
+  - Confirms `registry['pud21']['languages'][0]` equals `'ar'`.
+- `RunEvalHelperTests.test_infer_gmm_setup_name`
+  - Purpose: verifies **infer GMM setup name**.
+  - Confirms `name` equals `'pud9'`.
+- `RunEvalHelperTests.test_resolve_repr_gmm_dir_prefers_explicit_setup`
+  - Purpose: verifies **resolve representation GMM dir prefers explicit setup**.
+  - Confirms `setup_name` equals `'pud21'`.
+  - Confirms `setup['languages'][0]` equals `'ar'`.
+  - Confirms `path` equals `build_gmm_artifact_dir(base_dir='logs/gmm', setup_name='pud21', model_name='org/model', revision='main')`.
+- `RunEvalHelperTests.test_resolve_repr_gmm_dir_infers_from_prompts`
+  - Purpose: verifies **resolve representation GMM dir infers from prompts**.
+  - Confirms `setup_name` equals `'pud9'`.
+  - Confirms `'pud9'` is contained in `str(path)`.
+- `RunEvalHelperTests.test_load_jsonl_prompt_data_uses_source_lang_for_caps`
+  - Purpose: verifies **load JSONL prompt data uses source lang for caps**.
+  - Confirms `prompt_data.prompts` equals `['hello', 'привіт']`.
+  - Confirms `prompt_data.prompt_ids` equals `['en_pud-0', 'uk_iu-test-0']`.
+  - Confirms `prompt_data.prompt_langs` equals `['en', 'uk']`.
+- `RunEvalHelperTests.test_infer_task_langs_uses_prompt_task_languages`
+  - Purpose: verifies **infer task langs uses prompt task languages**.
+  - Confirms `langs` equals `['ar', 'fi', 'ru', 'tr', 'zh']`.
+- `RunEvalHelperTests.test_validate_pud_prompt_languages_rejects_unexpected_languages`
+  - Purpose: verifies **validate PUD prompt languages rejects unexpected languages**.
+  - Confirms the operation raises `ValueError` matching `'unexpected languages'`.
+- `RunEvalHelperTests.test_validate_pud_prompt_languages_accepts_subset`
+  - Purpose: verifies **validate PUD prompt languages accepts subset**.
+  - Verifies `validate PUD prompt languages accepts subset` by completing without an exception.
+- `RunEvalHelperTests.test_load_jsonl_prompt_data_filters_before_caps`
+  - Purpose: verifies **load JSONL prompt data filters before caps**.
+  - Confirms `prompt_data.prompts` equals `['hello']`.
+  - Confirms `prompt_data.prompt_ids` equals `['en_pud-0']`.
+  - Confirms `prompt_data.prompt_langs` equals `['en']`.
+- `RunEvalHelperTests.test_translation_to_resolves_translation_csv_and_filters_target_lang`
+  - Purpose: verifies **translation to resolves translation CSV and filters target lang**.
+  - Confirms `resolved` equals `path`.
+  - Confirms `prompt_data.prompts` equals `['Translate hello', 'Translate hallo']`.
+  - Confirms `prompt_data.prompt_langs` equals `['en', 'de']`.
+  - Confirms `prompt_data.task_langs_by_prompt` equals `[('en', 'fr'), ('de', 'fr')]`.
+  - Confirms `prompt_data.target_string_records[prompt_data.prompt_ids[0]]['tgt_lang']` equals `'fr'`.
+  - Confirms `set(prompt_data.target_string_records)` equals `set(prompt_data.prompt_ids)`.
+- `RunEvalHelperTests.test_target_string_step_scoring_can_return_vocab_entropy`
+  - Purpose: verifies **target string step scoring can return vocab entropy**.
+  - Confirms `torch.allclose(logprobs, expected_logprobs.unsqueeze(0))` is true.
+  - Confirms `torch.allclose(entropy, expected_entropy)` is true.
+- `RunEvalHelperTests.test_target_string_step_scoring_can_return_vocab_entropy.FakeLens.project_layer`
+  - Emulates `project layer` for `test_target_string_step_scoring_can_return_vocab_entropy`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_config_file_override_arg_is_disabled`
+  - Purpose: verifies **config file override arg is disabled**.
+  - Confirms the operation raises `SystemExit`.
+- `RunEvalHelperTests.test_config_precedence_default_cli`
+  - Purpose: verifies **config precedence default CLI**.
+  - Confirms `resolved['model_name']` equals `'cli-model'`.
+  - Confirms `resolved['prompts_path']` equals `'data/pud_holdout/pud_prompts_test.jsonl'`.
+  - Confirms `resolved['seed']` equals `999`.
+  - Confirms `resolved['lid_candidate_langs']` equals `[]`.
+- `RunEvalHelperTests.test_explicit_cli_keys_detects_equals_form`
+  - Purpose: verifies **explicit CLI keys detects equals form**.
+  - Confirms `'trace_batch_size'` is contained in `explicit_keys`.
+  - Confirms `'sampled_rollout_prompt_batch_size'` is contained in `explicit_keys`.
+- `RunEvalHelperTests.test_legacy_eval_langs_cli_alias_uses_lid_candidate_langs`
+  - Purpose: verifies **legacy eval langs CLI alias uses LID candidate langs**.
+  - Confirms `parsed.lid_candidate_langs` equals `['en', 'fr']`.
+  - Confirms `'lid_candidate_langs'` is contained in `explicit_keys`.
+- `RunEvalHelperTests.test_legacy_eval_langs_config_key_is_migrated`
+  - Purpose: verifies **legacy eval langs config key is migrated**.
+  - Confirms `resolved['lid_candidate_langs']` equals `['en', 'fr']`.
+  - Confirms `'eval_langs'` is absent from `resolved`.
+- `RunEvalHelperTests.test_explicit_cli_keys_follow_parser_order`
+  - Purpose: verifies **explicit CLI keys follow parser order**.
+  - Confirms `explicit_keys` equals `['model_name', 'seed']`.
+- `RunEvalHelperTests.test_gather_fixed_position_latents`
+  - Purpose: verifies **gather fixed position latents**.
+  - Confirms `selected.shape` equals `(1, 2, 4)`.
+  - Confirms `torch.allclose(selected[0, 0], full_latents[0][0, -1])` is true.
+- `RunEvalHelperTests.test_select_repr_latents_fractional_modes`
+  - Purpose: verifies **select representation latents fractional modes**.
+  - Confirms `frac_50.shape` equals `(1, 3)`.
+  - Confirms `frac_75.shape` equals `(1, 3)`.
+  - Confirms `torch.allclose(frac_50[0], layer_latents[2])` is true.
+  - Confirms `torch.allclose(frac_75[0], layer_latents[3])` is true.
+- `RunEvalHelperTests.test_select_repr_latents_fractional_modes_snap_to_word_end`
+  - Purpose: verifies **select representation latents fractional modes snap to word end**.
+  - Confirms `torch.allclose(frac_75[0], layer_latents[4])` is true.
+- `RunEvalHelperTests.test_select_repr_latents_rollout_span`
+  - Purpose: verifies **select representation latents rollout span**.
+  - Confirms `selected.shape` equals `(3, 3)`.
+  - Confirms `torch.allclose(selected[0], layer_latents[2])` is true.
+  - Confirms `torch.allclose(selected[1], layer_latents[3])` is true.
+  - Confirms `torch.allclose(selected[2], layer_latents[4])` is true.
+- `RunEvalHelperTests.test_select_repr_latents_rollout_rejects_all_tokens`
+  - Purpose: verifies **select representation latents rollout rejects all tokens**.
+  - Confirms the operation raises `ValueError` matching `'repr_rollout_k cannot be combined'`.
+- `RunEvalHelperTests.test_select_repr_word_rollout_latents_uses_touched_words`
+  - Purpose: verifies **select representation word rollout latents uses touched words**.
+  - Confirms `selected.shape` equals `(3, 2)`.
+  - Confirms `torch.allclose(selected[0], word1)` is true.
+  - Confirms `torch.allclose(selected[1], word2)` is true.
+  - Confirms `torch.allclose(selected[2], word3)` is true.
+- `RunEvalHelperTests.test_select_decoding_latents_fractional_modes`
+  - Purpose: verifies **select decoding latents fractional modes**.
+  - Confirms `frac_50.shape` equals `(2, 2, 3)`.
+  - Confirms `frac_75.shape` equals `(2, 2, 3)`.
+  - Confirms `torch.allclose(frac_50[0, 0], full_latents[0][0, 1])` is true.
+  - Confirms `torch.allclose(frac_50[1, 0], full_latents[1][0, 2])` is true.
+  - Confirms `torch.allclose(frac_75[0, 0], full_latents[0][0, 2])` is true.
+  - Confirms `torch.allclose(frac_75[1, 0], full_latents[1][0, 3])` is true.
+- `RunEvalHelperTests.test_select_decoding_latents_fractional_modes_snap_to_word_end`
+  - Purpose: verifies **select decoding latents fractional modes snap to word end**.
+  - Confirms `torch.allclose(frac_75[0, 0], full_latents[0][0, 4])` is true.
+- `RunEvalHelperTests.test_select_decoding_latents_last_token`
+  - Purpose: verifies **select decoding latents last token**.
+  - Confirms `torch.allclose(last_token[0, 0], full_latents[0][0, -1])` is true.
+- `RunEvalHelperTests.test_get_word_end_token_positions`
+  - Purpose: verifies **get word end token positions**.
+  - Confirms `get_word_end_token_positions([0, 0, None, 1, 2, 2])` equals `[1, 3, 5]`.
+- `RunEvalHelperTests.test_get_word_end_token_positions_ignores_special_token_gaps_without_shifting_words`
+  - Purpose: verifies **get word end token positions ignores special token gaps without shifting words**.
+  - Confirms `get_word_end_token_positions([None, 0, 0, 1, 1, None])` equals `[2, 4]`.
+- `RunEvalHelperTests.test_select_fractional_token_position_snaps_to_word_end`
+  - Purpose: verifies **select fractional token position snaps to word end**.
+  - Confirms `pos` equals `4`.
+- `RunEvalHelperTests.test_select_fractional_token_position_handles_special_token_nones`
+  - Purpose: verifies **select fractional token position handles special token nones**.
+  - Confirms `pos` equals `2`.
+- `RunEvalHelperTests.test_select_rollout_token_positions_word_count_uses_future_word_targets`
+  - Purpose: verifies **select rollout token positions word count uses future word targets**.
+  - Confirms `positions` equals `[4, 5, 6]`.
+- `RunEvalHelperTests.test_select_rollout_token_positions_frac75_word_count_clips_cleanly_near_prompt_end`
+  - Purpose: verifies **select rollout token positions frac75 word count clips cleanly near prompt end**.
+  - Confirms `positions` equals `[5, 6]`.
+- `RunEvalHelperTests.test_select_rollout_token_positions_frac75_word_count_stays_in_range_with_room_left`
+  - Purpose: verifies **select rollout token positions frac75 word count stays in range with room left**.
+  - Confirms `positions` equals `[10, 11, 12]`.
+- `RunEvalHelperTests.test_compute_surface_token_spans_uses_surface_tokens`
+  - Purpose: verifies **compute surface token spans uses surface tokens**.
+  - Confirms `spans` equals `[(0, 3), (4, 8), (8, 9)]`.
+- `RunEvalHelperTests.test_compute_surface_token_spans_respects_content_start_offset`
+  - Purpose: verifies **compute surface token spans respects content start offset**.
+  - Confirms `spans` equals `[(9, 14), (15, 20)]`.
+- `RunEvalHelperTests.test_text_chunk_ids_require_surface_tokens`
+  - Purpose: verifies **text chunk IDs require surface tokens**.
+  - Confirms the operation raises `ValueError`.
+- `RunEvalHelperTests.test_text_chunk_id_recovery_uses_surface_tokens`
+  - Purpose: verifies **text chunk ID recovery uses surface tokens**.
+  - Confirms `chunk_ids` equals `[None, 0, 1, 1, 2]`.
+- `RunEvalHelperTests.test_rollout_word_alignment_for_paper_models`
+  - Purpose: verifies **rollout word alignment for paper models**.
+  - Confirms `len(word_ids)` equals `len(input_ids)`.
+- `RunEvalHelperTests.test_format_prompts_for_tokenizer_keeps_raw_prompts_without_chat_template`
+  - Purpose: verifies **format prompts for tokenizer keeps raw prompts without chat template**.
+  - Confirms `formatted_prompts` equals `['hello world']`.
+  - Confirms `content_offsets` equals `[0]`.
+- `RunEvalHelperTests.test_format_prompts_for_tokenizer_uses_chat_template_when_available`
+  - Purpose: verifies **format prompts for tokenizer uses chat template when available**.
+  - Confirms `formatted_prompts` differs from `['hello world']`.
+  - Confirms `'hello world'` is contained in `formatted_prompts[0]`.
+  - Confirms `content_offsets[0]` is greater than `0`.
+- `RunEvalHelperTests.test_chat_template_moves_last_token_after_raw_synthetic_prompt`
+  - Purpose: verifies **chat template moves last token after raw synthetic prompt**.
+  - Confirms `formatted_prompt` differs from `prompt_text`.
+  - Confirms `formatted_prompt[content_start:content_end]` equals `prompt_text`.
+  - Confirms `len(formatted_prompt)` is greater than `content_end`.
+  - Confirms `final_token_start` is at least `content_end`.
+  - Confirms `len(tokenized_formatted['input_ids'])` is greater than `len(tokenized_raw)`.
+- `RunEvalHelperTests.test_content_end_position_selects_raw_synthetic_prompt_inside_chat_template`
+  - Purpose: verifies **content end position selects raw synthetic prompt inside chat template**.
+  - Confirms `position` is less than `len(tokenized_formatted['input_ids']) - 1`.
+  - Confirms `end` is at most `content_end`.
+  - Confirms `end` is greater than `content_offsets[0]`.
+  - Confirms `next_start >= content_end or next_start == next_end` is true.
+- `RunEvalHelperTests.test_open_ended_pud_include_policy_keeps_generation_position`
+  - Purpose: verifies **open ended PUD INCLUDE policy keeps generation position**.
+  - Confirms `should_anchor_to_raw_prompt_content('translation_to_zh')` is true.
+  - Confirms `should_anchor_to_raw_prompt_content('copy')` is true.
+  - Confirms `should_anchor_to_raw_prompt_content('cloze')` is true.
+  - Confirms `should_anchor_to_raw_prompt_content(data_source)` is false.
+- `RunEvalHelperTests.test_raw_content_anchor_would_change_pud_and_include_chat_positions`
+  - Purpose: verifies **raw content anchor would change PUD and INCLUDE chat positions**.
+  - Confirms `raw_content_position` is less than `generation_position`.
+  - Confirms `should_anchor_to_raw_prompt_content(data_source)` is false.
+- `RunEvalHelperTests.test_frac50_for_pud_include_uses_raw_prompt_surface_words_under_chat_template`
+  - Purpose: verifies **frac50 for PUD INCLUDE uses raw prompt surface words under chat template**.
+  - Confirms `position` is greater than `0`.
+  - Confirms `position` is less than `len(tokenized_formatted['input_ids']) - 1`.
+  - Confirms `start` is at least `content_start`.
+  - Confirms `end` is at most `content_end`.
+  - Confirms `should_anchor_to_raw_prompt_content(data_source)` is false.
+- `RunEvalHelperTests.test_format_prompts_for_tokenizer_matches_chat_template_tokenization_without_double_bos`
+  - Purpose: verifies **format prompts for tokenizer matches chat template tokenization without double bos**.
+  - Confirms `tokenized_formatted` equals `tokenized_chat_template`.
+- `RunEvalHelperTests.test_chat_template_availability_for_paper_models`
+  - Purpose: verifies **chat template availability for paper models**.
+  - Confirms `bool(getattr(tokenizer, 'chat_template', None))` equals `expected_has_chat_template`.
+- `RunEvalHelperTests.test_llama2_tokenizer_prepends_bos_as_none_word_id`
+  - Purpose: verifies **llama2 tokenizer prepends bos as none word ID**.
+  - Confirms `self.llama2_tokenizer.convert_ids_to_tokens(with_specials['input_ids'])[:3]` equals `['<s>', '▁hello', '▁world']`.
+  - Confirms `without_specials.word_ids()` equals `[0, 0]`.
+  - Confirms `with_specials.word_ids()` equals `[None, 0, 0]`.
+  - Confirms `get_word_end_token_positions(with_specials.word_ids())` equals `[2]`.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify`
+  - Purpose: verifies **teacher forced argmax decode then classify**.
+  - Confirms `lang_probs['en'][0, 0].item()` approximately equals `0.8`.
+  - Confirms `lang_probs['fr'][0, 0].item()` approximately equals `0.2`.
+  - Confirms `lang_probs['en'][0, 1].item()` approximately equals `0.3`.
+  - Confirms `lang_probs['fr'][0, 1].item()` approximately equals `0.7`.
+  - Confirms `decoded_texts[0]` equals `['a b', 'b a']`.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify.FakeTokenizer.decode`
+  - Emulates `decode` for `test_teacher_forced_argmax_decode_then_classify`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify.FakeScorer.score_text`
+  - Emulates `score text` for `test_teacher_forced_argmax_decode_then_classify`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify_preserves_candidate_language_order`
+  - Purpose: verifies **teacher forced argmax decode then classify preserves candidate language order**.
+  - Confirms `list(lang_probs.keys())` equals `['ar', 'en', 'fr']`.
+  - Confirms `lang_probs['ar'][0, 0].item()` approximately equals `0.0`.
+  - Confirms `lang_probs['en'][0, 0].item()` approximately equals `0.8`.
+  - Confirms `lang_probs['fr'][0, 0].item()` approximately equals `0.2`.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify_preserves_candidate_language_order.FakeTokenizer.decode`
+  - Emulates `decode` for `test_teacher_forced_argmax_decode_then_classify_preserves_candidate_language_order`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify_preserves_candidate_language_order.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify_preserves_candidate_language_order.FakeScorer.score_text`
+  - Emulates `score text` for `test_teacher_forced_argmax_decode_then_classify_preserves_candidate_language_order`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify_rejects_empty_score_dicts`
+  - Purpose: verifies **teacher forced argmax decode then classify rejects empty score dicts**.
+  - Confirms the operation raises `ValueError` matching `'empty scores for decoded text'`.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify_rejects_empty_score_dicts.FakeTokenizer.decode`
+  - Emulates `decode` for `test_teacher_forced_argmax_decode_then_classify_rejects_empty_score_dicts`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify_rejects_empty_score_dicts.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `RunEvalHelperTests.test_teacher_forced_argmax_decode_then_classify_rejects_empty_score_dicts.FakeScorer.score_text`
+  - Emulates `score text` for `test_teacher_forced_argmax_decode_then_classify_rejects_empty_score_dicts`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_compute_rollout_word_token_budget`
+  - Purpose: verifies **compute rollout word token budget**.
+  - Confirms `compute_rollout_word_token_budget(7, 'frac_50', rollout_word_cnt=2, word_ids=[None, 0, 0, 1, 2, 2, 3])` equals `3`.
+  - Confirms `compute_rollout_word_token_budget(4, 'frac_75', rollout_word_cnt=1, word_ids=[None, 0, 1, 1])` equals `2`.
+  - Confirms the operation raises `ValueError`.
+- `RunEvalHelperTests.test_sample_top_p_token_id_restricts_nucleus`
+  - Purpose: verifies **sample top p token ID restricts nucleus**.
+  - Confirms `sample_top_p_token_id(probs, top_p=0.7)` equals `0`.
+- `RunEvalHelperTests.test_sample_top_p_token_ids_restrict_nucleus`
+  - Purpose: verifies **sample top p token IDs restrict nucleus**.
+  - Confirms `tuple(sampled.shape)` equals `(2,)`.
+  - Confirms `int(sampled[0].item())` equals `0`.
+  - Confirms `int(sampled[1].item())` equals `0`.
+- `RunEvalHelperTests.test_hf_cached_final_layer_raw_lens_uses_lm_head_without_second_norm`
+  - Purpose: verifies **Hugging Face cached final layer raw lens uses LM head without second norm**.
+  - Confirms `torch.allclose(logits, expected_raw_lm_head)` is true.
+  - Confirms `torch.allclose(logits, double_normed)` is false.
+- `RunEvalHelperTests.test_hf_cached_final_layer_raw_lens_uses_lm_head_without_second_norm.FakeCausalLM.__init__`
+  - Initializes the `FakeCausalLM` test double or fixture.
+- `RunEvalHelperTests.test_hf_cached_nonfinal_layer_raw_lens_keeps_normal_projection`
+  - Purpose: verifies **Hugging Face cached nonfinal layer raw lens keeps normal projection**.
+  - Confirms `torch.allclose(logits, expected_normal_lens)` is true.
+  - Confirms `torch.allclose(logits, raw_lm_head_only)` is false.
+- `RunEvalHelperTests.test_hf_cached_nonfinal_layer_raw_lens_keeps_normal_projection.FakeCausalLM.__init__`
+  - Initializes the `FakeCausalLM` test double or fixture.
+- `RunEvalHelperTests.test_hf_cached_final_layer_tuned_lens_uses_raw_lm_head_without_second_norm`
+  - Purpose: verifies **Hugging Face cached final layer tuned lens uses raw LM head without second norm**.
+  - Confirms `torch.allclose(logits, expected_raw_lm_head)` is true.
+  - Confirms `torch.allclose(logits, double_normed)` is false.
+- `RunEvalHelperTests.test_hf_cached_final_layer_tuned_lens_uses_raw_lm_head_without_second_norm.FakeCausalLM.__init__`
+  - Initializes the `FakeCausalLM` test double or fixture.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify`
+  - Purpose: verifies **sampled rollout decode then classify**.
+  - Confirms `list(lang_probs.keys())` equals `['en', 'fr']`.
+  - Confirms `lang_probs['en'][0, 0].item()` approximately equals `0.45`.
+  - Confirms `lang_probs['fr'][0, 0].item()` approximately equals `0.55`.
+  - Confirms `len(sample_records)` equals `2`.
+  - Confirms `[row['decoded_text'] for row in sample_records]` equals `['a b', 'b a']`.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify.FakeTokenizer.__call__`
+  - Emulates `call` for `test_sampled_rollout_decode_then_classify`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify.FakeTokenizer.decode`
+  - Emulates `decode` for `test_sampled_rollout_decode_then_classify`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify.FakeHFModel.__init__`
+  - Initializes the `FakeHFModel` test double or fixture.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify.FakeHFModel.parameters`
+  - Emulates `parameters` for `test_sampled_rollout_decode_then_classify`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify.FakeHFModel.__call__`
+  - Emulates `call` for `test_sampled_rollout_decode_then_classify`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify.FakeScorer.score_text`
+  - Emulates `score text` for `test_sampled_rollout_decode_then_classify`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k`
+  - Purpose: verifies **sampled rollout decode then classify batches prompts for rollout k**.
+  - Confirms `fake_model._model.batch_sizes` equals `[2, 4]`.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k.FakeTokenizer.__call__`
+  - Emulates `call` for `test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k.FakeTokenizer.decode`
+  - Emulates `decode` for `test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k.FakeHFModel.__init__`
+  - Initializes the `FakeHFModel` test double or fixture.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k.FakeHFModel.parameters`
+  - Emulates `parameters` for `test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k.FakeHFModel.__call__`
+  - Emulates `call` for `test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k.FakeModel.__init__`
+  - Initializes the `FakeModel` test double or fixture.
+- `RunEvalHelperTests.test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k.FakeScorer.score_text`
+  - Emulates `score text` for `test_sampled_rollout_decode_then_classify_batches_prompts_for_rollout_k`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_score_singlepos_latents_matches_across_chunk_sizes`
+  - Purpose: verifies **score singlepos latents matches across chunk sizes**.
+  - Confirms `set(small.keys())` equals `set(large.keys())`.
+  - Confirms `torch.allclose(small[lang], large[lang])` is true.
+- `RunEvalHelperTests.test_score_singlepos_latents_matches_across_chunk_sizes.FakeScorer.classify_from_probs`
+  - Emulates `classify from probs` for `test_score_singlepos_latents_matches_across_chunk_sizes`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_score_singlepos_latents_preserves_candidate_language_order`
+  - Purpose: verifies **score singlepos latents preserves candidate language order**.
+  - Confirms `list(lang_probs.keys())` equals `['ar', 'en', 'fr']`.
+  - Confirms `lang_probs['ar'][0, 0].item()` approximately equals `0.0`.
+  - Confirms `lang_probs['en'][0, 0].item()` approximately equals `0.8`.
+  - Confirms `lang_probs['fr'][0, 0].item()` approximately equals `0.2`.
+- `RunEvalHelperTests.test_score_singlepos_latents_preserves_candidate_language_order.FakeScorer.classify_from_probs`
+  - Emulates `classify from probs` for `test_score_singlepos_latents_preserves_candidate_language_order`; it does not assert behavior independently.
+- `RunEvalHelperTests.test_build_method_langdist_artifact`
+  - Purpose: verifies **build method langdist artifact**.
+  - Confirms `artifact['langs']` equals `['en', 'fr']`.
+  - Confirms `tuple(artifact['probs'].shape)` equals `(1, 2, 2)`.
+  - Confirms `artifact['probs'].dtype` equals `torch.float16`.
+- `RunEvalHelperTests.test_build_prompt_metric_rows`
+  - Purpose: verifies **build prompt metric rows**.
+  - Confirms `len(rows)` equals `4`.
+  - Confirms `rows[0]['dominant_lang']` equals `'en'`.
+  - Confirms `rows[0]['pivot']` is false.
+  - Confirms `rows[-1]['dominant_lang']` equals `'fr'`.
+  - Confirms `rows[-1]['pivot']` is true.
+- `RunEvalHelperTests.test_validate_repr_gmm_dir_missing_prompt_langs_raises`
+  - Purpose: verifies **validate representation GMM dir missing prompt langs raises**.
+  - Confirms the operation raises `ValueError`.
+- `RunEvalHelperTests.test_validate_repr_gmm_dir_checks_manifest_for_named_setup`
+  - Purpose: verifies **validate representation GMM dir checks manifest for named setup**.
+  - Confirms `result['setup_name']` equals `'pud9'`.
+
+## `test_target_string.py`
+
+- `IdentityDecodingLens.project_layer`
+  - Provides `project layer` support for tests in this file; it does not assert behavior independently.
+- `IdentityDecodingLens.project_all_layers`
+  - Provides `project all layers` support for tests in this file; it does not assert behavior independently.
+- `TargetStringScoringTests.test_teacher_forced_multitoken_scores`
+  - Purpose: verifies **teacher forced multitoken scores**.
+  - Confirms `vocab_entropy_bits` is `None`.
+  - Confirms `torch.allclose(step_logprobs.sum(dim=-1), expected.unsqueeze(0))` is true.
+- `TargetStringScoringTests.test_teacher_forced_out_of_range_raises`
+  - Purpose: verifies **teacher forced out of range raises**.
+  - Confirms the operation raises `IndexError`.
+
+## `test_target_string_artifacts.py`
+
+- `TargetStringArtifactTests.test_prompt_line_omitted_target_leaves_answer_slot_open`
+  - Purpose: verifies **prompt line omitted target leaves answer slot open**.
+  - Confirms `prompt_line('de', 'Buch', 'zh')` equals `'Deutsch: "Buch" - 中文: "'`.
+  - Confirms `prompt_line('de', 'Buch', 'zh', '书')` equals `'Deutsch: "Buch" - 中文: "书"'`.
+- `TargetStringArtifactTests.test_prompt_text_repairs_closed_empty_translation_slot`
+  - Purpose: verifies **prompt text repairs closed empty translation slot**.
+  - Confirms `prompt_text_from_task_row(row, 'translation').splitlines()[-1]` equals `'Deutsch: "Buch" - 中文: "'`.
+- `TargetStringArtifactTests.test_prompt_text_for_cloze_uses_prefix_before_blank`
+  - Purpose: verifies **prompt text for cloze uses prefix before blank**.
+  - Confirms `prompt_text_from_task_row(row, 'cloze')` equals `'يتم إجراء "'`.
+- `TargetStringArtifactTests.test_prompt_text_for_cloze_prefers_prebuilt_prompt`
+  - Purpose: verifies **prompt text for cloze prefers prebuilt prompt**.
+  - Confirms `prompt_text_from_task_row(row, 'cloze')` equals `'A "___" is used to play sports. Answer: "ball".\nA "___" is often given as a gift. Answer: "'`.
+- `TargetStringArtifactTests.test_cloze_query_prompt_handles_full_width_colon`
+  - Purpose: verifies **cloze query prompt handles full width colon**.
+  - Confirms `cloze_query_prompt('___」が行われる。答えなさい：「試み」。', 'ja')` equals `'___」が行われる。答えなさい: "'`.
+- `TargetStringArtifactTests.test_cloze_query_prompt_falls_back_to_target_prefix`
+  - Purpose: verifies **cloze query prompt falls back to target prefix**.
+  - Confirms `cloze_query_prompt('___」。答え「ボール', 'ja', 'ボール')` equals `'___」。答え「'`.
+- `TargetStringArtifactTests.test_cloze_query_prompt_handles_japanese_answer_marker`
+  - Purpose: verifies **cloze query prompt handles japanese answer marker**.
+  - Confirms `cloze_query_prompt('___」。答え「9」である。', 'ja', 'ナイン')` equals `'___」。答え「'`.
+- `TargetStringArtifactTests.test_cloze_query_prompt_allows_initial_blank_query`
+  - Purpose: verifies **cloze query prompt allows initial blank query**.
+  - Confirms `cloze_query_prompt('___」である。', 'ja', '八')` equals `''`.
+- `TargetStringArtifactTests.test_build_target_string_records_groups_surface_forms`
+  - Purpose: verifies **build target string records groups surface forms**.
+  - Confirms `len(records)` equals `3`.
+  - Confirms `record['concept_id']` equals `'book'`.
+  - Confirms `record['menu_has_ambiguity']` is true.
+  - Confirms `record['menu_group_count']` equals `2`.
+  - Confirms `record['menu_strings_grouped']` equals `[{'text': 'Buch', 'langs': ['de']}, {'text': 'boek', 'langs': ['af', 'nl']}]`.
+  - Confirms `record['menu_strings_unique']` equals `[{'text': 'Buch', 'langs': ['de']}]`.
+- `TargetStringArtifactTests.test_concept_id_for_cloze_prefers_concept_id`
+  - Purpose: verifies **concept ID for cloze prefers concept ID**.
+  - Confirms `concept_id_from_task_row(row, 'cloze')` equals `'book'`.
+- `TargetStringArtifactTests.test_load_synthetic_prompt_data_falls_back_without_companion`
+  - Purpose: verifies **load synthetic prompt data falls back without companion**.
+  - Confirms `len(prompt_data.prompts)` equals `2`.
+  - Confirms `len(prompt_data.prompt_ids)` equals `2`.
+  - Confirms `len(prompt_data.target_string_records)` equals `2`.
+  - Confirms `'menu_strings_grouped'` is contained in `first_record`.
+  - Confirms `first_record['tgt_lang']` equals `'zh'`.
+  - Confirms `prompt_data.prompt_langs[0]` equals `'de'`.
+  - Confirms `prompt_data.task_langs_by_prompt[0]` equals `('de', 'zh')`.
+  - Confirms `prompt_data.surface_tokens_by_prompt[0]` is `None`.

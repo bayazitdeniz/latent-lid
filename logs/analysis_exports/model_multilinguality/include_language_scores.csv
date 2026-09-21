@@ -1,0 +1,529 @@
+setting,model_slug,model_name,lang,acc,sample_count,result_path,result_mtime_ns,display_model,model_rank
+include_base_44,gpt2,gpt2,albanian,0.2813067150635209,551,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,arabic,0.2246376811594203,552,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,armenian,0.26181818181818184,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,azerbaijani,0.2591240875912409,548,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,basque,0.258,500,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,belarusian,0.26545454545454544,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,bengali,0.29014598540145986,548,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,bulgarian,0.24,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,chinese,0.24587155963302754,545,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,croatian,0.26545454545454544,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,dutch,0.13430127041742287,551,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,estonian,0.3080357142857143,224,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,finnish,0.23593466424682397,551,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,french,0.2529832935560859,419,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,georgian,0.298,500,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,german,0.3237410071942446,139,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,greek,0.19746376811594202,552,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,hebrew,0.26,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,hindi,0.23948811700182815,547,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,hungarian,0.2545454545454545,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,indonesian,0.26545454545454544,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,italian,0.2572992700729927,548,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,japanese,0.26147704590818366,501,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,kazakh,0.26,500,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,korean,0.232,500,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,lithuanian,0.2640449438202247,534,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,malay,0.24151696606786427,501,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,malayalam,0.26304801670146133,479,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,nepali,0.228,500,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,north macedonian,0.2250453720508167,551,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,persian,0.2208029197080292,548,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,polish,0.27007299270072993,548,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,portuguese,0.2177858439201452,551,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,russian,0.2644927536231884,552,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,serbian,0.19818181818181818,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,spanish,0.26545454545454544,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,tagalog,0.34,500,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,tamil,0.24545454545454545,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,telugu,0.24087591240875914,548,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,turkish,0.2846715328467153,548,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,ukrainian,0.3527272727272727,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,urdu,0.3380681818181818,352,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,uzbek,0.42286751361161523,551,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2,gpt2,vietnamese,0.28,550,results_2026-05-23T00-19-53.083376.json,1779495593091724492,GPT-2,0
+include_base_44,gpt2xl,openai-community/gpt2-xl,albanian,0.2776769509981851,551,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,arabic,0.22644927536231885,552,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,armenian,0.2690909090909091,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,azerbaijani,0.24452554744525548,548,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,basque,0.256,500,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,belarusian,0.2581818181818182,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,bengali,0.3029197080291971,548,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,bulgarian,0.23454545454545456,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,chinese,0.23853211009174313,545,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,croatian,0.26545454545454544,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,dutch,0.13793103448275862,551,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,estonian,0.3125,224,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,finnish,0.23049001814882034,551,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,french,0.26730310262529833,419,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,georgian,0.3,500,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,german,0.31654676258992803,139,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,greek,0.19202898550724637,552,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,hebrew,0.26,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,hindi,0.25411334552102377,547,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,hungarian,0.26,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,indonesian,0.2381818181818182,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,italian,0.2791970802919708,548,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,japanese,0.2714570858283433,501,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,kazakh,0.276,500,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,korean,0.23,500,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,lithuanian,0.250936329588015,534,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,malay,0.26746506986027946,501,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,malayalam,0.19832985386221294,479,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,nepali,0.228,500,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,north macedonian,0.23593466424682397,551,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,persian,0.22262773722627738,548,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,polish,0.2281021897810219,548,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,portuguese,0.2177858439201452,551,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,russian,0.26268115942028986,552,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,serbian,0.20727272727272728,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,spanish,0.26181818181818184,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,tagalog,0.32,500,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,tamil,0.2381818181818182,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,telugu,0.2645985401459854,548,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,turkish,0.2572992700729927,548,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,ukrainian,0.34545454545454546,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,urdu,0.3409090909090909,352,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,uzbek,0.39019963702359345,551,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,gpt2xl,openai-community/gpt2-xl,vietnamese,0.26,550,results_2026-05-23T00-37-03.502968.json,1779496623517142513,GPT-2 XL,1
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,albanian,0.27041742286751363,551,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,arabic,0.27355072463768115,552,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,armenian,0.23636363636363636,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,azerbaijani,0.29927007299270075,548,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,basque,0.272,500,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,belarusian,0.2509090909090909,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,bengali,0.2773722627737226,548,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,bulgarian,0.2927272727272727,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,chinese,0.28073394495412846,545,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,croatian,0.33636363636363636,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,dutch,0.32667876588021777,551,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,estonian,0.22321428571428573,224,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,finnish,0.24500907441016334,551,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,french,0.3126491646778043,419,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,georgian,0.254,500,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,german,0.2805755395683453,139,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,greek,0.26268115942028986,552,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,hebrew,0.26545454545454544,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,hindi,0.2577696526508227,547,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,hungarian,0.2763636363636364,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,indonesian,0.2909090909090909,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,italian,0.2846715328467153,548,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,japanese,0.28542914171656686,501,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,kazakh,0.26,500,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,korean,0.28,500,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,lithuanian,0.24906367041198502,534,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,malay,0.2894211576846307,501,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,malayalam,0.2776617954070981,479,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,nepali,0.282,500,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,north macedonian,0.33212341197822143,551,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,persian,0.2864963503649635,548,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,polish,0.24087591240875914,548,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,portuguese,0.30490018148820325,551,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,russian,0.32608695652173914,552,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,serbian,0.3109090909090909,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,spanish,0.32545454545454544,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,tagalog,0.278,500,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,tamil,0.23636363636363636,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,telugu,0.28284671532846717,548,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,turkish,0.26094890510948904,548,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,ukrainian,0.32727272727272727,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,urdu,0.17897727272727273,352,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,uzbek,0.24682395644283123,551,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama27b,meta-llama/Llama-2-7b-hf,vietnamese,0.26545454545454544,550,results_2026-05-23T00-23-47.556697.json,1779495827566339232,Llama-2-7B,2
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,albanian,0.5970961887477314,551,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,arabic,0.5126811594202898,552,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,armenian,0.34545454545454546,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,azerbaijani,0.42700729927007297,548,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,basque,0.376,500,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,belarusian,0.2927272727272727,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,bengali,0.4124087591240876,548,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,bulgarian,0.6054545454545455,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,chinese,0.5357798165137615,545,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,croatian,0.6145454545454545,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,dutch,0.5571687840290381,551,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,estonian,0.45535714285714285,224,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,finnish,0.4101633393829401,551,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,french,0.5823389021479713,419,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,georgian,0.482,500,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,german,0.43884892086330934,139,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,greek,0.42028985507246375,552,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,hebrew,0.5836363636363636,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,hindi,0.4789762340036563,547,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,hungarian,0.4090909090909091,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,indonesian,0.5654545454545454,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,italian,0.6167883211678832,548,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,japanese,0.5788423153692615,501,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,kazakh,0.404,500,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,korean,0.536,500,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,lithuanian,0.4850187265917603,534,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,malay,0.5189620758483033,501,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,malayalam,0.3444676409185804,479,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,nepali,0.39,500,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,north macedonian,0.6823956442831216,551,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,persian,0.4032846715328467,548,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,polish,0.46715328467153283,548,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,portuguese,0.5172413793103449,551,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,russian,0.5108695652173914,552,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,serbian,0.5581818181818182,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,spanish,0.6163636363636363,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,tagalog,0.676,500,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,tamil,0.36363636363636365,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,telugu,0.3193430656934307,548,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,turkish,0.531021897810219,548,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,ukrainian,0.5763636363636364,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,urdu,0.3522727272727273,352,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,uzbek,0.4500907441016334,551,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318b,meta-llama/Llama-3.1-8B,vietnamese,0.5272727272727272,550,results_2026-05-23T00-23-19.955785.json,1779495799965380485,Llama-3.1-8B,3
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,albanian,0.647912885662432,551,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,arabic,0.5579710144927537,552,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,armenian,0.3836363636363636,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,azerbaijani,0.4416058394160584,548,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,basque,0.366,500,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,belarusian,0.3054545454545455,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,bengali,0.4142335766423358,548,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,bulgarian,0.64,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,chinese,0.5596330275229358,545,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,croatian,0.6672727272727272,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,dutch,0.6206896551724138,551,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,estonian,0.42857142857142855,224,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,finnish,0.4537205081669691,551,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,french,0.594272076372315,419,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,georgian,0.508,500,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,german,0.5323741007194245,139,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,greek,0.46195652173913043,552,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,hebrew,0.5963636363636363,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,hindi,0.5173674588665448,547,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,hungarian,0.5327272727272727,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,indonesian,0.5927272727272728,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,italian,0.7062043795620438,548,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,japanese,0.6167664670658682,501,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,kazakh,0.432,500,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,korean,0.534,500,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,lithuanian,0.49625468164794007,534,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,malay,0.5508982035928144,501,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,malayalam,0.40083507306889354,479,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,nepali,0.424,500,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,north macedonian,0.7223230490018149,551,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,persian,0.42883211678832117,548,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,polish,0.5766423357664233,548,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,portuguese,0.5952813067150635,551,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,russian,0.5597826086956522,552,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,serbian,0.6454545454545455,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,spanish,0.649090909090909,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,tagalog,0.69,500,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,tamil,0.4109090909090909,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,telugu,0.3759124087591241,548,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,turkish,0.6532846715328468,548,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,ukrainian,0.5672727272727273,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,urdu,0.3806818181818182,352,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,uzbek,0.3992740471869328,551,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,llama318binstr,meta-llama/Llama-3.1-8B-Instruct,vietnamese,0.5781818181818181,550,results_2026-05-23T00-25-01.471265.json,1779495901481006190,Llama-3.1-8B-Instruct,4
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,albanian,0.3176043557168784,551,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,arabic,0.35144927536231885,552,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,armenian,0.2545454545454545,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,azerbaijani,0.291970802919708,548,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,basque,0.29,500,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,belarusian,0.24545454545454545,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,bengali,0.28832116788321166,548,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,bulgarian,0.3709090909090909,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,chinese,0.3651376146788991,545,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,croatian,0.3781818181818182,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,dutch,0.4192377495462795,551,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,estonian,0.28125,224,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,finnish,0.308529945553539,551,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,french,0.4606205250596659,419,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,georgian,0.248,500,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,german,0.3237410071942446,139,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,greek,0.29347826086956524,552,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,hebrew,0.42363636363636364,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,hindi,0.35283363802559414,547,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,hungarian,0.24727272727272728,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,indonesian,0.42727272727272725,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,italian,0.4215328467153285,548,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,japanese,0.3532934131736527,501,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,kazakh,0.278,500,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,korean,0.304,500,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,lithuanian,0.2902621722846442,534,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,malay,0.3652694610778443,501,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,malayalam,0.33402922755741127,479,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,nepali,0.27,500,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,north macedonian,0.36116152450090744,551,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,persian,0.3193430656934307,548,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,polish,0.3029197080291971,548,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,portuguese,0.4664246823956443,551,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,russian,0.35507246376811596,552,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,serbian,0.30727272727272725,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,spanish,0.4509090909090909,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,tagalog,0.584,500,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,tamil,0.3109090909090909,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,telugu,0.2773722627737226,548,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,turkish,0.3193430656934307,548,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,ukrainian,0.35454545454545455,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,urdu,0.3494318181818182,352,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,uzbek,0.24319419237749546,551,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,olmo211247b,allenai/OLMo-2-1124-7B,vietnamese,0.3,550,results_2026-05-23T01-24-18.673099.json,1779499458682026553,OLMo-2-1124-7B,5
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,albanian,0.6678765880217786,551,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,arabic,0.5090579710144928,552,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,armenian,0.4218181818181818,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,azerbaijani,0.4142335766423358,548,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,basque,0.382,500,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,belarusian,0.3018181818181818,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,bengali,0.43613138686131386,548,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,bulgarian,0.6545454545454545,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,chinese,0.5266055045871559,545,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,croatian,0.6781818181818182,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,dutch,0.6424682395644283,551,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,estonian,0.5446428571428571,224,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,finnish,0.4900181488203267,551,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,french,0.6014319809069213,419,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,georgian,0.582,500,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,german,0.45323741007194246,139,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,greek,0.5181159420289855,552,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,hebrew,0.6418181818181818,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,hindi,0.5356489945155393,547,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,hungarian,0.4909090909090909,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,indonesian,0.5854545454545454,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,italian,0.6624087591240876,548,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,japanese,0.6367265469061876,501,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,kazakh,0.47,500,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,korean,0.53,500,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,lithuanian,0.5692883895131086,534,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,malay,0.5069860279441117,501,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,malayalam,0.4342379958246347,479,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,nepali,0.46,500,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,north macedonian,0.7495462794918331,551,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,persian,0.4124087591240876,548,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,polish,0.5,548,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,portuguese,0.5317604355716878,551,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,russian,0.5471014492753623,552,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,serbian,0.6509090909090909,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,spanish,0.6436363636363637,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,tagalog,0.712,500,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,tamil,0.4618181818181818,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,telugu,0.36313868613138683,548,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,turkish,0.5383211678832117,548,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,ukrainian,0.6254545454545455,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,urdu,0.32670454545454547,352,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,uzbek,0.41742286751361163,551,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8b,swiss-ai/Apertus-8B-2509,vietnamese,0.5309090909090909,550,results_2026-05-23T00-25-08.553357.json,1779495908561400089,Apertus-8B,6
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,albanian,0.6860254083484574,551,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,arabic,0.5615942028985508,552,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,armenian,0.4581818181818182,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,azerbaijani,0.48175182481751827,548,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,basque,0.36,500,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,belarusian,0.32545454545454544,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,bengali,0.47992700729927007,548,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,bulgarian,0.6545454545454545,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,chinese,0.5541284403669725,545,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,croatian,0.7,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,dutch,0.6297640653357531,551,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,estonian,0.6473214285714286,224,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,finnish,0.4627949183303085,551,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,french,0.6014319809069213,419,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,georgian,0.626,500,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,german,0.5179856115107914,139,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,greek,0.5217391304347826,552,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,hebrew,0.6218181818181818,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,hindi,0.5575868372943327,547,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,hungarian,0.4690909090909091,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,indonesian,0.6236363636363637,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,italian,0.6843065693430657,548,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,japanese,0.6666666666666666,501,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,kazakh,0.47,500,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,korean,0.568,500,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,lithuanian,0.6142322097378277,534,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,malay,0.5449101796407185,501,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,malayalam,0.4363256784968685,479,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,nepali,0.492,500,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,north macedonian,0.7604355716878403,551,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,persian,0.43613138686131386,548,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,polish,0.5054744525547445,548,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,portuguese,0.5353901996370236,551,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,russian,0.5452898550724637,552,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,serbian,0.68,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,spanish,0.64,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,tagalog,0.732,500,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,tamil,0.4509090909090909,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,telugu,0.3777372262773723,548,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,turkish,0.5437956204379562,548,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,ukrainian,0.6163636363636363,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,urdu,0.3664772727272727,352,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,uzbek,0.455535390199637,551,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,apertus8binstr,swiss-ai/Apertus-8B-Instruct-2509,vietnamese,0.5418181818181819,550,results_2026-05-23T00-25-35.221211.json,1779495935230437520,Apertus-8B-Instruct,7
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,albanian,0.6333938294010889,551,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,arabic,0.5253623188405797,552,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,armenian,0.44727272727272727,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,azerbaijani,0.4032846715328467,548,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,basque,0.334,500,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,belarusian,0.3181818181818182,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,bengali,0.46167883211678834,548,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,bulgarian,0.6527272727272727,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,chinese,0.5504587155963303,545,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,croatian,0.6418181818181818,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,dutch,0.6642468239564429,551,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,estonian,0.47767857142857145,224,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,finnish,0.426497277676951,551,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,french,0.6085918854415274,419,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,georgian,0.574,500,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,german,0.45323741007194246,139,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,greek,0.48188405797101447,552,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,hebrew,0.6309090909090909,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,hindi,0.48811700182815354,547,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,hungarian,0.4490909090909091,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,indonesian,0.5709090909090909,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,italian,0.6879562043795621,548,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,japanese,0.6347305389221557,501,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,kazakh,0.418,500,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,korean,0.576,500,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,lithuanian,0.49625468164794007,534,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,malay,0.5548902195608783,501,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,malayalam,0.40501043841336115,479,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,nepali,0.43,500,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,north macedonian,0.7676950998185118,551,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,persian,0.4233576642335766,548,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,polish,0.48175182481751827,548,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,portuguese,0.5898366606170599,551,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,russian,0.5688405797101449,552,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,serbian,0.6127272727272727,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,spanish,0.6563636363636364,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,tagalog,0.694,500,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,tamil,0.4254545454545455,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,telugu,0.3722627737226277,548,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,turkish,0.5018248175182481,548,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,ukrainian,0.5872727272727273,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,urdu,0.32954545454545453,352,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,uzbek,0.4029038112522686,551,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,nemo,mistralai/Mistral-Nemo-Instruct-2407,vietnamese,0.5436363636363636,550,results_2026-05-23T00-26-37.482810.json,1779495997491716300,Mistral-Nemo-Instruct-2407,8
+include_base_44,aya238b,CohereLabs/aya-23-8B,albanian,0.3629764065335753,551,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,arabic,0.4782608695652174,552,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,armenian,0.28909090909090907,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,azerbaijani,0.3284671532846715,548,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,basque,0.284,500,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,belarusian,0.22,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,bengali,0.3375912408759124,548,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,bulgarian,0.4127272727272727,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,chinese,0.42201834862385323,545,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,croatian,0.4509090909090909,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,dutch,0.47368421052631576,551,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,estonian,0.3169642857142857,224,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,finnish,0.3248638838475499,551,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,french,0.5250596658711217,419,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,georgian,0.334,500,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,german,0.39568345323741005,139,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,greek,0.3822463768115942,552,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,hebrew,0.5818181818181818,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,hindi,0.42230347349177333,547,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,hungarian,0.3,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,indonesian,0.5036363636363637,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,italian,0.572992700729927,548,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,japanese,0.5049900199600799,501,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,kazakh,0.296,500,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,korean,0.53,500,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,lithuanian,0.3951310861423221,534,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,malay,0.3912175648702595,501,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,malayalam,0.3444676409185804,479,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,nepali,0.254,500,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,north macedonian,0.4646098003629764,551,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,persian,0.38503649635036497,548,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,polish,0.4124087591240876,548,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,portuguese,0.3684210526315789,551,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,russian,0.4492753623188406,552,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,serbian,0.3781818181818182,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,spanish,0.5018181818181818,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,tagalog,0.53,500,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,tamil,0.31272727272727274,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,telugu,0.2518248175182482,548,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,turkish,0.4708029197080292,548,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,ukrainian,0.5490909090909091,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,urdu,0.3465909090909091,352,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,uzbek,0.32849364791288566,551,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,aya238b,CohereLabs/aya-23-8B,vietnamese,0.4727272727272727,550,results_2026-05-23T00-34-40.753792.json,1779496480764934416,Aya-23-8B,9
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,albanian,0.43738656987295826,551,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,arabic,0.5271739130434783,552,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,armenian,0.28545454545454546,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,azerbaijani,0.354014598540146,548,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,basque,0.298,500,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,belarusian,0.24545454545454545,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,bengali,0.3102189781021898,548,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,bulgarian,0.5836363636363636,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,chinese,0.44220183486238535,545,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,croatian,0.6418181818181818,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,dutch,0.5626134301270418,551,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,estonian,0.53125,224,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,finnish,0.3956442831215971,551,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,french,0.5513126491646778,419,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,georgian,0.326,500,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,german,0.43884892086330934,139,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,greek,0.42391304347826086,552,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,hebrew,0.4072727272727273,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,hindi,0.4826325411334552,547,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,hungarian,0.4581818181818182,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,indonesian,0.39454545454545453,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,italian,0.5748175182481752,548,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,japanese,0.5429141716566867,501,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,kazakh,0.344,500,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,korean,0.548,500,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,lithuanian,0.5580524344569289,534,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,malay,0.3532934131736527,501,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,malayalam,0.3173277661795407,479,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,nepali,0.34,500,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,north macedonian,0.6079854809437386,551,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,persian,0.29744525547445255,548,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,polish,0.46715328467153283,548,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,portuguese,0.5027223230490018,551,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,russian,0.48188405797101447,552,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,serbian,0.5290909090909091,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,spanish,0.5890909090909091,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,tagalog,0.432,500,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,tamil,0.24909090909090909,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,telugu,0.30656934306569344,548,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,turkish,0.4835766423357664,548,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,ukrainian,0.5218181818181818,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,urdu,0.2840909090909091,352,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,uzbek,0.2885662431941924,551,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9b,utter-project/EuroLLM-9B,vietnamese,0.31636363636363635,550,results_2026-05-23T00-35-36.007550.json,1779496536015639165,EuroLLM-9B,10
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,albanian,0.4591651542649728,551,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,arabic,0.5760869565217391,552,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,armenian,0.2581818181818182,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,azerbaijani,0.41788321167883213,548,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,basque,0.322,500,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,belarusian,0.2727272727272727,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,bengali,0.3284671532846715,548,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,bulgarian,0.649090909090909,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,chinese,0.5412844036697247,545,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,croatian,0.7054545454545454,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,dutch,0.6188747731397459,551,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,estonian,0.6071428571428571,224,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,finnish,0.44101633393829404,551,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,french,0.6014319809069213,419,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,georgian,0.332,500,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,german,0.460431654676259,139,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,greek,0.5018115942028986,552,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,hebrew,0.4618181818181818,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,hindi,0.526508226691042,547,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,hungarian,0.49454545454545457,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,indonesian,0.44,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,italian,0.6423357664233577,548,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,japanese,0.6067864271457086,501,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,kazakh,0.388,500,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,korean,0.57,500,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,lithuanian,0.6161048689138576,534,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,malay,0.3852295409181637,501,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,malayalam,0.33611691022964507,479,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,nepali,0.36,500,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,north macedonian,0.6497277676950998,551,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,persian,0.34306569343065696,548,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,polish,0.5401459854014599,548,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,portuguese,0.5190562613430127,551,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,russian,0.5507246376811594,552,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,serbian,0.6036363636363636,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,spanish,0.6672727272727272,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,tagalog,0.504,500,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,tamil,0.28363636363636363,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,telugu,0.30474452554744524,548,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,turkish,0.5583941605839416,548,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,ukrainian,0.5690909090909091,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,urdu,0.3096590909090909,352,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,uzbek,0.3502722323049002,551,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11
+include_base_44,eurollm9binstr,utter-project/EuroLLM-9B-Instruct,vietnamese,0.3472727272727273,550,results_2026-05-23T00-35-25.705454.json,1779496525715349342,EuroLLM-9B-Instruct,11

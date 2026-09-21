@@ -1,0 +1,10 @@
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Bekim Fehmiju.", "surface_tokens": ["Bekim", "Fehmiju", "."], "ud_split": "train", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Maja Kostić-Mandić", "surface_tokens": ["Maja", "Kostić-Mandić"], "ud_split": "train", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Apolitičan.", "surface_tokens": ["Apolitičan", "."], "ud_split": "train", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Apolitičan?", "surface_tokens": ["Apolitičan", "?"], "ud_split": "train", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Davno bilo?", "surface_tokens": ["Davno", "bilo", "?"], "ud_split": "train", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Samo čijom?", "surface_tokens": ["Samo", "čijom", "?"], "ud_split": "train", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Nedostatak sna", "surface_tokens": ["Nedostatak", "sna"], "ud_split": "train", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Knjige - plovidbe", "surface_tokens": ["Knjige", "-", "plovidbe"], "ud_split": "train", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Ismail Kadare.", "surface_tokens": ["Ismail", "Kadare", "."], "ud_split": "dev", "filter_reason": "very_short"}
+{"source_lang": "sr", "treebank": "UD_Serbian-SET", "source": "ud", "is_parallel": false, "text": "Verovatno ne.\"", "surface_tokens": ["Verovatno", "ne", ".", "\""], "ud_split": "test", "filter_reason": "very_short"}

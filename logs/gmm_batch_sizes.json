@@ -1,0 +1,4512 @@
+{
+  "meta-llama/Llama-2-7b-hf": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 175,
+          "median_tokens": 87
+        },
+        "cs": {
+          "max_tokens": 88,
+          "median_tokens": 43
+        },
+        "de": {
+          "max_tokens": 76,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 53,
+          "median_tokens": 27
+        },
+        "es": {
+          "max_tokens": 77,
+          "median_tokens": 35
+        },
+        "fi": {
+          "max_tokens": 107,
+          "median_tokens": 50
+        },
+        "fr": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "gl": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "hi": {
+          "max_tokens": 272,
+          "median_tokens": 122
+        },
+        "id": {
+          "max_tokens": 97,
+          "median_tokens": 46
+        },
+        "is": {
+          "max_tokens": 142,
+          "median_tokens": 50
+        },
+        "it": {
+          "max_tokens": 87,
+          "median_tokens": 38
+        },
+        "ja": {
+          "max_tokens": 110,
+          "median_tokens": 60
+        },
+        "ko": {
+          "max_tokens": 206,
+          "median_tokens": 86
+        },
+        "pl": {
+          "max_tokens": 91,
+          "median_tokens": 43
+        },
+        "pt": {
+          "max_tokens": 80,
+          "median_tokens": 36
+        },
+        "ru": {
+          "max_tokens": 110,
+          "median_tokens": 41
+        },
+        "sv": {
+          "max_tokens": 81,
+          "median_tokens": 37
+        },
+        "th": {
+          "max_tokens": 236,
+          "median_tokens": 111
+        },
+        "tr": {
+          "max_tokens": 105,
+          "median_tokens": 52
+        },
+        "zh": {
+          "max_tokens": 131,
+          "median_tokens": 61
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 175,
+          "median_tokens": 87
+        },
+        "bg": {
+          "max_tokens": 108,
+          "median_tokens": 29
+        },
+        "cs": {
+          "max_tokens": 88,
+          "median_tokens": 43
+        },
+        "de": {
+          "max_tokens": 76,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 53,
+          "median_tokens": 27
+        },
+        "es": {
+          "max_tokens": 77,
+          "median_tokens": 35
+        },
+        "fa": {
+          "max_tokens": 339,
+          "median_tokens": 96
+        },
+        "fi": {
+          "max_tokens": 107,
+          "median_tokens": 50
+        },
+        "fr": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "gl": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "hi": {
+          "max_tokens": 272,
+          "median_tokens": 122
+        },
+        "id": {
+          "max_tokens": 97,
+          "median_tokens": 46
+        },
+        "is": {
+          "max_tokens": 142,
+          "median_tokens": 50
+        },
+        "it": {
+          "max_tokens": 87,
+          "median_tokens": 38
+        },
+        "ja": {
+          "max_tokens": 110,
+          "median_tokens": 60
+        },
+        "ko": {
+          "max_tokens": 206,
+          "median_tokens": 86
+        },
+        "mr": {
+          "max_tokens": 101,
+          "median_tokens": 36
+        },
+        "pl": {
+          "max_tokens": 91,
+          "median_tokens": 43
+        },
+        "pt": {
+          "max_tokens": 80,
+          "median_tokens": 36
+        },
+        "ru": {
+          "max_tokens": 110,
+          "median_tokens": 41
+        },
+        "sr": {
+          "max_tokens": 123,
+          "median_tokens": 50
+        },
+        "sv": {
+          "max_tokens": 81,
+          "median_tokens": 37
+        },
+        "th": {
+          "max_tokens": 236,
+          "median_tokens": 111
+        },
+        "tr": {
+          "max_tokens": 105,
+          "median_tokens": 52
+        },
+        "uk": {
+          "max_tokens": 96,
+          "median_tokens": 34
+        },
+        "ur": {
+          "max_tokens": 330,
+          "median_tokens": 116
+        },
+        "zh": {
+          "max_tokens": 131,
+          "median_tokens": 61
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 175,
+          "median_tokens": 87
+        },
+        "cs": {
+          "max_tokens": 88,
+          "median_tokens": 43
+        },
+        "en": {
+          "max_tokens": 53,
+          "median_tokens": 27
+        },
+        "es": {
+          "max_tokens": 77,
+          "median_tokens": 35
+        },
+        "fr": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "hi": {
+          "max_tokens": 272,
+          "median_tokens": 122
+        },
+        "id": {
+          "max_tokens": 97,
+          "median_tokens": 46
+        },
+        "is": {
+          "max_tokens": 142,
+          "median_tokens": 50
+        },
+        "pt": {
+          "max_tokens": 80,
+          "median_tokens": 36
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 175,
+          "median_tokens": 87
+        },
+        "bg": {
+          "max_tokens": 108,
+          "median_tokens": 29
+        },
+        "cs": {
+          "max_tokens": 88,
+          "median_tokens": 43
+        },
+        "en": {
+          "max_tokens": 53,
+          "median_tokens": 27
+        },
+        "es": {
+          "max_tokens": 77,
+          "median_tokens": 35
+        },
+        "fa": {
+          "max_tokens": 339,
+          "median_tokens": 96
+        },
+        "fr": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "hi": {
+          "max_tokens": 272,
+          "median_tokens": 122
+        },
+        "id": {
+          "max_tokens": 97,
+          "median_tokens": 46
+        },
+        "is": {
+          "max_tokens": 142,
+          "median_tokens": 50
+        },
+        "mr": {
+          "max_tokens": 101,
+          "median_tokens": 36
+        },
+        "pt": {
+          "max_tokens": 80,
+          "median_tokens": 36
+        },
+        "sr": {
+          "max_tokens": 123,
+          "median_tokens": 50
+        },
+        "uk": {
+          "max_tokens": 96,
+          "median_tokens": 34
+        },
+        "ur": {
+          "max_tokens": 330,
+          "median_tokens": 116
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "CohereLabs/aya-23-8B": {
+    "pud21": {
+      "batch_size": 64,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 64,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 66,
+          "median_tokens": 32
+        },
+        "cs": {
+          "max_tokens": 63,
+          "median_tokens": 29
+        },
+        "de": {
+          "max_tokens": 63,
+          "median_tokens": 29
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 52,
+          "median_tokens": 27
+        },
+        "fi": {
+          "max_tokens": 92,
+          "median_tokens": 44
+        },
+        "fr": {
+          "max_tokens": 59,
+          "median_tokens": 30
+        },
+        "gl": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "hi": {
+          "max_tokens": 177,
+          "median_tokens": 76
+        },
+        "id": {
+          "max_tokens": 51,
+          "median_tokens": 25
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 43
+        },
+        "it": {
+          "max_tokens": 66,
+          "median_tokens": 28
+        },
+        "ja": {
+          "max_tokens": 58,
+          "median_tokens": 28
+        },
+        "ko": {
+          "max_tokens": 70,
+          "median_tokens": 29
+        },
+        "pl": {
+          "max_tokens": 62,
+          "median_tokens": 29
+        },
+        "pt": {
+          "max_tokens": 53,
+          "median_tokens": 26
+        },
+        "ru": {
+          "max_tokens": 68,
+          "median_tokens": 30
+        },
+        "sv": {
+          "max_tokens": 78,
+          "median_tokens": 36
+        },
+        "th": {
+          "max_tokens": 218,
+          "median_tokens": 104
+        },
+        "tr": {
+          "max_tokens": 51,
+          "median_tokens": 29
+        },
+        "zh": {
+          "max_tokens": 49,
+          "median_tokens": 26
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 64,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 64,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 66,
+          "median_tokens": 32
+        },
+        "bg": {
+          "max_tokens": 97,
+          "median_tokens": 27
+        },
+        "cs": {
+          "max_tokens": 63,
+          "median_tokens": 29
+        },
+        "de": {
+          "max_tokens": 63,
+          "median_tokens": 29
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 52,
+          "median_tokens": 27
+        },
+        "fa": {
+          "max_tokens": 102,
+          "median_tokens": 33
+        },
+        "fi": {
+          "max_tokens": 92,
+          "median_tokens": 44
+        },
+        "fr": {
+          "max_tokens": 59,
+          "median_tokens": 30
+        },
+        "gl": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "hi": {
+          "max_tokens": 177,
+          "median_tokens": 76
+        },
+        "id": {
+          "max_tokens": 51,
+          "median_tokens": 25
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 43
+        },
+        "it": {
+          "max_tokens": 66,
+          "median_tokens": 28
+        },
+        "ja": {
+          "max_tokens": 58,
+          "median_tokens": 28
+        },
+        "ko": {
+          "max_tokens": 70,
+          "median_tokens": 29
+        },
+        "mr": {
+          "max_tokens": 69,
+          "median_tokens": 26
+        },
+        "pl": {
+          "max_tokens": 62,
+          "median_tokens": 29
+        },
+        "pt": {
+          "max_tokens": 53,
+          "median_tokens": 26
+        },
+        "ru": {
+          "max_tokens": 68,
+          "median_tokens": 30
+        },
+        "sr": {
+          "max_tokens": 115,
+          "median_tokens": 45
+        },
+        "sv": {
+          "max_tokens": 78,
+          "median_tokens": 36
+        },
+        "th": {
+          "max_tokens": 218,
+          "median_tokens": 104
+        },
+        "tr": {
+          "max_tokens": 51,
+          "median_tokens": 29
+        },
+        "uk": {
+          "max_tokens": 77,
+          "median_tokens": 25
+        },
+        "ur": {
+          "max_tokens": 206,
+          "median_tokens": 70
+        },
+        "zh": {
+          "max_tokens": 49,
+          "median_tokens": 26
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 66,
+          "median_tokens": 32
+        },
+        "cs": {
+          "max_tokens": 63,
+          "median_tokens": 29
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 52,
+          "median_tokens": 27
+        },
+        "fr": {
+          "max_tokens": 59,
+          "median_tokens": 30
+        },
+        "hi": {
+          "max_tokens": 177,
+          "median_tokens": 76
+        },
+        "id": {
+          "max_tokens": 51,
+          "median_tokens": 25
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 43
+        },
+        "pt": {
+          "max_tokens": 53,
+          "median_tokens": 26
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 66,
+          "median_tokens": 32
+        },
+        "bg": {
+          "max_tokens": 97,
+          "median_tokens": 27
+        },
+        "cs": {
+          "max_tokens": 63,
+          "median_tokens": 29
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 52,
+          "median_tokens": 27
+        },
+        "fa": {
+          "max_tokens": 102,
+          "median_tokens": 33
+        },
+        "fr": {
+          "max_tokens": 59,
+          "median_tokens": 30
+        },
+        "hi": {
+          "max_tokens": 177,
+          "median_tokens": 76
+        },
+        "id": {
+          "max_tokens": 51,
+          "median_tokens": 25
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 43
+        },
+        "mr": {
+          "max_tokens": 69,
+          "median_tokens": 26
+        },
+        "pt": {
+          "max_tokens": 53,
+          "median_tokens": 26
+        },
+        "sr": {
+          "max_tokens": 115,
+          "median_tokens": 45
+        },
+        "uk": {
+          "max_tokens": 77,
+          "median_tokens": 25
+        },
+        "ur": {
+          "max_tokens": 206,
+          "median_tokens": 70
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "gpt2": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 194,
+          "median_tokens": 90
+        },
+        "cs": {
+          "max_tokens": 127,
+          "median_tokens": 58
+        },
+        "de": {
+          "max_tokens": 100,
+          "median_tokens": 48
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 87,
+          "median_tokens": 43
+        },
+        "fi": {
+          "max_tokens": 114,
+          "median_tokens": 52
+        },
+        "fr": {
+          "max_tokens": 86,
+          "median_tokens": 42
+        },
+        "gl": {
+          "max_tokens": 82,
+          "median_tokens": 42
+        },
+        "hi": {
+          "max_tokens": 403,
+          "median_tokens": 172
+        },
+        "id": {
+          "max_tokens": 96,
+          "median_tokens": 45
+        },
+        "is": {
+          "max_tokens": 147,
+          "median_tokens": 53
+        },
+        "it": {
+          "max_tokens": 100,
+          "median_tokens": 44
+        },
+        "ja": {
+          "max_tokens": 126,
+          "median_tokens": 65
+        },
+        "ko": {
+          "max_tokens": 267,
+          "median_tokens": 117
+        },
+        "pl": {
+          "max_tokens": 132,
+          "median_tokens": 54
+        },
+        "pt": {
+          "max_tokens": 89,
+          "median_tokens": 42
+        },
+        "ru": {
+          "max_tokens": 341,
+          "median_tokens": 123
+        },
+        "sv": {
+          "max_tokens": 93,
+          "median_tokens": 44
+        },
+        "th": {
+          "max_tokens": 438,
+          "median_tokens": 203
+        },
+        "tr": {
+          "max_tokens": 101,
+          "median_tokens": 52
+        },
+        "zh": {
+          "max_tokens": 164,
+          "median_tokens": 78
+        }
+      },
+      "probe_layers": [
+        11
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 194,
+          "median_tokens": 90
+        },
+        "bg": {
+          "max_tokens": 313,
+          "median_tokens": 81
+        },
+        "cs": {
+          "max_tokens": 127,
+          "median_tokens": 58
+        },
+        "de": {
+          "max_tokens": 100,
+          "median_tokens": 48
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 87,
+          "median_tokens": 43
+        },
+        "fa": {
+          "max_tokens": 399,
+          "median_tokens": 110
+        },
+        "fi": {
+          "max_tokens": 114,
+          "median_tokens": 52
+        },
+        "fr": {
+          "max_tokens": 86,
+          "median_tokens": 42
+        },
+        "gl": {
+          "max_tokens": 82,
+          "median_tokens": 42
+        },
+        "hi": {
+          "max_tokens": 403,
+          "median_tokens": 172
+        },
+        "id": {
+          "max_tokens": 96,
+          "median_tokens": 45
+        },
+        "is": {
+          "max_tokens": 147,
+          "median_tokens": 53
+        },
+        "it": {
+          "max_tokens": 100,
+          "median_tokens": 44
+        },
+        "ja": {
+          "max_tokens": 126,
+          "median_tokens": 65
+        },
+        "ko": {
+          "max_tokens": 267,
+          "median_tokens": 117
+        },
+        "mr": {
+          "max_tokens": 143,
+          "median_tokens": 51
+        },
+        "pl": {
+          "max_tokens": 132,
+          "median_tokens": 54
+        },
+        "pt": {
+          "max_tokens": 89,
+          "median_tokens": 42
+        },
+        "ru": {
+          "max_tokens": 341,
+          "median_tokens": 123
+        },
+        "sr": {
+          "max_tokens": 143,
+          "median_tokens": 56
+        },
+        "sv": {
+          "max_tokens": 93,
+          "median_tokens": 44
+        },
+        "th": {
+          "max_tokens": 438,
+          "median_tokens": 203
+        },
+        "tr": {
+          "max_tokens": 101,
+          "median_tokens": 52
+        },
+        "uk": {
+          "max_tokens": 239,
+          "median_tokens": 94
+        },
+        "ur": {
+          "max_tokens": 407,
+          "median_tokens": 141
+        },
+        "zh": {
+          "max_tokens": 164,
+          "median_tokens": 78
+        }
+      },
+      "probe_layers": [
+        11
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 194,
+          "median_tokens": 90
+        },
+        "cs": {
+          "max_tokens": 127,
+          "median_tokens": 58
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 87,
+          "median_tokens": 43
+        },
+        "fr": {
+          "max_tokens": 86,
+          "median_tokens": 42
+        },
+        "hi": {
+          "max_tokens": 403,
+          "median_tokens": 172
+        },
+        "id": {
+          "max_tokens": 96,
+          "median_tokens": 45
+        },
+        "is": {
+          "max_tokens": 147,
+          "median_tokens": 53
+        },
+        "pt": {
+          "max_tokens": 89,
+          "median_tokens": 42
+        }
+      },
+      "probe_layers": [
+        11
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 194,
+          "median_tokens": 90
+        },
+        "bg": {
+          "max_tokens": 313,
+          "median_tokens": 81
+        },
+        "cs": {
+          "max_tokens": 127,
+          "median_tokens": 58
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 87,
+          "median_tokens": 43
+        },
+        "fa": {
+          "max_tokens": 399,
+          "median_tokens": 110
+        },
+        "fr": {
+          "max_tokens": 86,
+          "median_tokens": 42
+        },
+        "hi": {
+          "max_tokens": 403,
+          "median_tokens": 172
+        },
+        "id": {
+          "max_tokens": 96,
+          "median_tokens": 45
+        },
+        "is": {
+          "max_tokens": 147,
+          "median_tokens": 53
+        },
+        "mr": {
+          "max_tokens": 143,
+          "median_tokens": 51
+        },
+        "pt": {
+          "max_tokens": 89,
+          "median_tokens": 42
+        },
+        "sr": {
+          "max_tokens": 143,
+          "median_tokens": 56
+        },
+        "uk": {
+          "max_tokens": 239,
+          "median_tokens": 94
+        },
+        "ur": {
+          "max_tokens": 407,
+          "median_tokens": 141
+        }
+      },
+      "probe_layers": [
+        11
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "gpt2-xl": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 194,
+          "median_tokens": 90
+        },
+        "cs": {
+          "max_tokens": 127,
+          "median_tokens": 58
+        },
+        "de": {
+          "max_tokens": 100,
+          "median_tokens": 48
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 87,
+          "median_tokens": 43
+        },
+        "fi": {
+          "max_tokens": 114,
+          "median_tokens": 52
+        },
+        "fr": {
+          "max_tokens": 86,
+          "median_tokens": 42
+        },
+        "gl": {
+          "max_tokens": 82,
+          "median_tokens": 42
+        },
+        "hi": {
+          "max_tokens": 403,
+          "median_tokens": 172
+        },
+        "id": {
+          "max_tokens": 96,
+          "median_tokens": 45
+        },
+        "is": {
+          "max_tokens": 147,
+          "median_tokens": 53
+        },
+        "it": {
+          "max_tokens": 100,
+          "median_tokens": 44
+        },
+        "ja": {
+          "max_tokens": 126,
+          "median_tokens": 65
+        },
+        "ko": {
+          "max_tokens": 267,
+          "median_tokens": 117
+        },
+        "pl": {
+          "max_tokens": 132,
+          "median_tokens": 54
+        },
+        "pt": {
+          "max_tokens": 89,
+          "median_tokens": 42
+        },
+        "ru": {
+          "max_tokens": 341,
+          "median_tokens": 123
+        },
+        "sv": {
+          "max_tokens": 93,
+          "median_tokens": 44
+        },
+        "th": {
+          "max_tokens": 438,
+          "median_tokens": 203
+        },
+        "tr": {
+          "max_tokens": 101,
+          "median_tokens": 52
+        },
+        "zh": {
+          "max_tokens": 164,
+          "median_tokens": 78
+        }
+      },
+      "probe_layers": [
+        47
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 194,
+          "median_tokens": 90
+        },
+        "bg": {
+          "max_tokens": 313,
+          "median_tokens": 81
+        },
+        "cs": {
+          "max_tokens": 127,
+          "median_tokens": 58
+        },
+        "de": {
+          "max_tokens": 100,
+          "median_tokens": 48
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 87,
+          "median_tokens": 43
+        },
+        "fa": {
+          "max_tokens": 399,
+          "median_tokens": 110
+        },
+        "fi": {
+          "max_tokens": 114,
+          "median_tokens": 52
+        },
+        "fr": {
+          "max_tokens": 86,
+          "median_tokens": 42
+        },
+        "gl": {
+          "max_tokens": 82,
+          "median_tokens": 42
+        },
+        "hi": {
+          "max_tokens": 403,
+          "median_tokens": 172
+        },
+        "id": {
+          "max_tokens": 96,
+          "median_tokens": 45
+        },
+        "is": {
+          "max_tokens": 147,
+          "median_tokens": 53
+        },
+        "it": {
+          "max_tokens": 100,
+          "median_tokens": 44
+        },
+        "ja": {
+          "max_tokens": 126,
+          "median_tokens": 65
+        },
+        "ko": {
+          "max_tokens": 267,
+          "median_tokens": 117
+        },
+        "mr": {
+          "max_tokens": 143,
+          "median_tokens": 51
+        },
+        "pl": {
+          "max_tokens": 132,
+          "median_tokens": 54
+        },
+        "pt": {
+          "max_tokens": 89,
+          "median_tokens": 42
+        },
+        "ru": {
+          "max_tokens": 341,
+          "median_tokens": 123
+        },
+        "sr": {
+          "max_tokens": 143,
+          "median_tokens": 56
+        },
+        "sv": {
+          "max_tokens": 93,
+          "median_tokens": 44
+        },
+        "th": {
+          "max_tokens": 438,
+          "median_tokens": 203
+        },
+        "tr": {
+          "max_tokens": 101,
+          "median_tokens": 52
+        },
+        "uk": {
+          "max_tokens": 239,
+          "median_tokens": 94
+        },
+        "ur": {
+          "max_tokens": 407,
+          "median_tokens": 141
+        },
+        "zh": {
+          "max_tokens": 164,
+          "median_tokens": 78
+        }
+      },
+      "probe_layers": [
+        47
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 194,
+          "median_tokens": 90
+        },
+        "cs": {
+          "max_tokens": 127,
+          "median_tokens": 58
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 87,
+          "median_tokens": 43
+        },
+        "fr": {
+          "max_tokens": 86,
+          "median_tokens": 42
+        },
+        "hi": {
+          "max_tokens": 403,
+          "median_tokens": 172
+        },
+        "id": {
+          "max_tokens": 96,
+          "median_tokens": 45
+        },
+        "is": {
+          "max_tokens": 147,
+          "median_tokens": 53
+        },
+        "pt": {
+          "max_tokens": 89,
+          "median_tokens": 42
+        }
+      },
+      "probe_layers": [
+        47
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 194,
+          "median_tokens": 90
+        },
+        "bg": {
+          "max_tokens": 313,
+          "median_tokens": 81
+        },
+        "cs": {
+          "max_tokens": 127,
+          "median_tokens": 58
+        },
+        "en": {
+          "max_tokens": 44,
+          "median_tokens": 23
+        },
+        "es": {
+          "max_tokens": 87,
+          "median_tokens": 43
+        },
+        "fa": {
+          "max_tokens": 399,
+          "median_tokens": 110
+        },
+        "fr": {
+          "max_tokens": 86,
+          "median_tokens": 42
+        },
+        "hi": {
+          "max_tokens": 403,
+          "median_tokens": 172
+        },
+        "id": {
+          "max_tokens": 96,
+          "median_tokens": 45
+        },
+        "is": {
+          "max_tokens": 147,
+          "median_tokens": 53
+        },
+        "mr": {
+          "max_tokens": 143,
+          "median_tokens": 51
+        },
+        "pt": {
+          "max_tokens": 89,
+          "median_tokens": 42
+        },
+        "sr": {
+          "max_tokens": 143,
+          "median_tokens": 56
+        },
+        "uk": {
+          "max_tokens": 239,
+          "median_tokens": 94
+        },
+        "ur": {
+          "max_tokens": 407,
+          "median_tokens": 141
+        }
+      },
+      "probe_layers": [
+        47
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "meta-llama/Llama-3.1-8B": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "cs": {
+          "max_tokens": 70,
+          "median_tokens": 34
+        },
+        "de": {
+          "max_tokens": 70,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 45,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 67,
+          "median_tokens": 34
+        },
+        "fi": {
+          "max_tokens": 95,
+          "median_tokens": 46
+        },
+        "fr": {
+          "max_tokens": 68,
+          "median_tokens": 35
+        },
+        "gl": {
+          "max_tokens": 68,
+          "median_tokens": 34
+        },
+        "hi": {
+          "max_tokens": 128,
+          "median_tokens": 60
+        },
+        "id": {
+          "max_tokens": 72,
+          "median_tokens": 35
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 47
+        },
+        "it": {
+          "max_tokens": 83,
+          "median_tokens": 36
+        },
+        "ja": {
+          "max_tokens": 72,
+          "median_tokens": 36
+        },
+        "ko": {
+          "max_tokens": 81,
+          "median_tokens": 37
+        },
+        "pl": {
+          "max_tokens": 86,
+          "median_tokens": 41
+        },
+        "pt": {
+          "max_tokens": 66,
+          "median_tokens": 33
+        },
+        "ru": {
+          "max_tokens": 96,
+          "median_tokens": 38
+        },
+        "sv": {
+          "max_tokens": 78,
+          "median_tokens": 36
+        },
+        "th": {
+          "max_tokens": 109,
+          "median_tokens": 50
+        },
+        "tr": {
+          "max_tokens": 58,
+          "median_tokens": 32
+        },
+        "zh": {
+          "max_tokens": 73,
+          "median_tokens": 34
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "bg": {
+          "max_tokens": 110,
+          "median_tokens": 31
+        },
+        "cs": {
+          "max_tokens": 70,
+          "median_tokens": 34
+        },
+        "de": {
+          "max_tokens": 70,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 45,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 67,
+          "median_tokens": 34
+        },
+        "fa": {
+          "max_tokens": 107,
+          "median_tokens": 32
+        },
+        "fi": {
+          "max_tokens": 95,
+          "median_tokens": 46
+        },
+        "fr": {
+          "max_tokens": 68,
+          "median_tokens": 35
+        },
+        "gl": {
+          "max_tokens": 68,
+          "median_tokens": 34
+        },
+        "hi": {
+          "max_tokens": 128,
+          "median_tokens": 60
+        },
+        "id": {
+          "max_tokens": 72,
+          "median_tokens": 35
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 47
+        },
+        "it": {
+          "max_tokens": 83,
+          "median_tokens": 36
+        },
+        "ja": {
+          "max_tokens": 72,
+          "median_tokens": 36
+        },
+        "ko": {
+          "max_tokens": 81,
+          "median_tokens": 37
+        },
+        "mr": {
+          "max_tokens": 55,
+          "median_tokens": 20
+        },
+        "pl": {
+          "max_tokens": 86,
+          "median_tokens": 41
+        },
+        "pt": {
+          "max_tokens": 66,
+          "median_tokens": 33
+        },
+        "ru": {
+          "max_tokens": 96,
+          "median_tokens": 38
+        },
+        "sr": {
+          "max_tokens": 116,
+          "median_tokens": 48
+        },
+        "sv": {
+          "max_tokens": 78,
+          "median_tokens": 36
+        },
+        "th": {
+          "max_tokens": 109,
+          "median_tokens": 50
+        },
+        "tr": {
+          "max_tokens": 58,
+          "median_tokens": 32
+        },
+        "uk": {
+          "max_tokens": 93,
+          "median_tokens": 28
+        },
+        "ur": {
+          "max_tokens": 206,
+          "median_tokens": 74
+        },
+        "zh": {
+          "max_tokens": 73,
+          "median_tokens": 34
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "cs": {
+          "max_tokens": 70,
+          "median_tokens": 34
+        },
+        "en": {
+          "max_tokens": 45,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 67,
+          "median_tokens": 34
+        },
+        "fr": {
+          "max_tokens": 68,
+          "median_tokens": 35
+        },
+        "hi": {
+          "max_tokens": 128,
+          "median_tokens": 60
+        },
+        "id": {
+          "max_tokens": 72,
+          "median_tokens": 35
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 47
+        },
+        "pt": {
+          "max_tokens": 66,
+          "median_tokens": 33
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "bg": {
+          "max_tokens": 110,
+          "median_tokens": 31
+        },
+        "cs": {
+          "max_tokens": 70,
+          "median_tokens": 34
+        },
+        "en": {
+          "max_tokens": 45,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 67,
+          "median_tokens": 34
+        },
+        "fa": {
+          "max_tokens": 107,
+          "median_tokens": 32
+        },
+        "fr": {
+          "max_tokens": 68,
+          "median_tokens": 35
+        },
+        "hi": {
+          "max_tokens": 128,
+          "median_tokens": 60
+        },
+        "id": {
+          "max_tokens": 72,
+          "median_tokens": 35
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 47
+        },
+        "mr": {
+          "max_tokens": 55,
+          "median_tokens": 20
+        },
+        "pt": {
+          "max_tokens": 66,
+          "median_tokens": 33
+        },
+        "sr": {
+          "max_tokens": 116,
+          "median_tokens": 48
+        },
+        "uk": {
+          "max_tokens": 93,
+          "median_tokens": 28
+        },
+        "ur": {
+          "max_tokens": 206,
+          "median_tokens": 74
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "meta-llama/Llama-3.1-8B-Instruct": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "cs": {
+          "max_tokens": 70,
+          "median_tokens": 34
+        },
+        "de": {
+          "max_tokens": 70,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 45,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 67,
+          "median_tokens": 34
+        },
+        "fi": {
+          "max_tokens": 95,
+          "median_tokens": 46
+        },
+        "fr": {
+          "max_tokens": 68,
+          "median_tokens": 35
+        },
+        "gl": {
+          "max_tokens": 68,
+          "median_tokens": 34
+        },
+        "hi": {
+          "max_tokens": 128,
+          "median_tokens": 60
+        },
+        "id": {
+          "max_tokens": 72,
+          "median_tokens": 35
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 47
+        },
+        "it": {
+          "max_tokens": 83,
+          "median_tokens": 36
+        },
+        "ja": {
+          "max_tokens": 72,
+          "median_tokens": 36
+        },
+        "ko": {
+          "max_tokens": 81,
+          "median_tokens": 37
+        },
+        "pl": {
+          "max_tokens": 86,
+          "median_tokens": 41
+        },
+        "pt": {
+          "max_tokens": 66,
+          "median_tokens": 33
+        },
+        "ru": {
+          "max_tokens": 96,
+          "median_tokens": 38
+        },
+        "sv": {
+          "max_tokens": 78,
+          "median_tokens": 36
+        },
+        "th": {
+          "max_tokens": 109,
+          "median_tokens": 50
+        },
+        "tr": {
+          "max_tokens": 58,
+          "median_tokens": 32
+        },
+        "zh": {
+          "max_tokens": 73,
+          "median_tokens": 34
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "bg": {
+          "max_tokens": 110,
+          "median_tokens": 31
+        },
+        "cs": {
+          "max_tokens": 70,
+          "median_tokens": 34
+        },
+        "de": {
+          "max_tokens": 70,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 45,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 67,
+          "median_tokens": 34
+        },
+        "fa": {
+          "max_tokens": 107,
+          "median_tokens": 32
+        },
+        "fi": {
+          "max_tokens": 95,
+          "median_tokens": 46
+        },
+        "fr": {
+          "max_tokens": 68,
+          "median_tokens": 35
+        },
+        "gl": {
+          "max_tokens": 68,
+          "median_tokens": 34
+        },
+        "hi": {
+          "max_tokens": 128,
+          "median_tokens": 60
+        },
+        "id": {
+          "max_tokens": 72,
+          "median_tokens": 35
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 47
+        },
+        "it": {
+          "max_tokens": 83,
+          "median_tokens": 36
+        },
+        "ja": {
+          "max_tokens": 72,
+          "median_tokens": 36
+        },
+        "ko": {
+          "max_tokens": 81,
+          "median_tokens": 37
+        },
+        "mr": {
+          "max_tokens": 55,
+          "median_tokens": 20
+        },
+        "pl": {
+          "max_tokens": 86,
+          "median_tokens": 41
+        },
+        "pt": {
+          "max_tokens": 66,
+          "median_tokens": 33
+        },
+        "ru": {
+          "max_tokens": 96,
+          "median_tokens": 38
+        },
+        "sr": {
+          "max_tokens": 116,
+          "median_tokens": 48
+        },
+        "sv": {
+          "max_tokens": 78,
+          "median_tokens": 36
+        },
+        "th": {
+          "max_tokens": 109,
+          "median_tokens": 50
+        },
+        "tr": {
+          "max_tokens": 58,
+          "median_tokens": 32
+        },
+        "uk": {
+          "max_tokens": 93,
+          "median_tokens": 28
+        },
+        "ur": {
+          "max_tokens": 206,
+          "median_tokens": 74
+        },
+        "zh": {
+          "max_tokens": 73,
+          "median_tokens": 34
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "cs": {
+          "max_tokens": 70,
+          "median_tokens": 34
+        },
+        "en": {
+          "max_tokens": 45,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 67,
+          "median_tokens": 34
+        },
+        "fr": {
+          "max_tokens": 68,
+          "median_tokens": 35
+        },
+        "hi": {
+          "max_tokens": 128,
+          "median_tokens": 60
+        },
+        "id": {
+          "max_tokens": 72,
+          "median_tokens": 35
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 47
+        },
+        "pt": {
+          "max_tokens": 66,
+          "median_tokens": 33
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "bg": {
+          "max_tokens": 110,
+          "median_tokens": 31
+        },
+        "cs": {
+          "max_tokens": 70,
+          "median_tokens": 34
+        },
+        "en": {
+          "max_tokens": 45,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 67,
+          "median_tokens": 34
+        },
+        "fa": {
+          "max_tokens": 107,
+          "median_tokens": 32
+        },
+        "fr": {
+          "max_tokens": 68,
+          "median_tokens": 35
+        },
+        "hi": {
+          "max_tokens": 128,
+          "median_tokens": 60
+        },
+        "id": {
+          "max_tokens": 72,
+          "median_tokens": 35
+        },
+        "is": {
+          "max_tokens": 136,
+          "median_tokens": 47
+        },
+        "mr": {
+          "max_tokens": 55,
+          "median_tokens": 20
+        },
+        "pt": {
+          "max_tokens": 66,
+          "median_tokens": 33
+        },
+        "sr": {
+          "max_tokens": 116,
+          "median_tokens": 48
+        },
+        "uk": {
+          "max_tokens": 93,
+          "median_tokens": 28
+        },
+        "ur": {
+          "max_tokens": 206,
+          "median_tokens": 74
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "mistralai/Mistral-Nemo-Instruct-2407": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "de": {
+          "max_tokens": 65,
+          "median_tokens": 30
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fi": {
+          "max_tokens": 84,
+          "median_tokens": 38
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "gl": {
+          "max_tokens": 63,
+          "median_tokens": 30
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "it": {
+          "max_tokens": 72,
+          "median_tokens": 30
+        },
+        "ja": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "ko": {
+          "max_tokens": 73,
+          "median_tokens": 33
+        },
+        "pl": {
+          "max_tokens": 75,
+          "median_tokens": 35
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "ru": {
+          "max_tokens": 91,
+          "median_tokens": 35
+        },
+        "sv": {
+          "max_tokens": 70,
+          "median_tokens": 33
+        },
+        "th": {
+          "max_tokens": 133,
+          "median_tokens": 54
+        },
+        "tr": {
+          "max_tokens": 67,
+          "median_tokens": 35
+        },
+        "zh": {
+          "max_tokens": 77,
+          "median_tokens": 37
+        }
+      },
+      "probe_layers": [
+        39
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "bg": {
+          "max_tokens": 85,
+          "median_tokens": 25
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "de": {
+          "max_tokens": 65,
+          "median_tokens": 30
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fa": {
+          "max_tokens": 102,
+          "median_tokens": 33
+        },
+        "fi": {
+          "max_tokens": 84,
+          "median_tokens": 38
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "gl": {
+          "max_tokens": 63,
+          "median_tokens": 30
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "it": {
+          "max_tokens": 72,
+          "median_tokens": 30
+        },
+        "ja": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "ko": {
+          "max_tokens": 73,
+          "median_tokens": 33
+        },
+        "mr": {
+          "max_tokens": 47,
+          "median_tokens": 17
+        },
+        "pl": {
+          "max_tokens": 75,
+          "median_tokens": 35
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "ru": {
+          "max_tokens": 91,
+          "median_tokens": 35
+        },
+        "sr": {
+          "max_tokens": 103,
+          "median_tokens": 42
+        },
+        "sv": {
+          "max_tokens": 70,
+          "median_tokens": 33
+        },
+        "th": {
+          "max_tokens": 133,
+          "median_tokens": 54
+        },
+        "tr": {
+          "max_tokens": 67,
+          "median_tokens": 35
+        },
+        "uk": {
+          "max_tokens": 90,
+          "median_tokens": 31
+        },
+        "ur": {
+          "max_tokens": 118,
+          "median_tokens": 42
+        },
+        "zh": {
+          "max_tokens": 77,
+          "median_tokens": 37
+        }
+      },
+      "probe_layers": [
+        39
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        }
+      },
+      "probe_layers": [
+        39
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "bg": {
+          "max_tokens": 85,
+          "median_tokens": 25
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fa": {
+          "max_tokens": 102,
+          "median_tokens": 33
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "mr": {
+          "max_tokens": 47,
+          "median_tokens": 17
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "sr": {
+          "max_tokens": 103,
+          "median_tokens": 42
+        },
+        "uk": {
+          "max_tokens": 90,
+          "median_tokens": 31
+        },
+        "ur": {
+          "max_tokens": 118,
+          "median_tokens": 42
+        }
+      },
+      "probe_layers": [
+        39
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "swiss-ai/Apertus-8B-2509": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "de": {
+          "max_tokens": 65,
+          "median_tokens": 30
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fi": {
+          "max_tokens": 84,
+          "median_tokens": 38
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "gl": {
+          "max_tokens": 63,
+          "median_tokens": 30
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "it": {
+          "max_tokens": 72,
+          "median_tokens": 30
+        },
+        "ja": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "ko": {
+          "max_tokens": 73,
+          "median_tokens": 33
+        },
+        "pl": {
+          "max_tokens": 75,
+          "median_tokens": 35
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "ru": {
+          "max_tokens": 91,
+          "median_tokens": 35
+        },
+        "sv": {
+          "max_tokens": 70,
+          "median_tokens": 33
+        },
+        "th": {
+          "max_tokens": 133,
+          "median_tokens": 54
+        },
+        "tr": {
+          "max_tokens": 67,
+          "median_tokens": 35
+        },
+        "zh": {
+          "max_tokens": 77,
+          "median_tokens": 37
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "bg": {
+          "max_tokens": 85,
+          "median_tokens": 25
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "de": {
+          "max_tokens": 65,
+          "median_tokens": 30
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fa": {
+          "max_tokens": 102,
+          "median_tokens": 33
+        },
+        "fi": {
+          "max_tokens": 84,
+          "median_tokens": 38
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "gl": {
+          "max_tokens": 63,
+          "median_tokens": 30
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "it": {
+          "max_tokens": 72,
+          "median_tokens": 30
+        },
+        "ja": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "ko": {
+          "max_tokens": 73,
+          "median_tokens": 33
+        },
+        "mr": {
+          "max_tokens": 47,
+          "median_tokens": 17
+        },
+        "pl": {
+          "max_tokens": 75,
+          "median_tokens": 35
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "ru": {
+          "max_tokens": 91,
+          "median_tokens": 35
+        },
+        "sr": {
+          "max_tokens": 103,
+          "median_tokens": 42
+        },
+        "sv": {
+          "max_tokens": 70,
+          "median_tokens": 33
+        },
+        "th": {
+          "max_tokens": 133,
+          "median_tokens": 54
+        },
+        "tr": {
+          "max_tokens": 67,
+          "median_tokens": 35
+        },
+        "uk": {
+          "max_tokens": 90,
+          "median_tokens": 31
+        },
+        "ur": {
+          "max_tokens": 118,
+          "median_tokens": 42
+        },
+        "zh": {
+          "max_tokens": 77,
+          "median_tokens": 37
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "bg": {
+          "max_tokens": 85,
+          "median_tokens": 25
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fa": {
+          "max_tokens": 102,
+          "median_tokens": 33
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "mr": {
+          "max_tokens": 47,
+          "median_tokens": 17
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "sr": {
+          "max_tokens": 103,
+          "median_tokens": 42
+        },
+        "uk": {
+          "max_tokens": 90,
+          "median_tokens": 31
+        },
+        "ur": {
+          "max_tokens": 118,
+          "median_tokens": 42
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "swiss-ai/Apertus-8B-Instruct-2509": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "de": {
+          "max_tokens": 65,
+          "median_tokens": 30
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fi": {
+          "max_tokens": 84,
+          "median_tokens": 38
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "gl": {
+          "max_tokens": 63,
+          "median_tokens": 30
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "it": {
+          "max_tokens": 72,
+          "median_tokens": 30
+        },
+        "ja": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "ko": {
+          "max_tokens": 73,
+          "median_tokens": 33
+        },
+        "pl": {
+          "max_tokens": 75,
+          "median_tokens": 35
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "ru": {
+          "max_tokens": 91,
+          "median_tokens": 35
+        },
+        "sv": {
+          "max_tokens": 70,
+          "median_tokens": 33
+        },
+        "th": {
+          "max_tokens": 133,
+          "median_tokens": 54
+        },
+        "tr": {
+          "max_tokens": 67,
+          "median_tokens": 35
+        },
+        "zh": {
+          "max_tokens": 77,
+          "median_tokens": 37
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "bg": {
+          "max_tokens": 85,
+          "median_tokens": 25
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "de": {
+          "max_tokens": 65,
+          "median_tokens": 30
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fa": {
+          "max_tokens": 102,
+          "median_tokens": 33
+        },
+        "fi": {
+          "max_tokens": 84,
+          "median_tokens": 38
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "gl": {
+          "max_tokens": 63,
+          "median_tokens": 30
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "it": {
+          "max_tokens": 72,
+          "median_tokens": 30
+        },
+        "ja": {
+          "max_tokens": 75,
+          "median_tokens": 37
+        },
+        "ko": {
+          "max_tokens": 73,
+          "median_tokens": 33
+        },
+        "mr": {
+          "max_tokens": 47,
+          "median_tokens": 17
+        },
+        "pl": {
+          "max_tokens": 75,
+          "median_tokens": 35
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "ru": {
+          "max_tokens": 91,
+          "median_tokens": 35
+        },
+        "sr": {
+          "max_tokens": 103,
+          "median_tokens": 42
+        },
+        "sv": {
+          "max_tokens": 70,
+          "median_tokens": 33
+        },
+        "th": {
+          "max_tokens": 133,
+          "median_tokens": 54
+        },
+        "tr": {
+          "max_tokens": 67,
+          "median_tokens": 35
+        },
+        "uk": {
+          "max_tokens": 90,
+          "median_tokens": 31
+        },
+        "ur": {
+          "max_tokens": 118,
+          "median_tokens": 42
+        },
+        "zh": {
+          "max_tokens": 77,
+          "median_tokens": 37
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 61,
+          "median_tokens": 29
+        },
+        "bg": {
+          "max_tokens": 85,
+          "median_tokens": 25
+        },
+        "cs": {
+          "max_tokens": 77,
+          "median_tokens": 36
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 58,
+          "median_tokens": 29
+        },
+        "fa": {
+          "max_tokens": 102,
+          "median_tokens": 33
+        },
+        "fr": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "hi": {
+          "max_tokens": 89,
+          "median_tokens": 45
+        },
+        "id": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "is": {
+          "max_tokens": 124,
+          "median_tokens": 42
+        },
+        "mr": {
+          "max_tokens": 47,
+          "median_tokens": 17
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 29
+        },
+        "sr": {
+          "max_tokens": 103,
+          "median_tokens": 42
+        },
+        "uk": {
+          "max_tokens": 90,
+          "median_tokens": 31
+        },
+        "ur": {
+          "max_tokens": 118,
+          "median_tokens": 42
+        }
+      },
+      "probe_layers": [
+        31
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "utter-project/EuroLLM-9B": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 71,
+          "median_tokens": 35
+        },
+        "cs": {
+          "max_tokens": 66,
+          "median_tokens": 32
+        },
+        "de": {
+          "max_tokens": 59,
+          "median_tokens": 29
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 25
+        },
+        "es": {
+          "max_tokens": 55,
+          "median_tokens": 28
+        },
+        "fi": {
+          "max_tokens": 70,
+          "median_tokens": 32
+        },
+        "fr": {
+          "max_tokens": 65,
+          "median_tokens": 32
+        },
+        "gl": {
+          "max_tokens": 56,
+          "median_tokens": 27
+        },
+        "hi": {
+          "max_tokens": 83,
+          "median_tokens": 40
+        },
+        "id": {
+          "max_tokens": 85,
+          "median_tokens": 41
+        },
+        "is": {
+          "max_tokens": 133,
+          "median_tokens": 45
+        },
+        "it": {
+          "max_tokens": 67,
+          "median_tokens": 29
+        },
+        "ja": {
+          "max_tokens": 71,
+          "median_tokens": 33
+        },
+        "ko": {
+          "max_tokens": 79,
+          "median_tokens": 33
+        },
+        "pl": {
+          "max_tokens": 63,
+          "median_tokens": 28
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 28
+        },
+        "ru": {
+          "max_tokens": 80,
+          "median_tokens": 31
+        },
+        "sv": {
+          "max_tokens": 63,
+          "median_tokens": 30
+        },
+        "th": {
+          "max_tokens": 258,
+          "median_tokens": 120
+        },
+        "tr": {
+          "max_tokens": 57,
+          "median_tokens": 33
+        },
+        "zh": {
+          "max_tokens": 71,
+          "median_tokens": 32
+        }
+      },
+      "probe_layers": [
+        41
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 71,
+          "median_tokens": 35
+        },
+        "bg": {
+          "max_tokens": 77,
+          "median_tokens": 23
+        },
+        "cs": {
+          "max_tokens": 66,
+          "median_tokens": 32
+        },
+        "de": {
+          "max_tokens": 59,
+          "median_tokens": 29
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 25
+        },
+        "es": {
+          "max_tokens": 55,
+          "median_tokens": 28
+        },
+        "fa": {
+          "max_tokens": 207,
+          "median_tokens": 59
+        },
+        "fi": {
+          "max_tokens": 70,
+          "median_tokens": 32
+        },
+        "fr": {
+          "max_tokens": 65,
+          "median_tokens": 32
+        },
+        "gl": {
+          "max_tokens": 56,
+          "median_tokens": 27
+        },
+        "hi": {
+          "max_tokens": 83,
+          "median_tokens": 40
+        },
+        "id": {
+          "max_tokens": 85,
+          "median_tokens": 41
+        },
+        "is": {
+          "max_tokens": 133,
+          "median_tokens": 45
+        },
+        "it": {
+          "max_tokens": 67,
+          "median_tokens": 29
+        },
+        "ja": {
+          "max_tokens": 71,
+          "median_tokens": 33
+        },
+        "ko": {
+          "max_tokens": 79,
+          "median_tokens": 33
+        },
+        "mr": {
+          "max_tokens": 48,
+          "median_tokens": 17
+        },
+        "pl": {
+          "max_tokens": 63,
+          "median_tokens": 28
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 28
+        },
+        "ru": {
+          "max_tokens": 80,
+          "median_tokens": 31
+        },
+        "sr": {
+          "max_tokens": 92,
+          "median_tokens": 36
+        },
+        "sv": {
+          "max_tokens": 63,
+          "median_tokens": 30
+        },
+        "th": {
+          "max_tokens": 258,
+          "median_tokens": 120
+        },
+        "tr": {
+          "max_tokens": 57,
+          "median_tokens": 33
+        },
+        "uk": {
+          "max_tokens": 83,
+          "median_tokens": 27
+        },
+        "ur": {
+          "max_tokens": 262,
+          "median_tokens": 94
+        },
+        "zh": {
+          "max_tokens": 71,
+          "median_tokens": 32
+        }
+      },
+      "probe_layers": [
+        41
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 71,
+          "median_tokens": 35
+        },
+        "cs": {
+          "max_tokens": 66,
+          "median_tokens": 32
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 25
+        },
+        "es": {
+          "max_tokens": 55,
+          "median_tokens": 28
+        },
+        "fr": {
+          "max_tokens": 65,
+          "median_tokens": 32
+        },
+        "hi": {
+          "max_tokens": 83,
+          "median_tokens": 40
+        },
+        "id": {
+          "max_tokens": 85,
+          "median_tokens": 41
+        },
+        "is": {
+          "max_tokens": 133,
+          "median_tokens": 45
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 28
+        }
+      },
+      "probe_layers": [
+        41
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 71,
+          "median_tokens": 35
+        },
+        "bg": {
+          "max_tokens": 77,
+          "median_tokens": 23
+        },
+        "cs": {
+          "max_tokens": 66,
+          "median_tokens": 32
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 25
+        },
+        "es": {
+          "max_tokens": 55,
+          "median_tokens": 28
+        },
+        "fa": {
+          "max_tokens": 207,
+          "median_tokens": 59
+        },
+        "fr": {
+          "max_tokens": 65,
+          "median_tokens": 32
+        },
+        "hi": {
+          "max_tokens": 83,
+          "median_tokens": 40
+        },
+        "id": {
+          "max_tokens": 85,
+          "median_tokens": 41
+        },
+        "is": {
+          "max_tokens": 133,
+          "median_tokens": 45
+        },
+        "mr": {
+          "max_tokens": 48,
+          "median_tokens": 17
+        },
+        "pt": {
+          "max_tokens": 57,
+          "median_tokens": 28
+        },
+        "sr": {
+          "max_tokens": 92,
+          "median_tokens": 36
+        },
+        "uk": {
+          "max_tokens": 83,
+          "median_tokens": 27
+        },
+        "ur": {
+          "max_tokens": 262,
+          "median_tokens": 94
+        }
+      },
+      "probe_layers": [
+        41
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  },
+  "utter-project/EuroLLM-9B-Instruct": {
+    "pud21": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 70,
+          "median_tokens": 35
+        },
+        "cs": {
+          "max_tokens": 66,
+          "median_tokens": 31
+        },
+        "de": {
+          "max_tokens": 60,
+          "median_tokens": 28
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 55,
+          "median_tokens": 28
+        },
+        "fi": {
+          "max_tokens": 69,
+          "median_tokens": 31
+        },
+        "fr": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "gl": {
+          "max_tokens": 56,
+          "median_tokens": 26
+        },
+        "hi": {
+          "max_tokens": 83,
+          "median_tokens": 39
+        },
+        "id": {
+          "max_tokens": 84,
+          "median_tokens": 40
+        },
+        "is": {
+          "max_tokens": 132,
+          "median_tokens": 44
+        },
+        "it": {
+          "max_tokens": 66,
+          "median_tokens": 29
+        },
+        "ja": {
+          "max_tokens": 69,
+          "median_tokens": 31
+        },
+        "ko": {
+          "max_tokens": 78,
+          "median_tokens": 33
+        },
+        "pl": {
+          "max_tokens": 62,
+          "median_tokens": 27
+        },
+        "pt": {
+          "max_tokens": 56,
+          "median_tokens": 27
+        },
+        "ru": {
+          "max_tokens": 80,
+          "median_tokens": 31
+        },
+        "sv": {
+          "max_tokens": 62,
+          "median_tokens": 30
+        },
+        "th": {
+          "max_tokens": 256,
+          "median_tokens": 118
+        },
+        "tr": {
+          "max_tokens": 57,
+          "median_tokens": 32
+        },
+        "zh": {
+          "max_tokens": 69,
+          "median_tokens": 30
+        }
+      },
+      "probe_layers": [
+        41
+      ],
+      "setup_name": "pud21"
+    },
+    "pud21_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "de": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fi": 100,
+        "fr": 100,
+        "gl": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "it": 100,
+        "ja": 100,
+        "ko": 100,
+        "mr": 100,
+        "pl": 100,
+        "pt": 100,
+        "ru": 100,
+        "sr": 100,
+        "sv": 100,
+        "th": 100,
+        "tr": 100,
+        "uk": 100,
+        "ur": 100,
+        "zh": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 70,
+          "median_tokens": 35
+        },
+        "bg": {
+          "max_tokens": 76,
+          "median_tokens": 22
+        },
+        "cs": {
+          "max_tokens": 66,
+          "median_tokens": 31
+        },
+        "de": {
+          "max_tokens": 60,
+          "median_tokens": 28
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 55,
+          "median_tokens": 28
+        },
+        "fa": {
+          "max_tokens": 206,
+          "median_tokens": 58
+        },
+        "fi": {
+          "max_tokens": 69,
+          "median_tokens": 31
+        },
+        "fr": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "gl": {
+          "max_tokens": 56,
+          "median_tokens": 26
+        },
+        "hi": {
+          "max_tokens": 83,
+          "median_tokens": 39
+        },
+        "id": {
+          "max_tokens": 84,
+          "median_tokens": 40
+        },
+        "is": {
+          "max_tokens": 132,
+          "median_tokens": 44
+        },
+        "it": {
+          "max_tokens": 66,
+          "median_tokens": 29
+        },
+        "ja": {
+          "max_tokens": 69,
+          "median_tokens": 31
+        },
+        "ko": {
+          "max_tokens": 78,
+          "median_tokens": 33
+        },
+        "mr": {
+          "max_tokens": 47,
+          "median_tokens": 16
+        },
+        "pl": {
+          "max_tokens": 62,
+          "median_tokens": 27
+        },
+        "pt": {
+          "max_tokens": 56,
+          "median_tokens": 27
+        },
+        "ru": {
+          "max_tokens": 80,
+          "median_tokens": 31
+        },
+        "sr": {
+          "max_tokens": 93,
+          "median_tokens": 36
+        },
+        "sv": {
+          "max_tokens": 62,
+          "median_tokens": 30
+        },
+        "th": {
+          "max_tokens": 256,
+          "median_tokens": 118
+        },
+        "tr": {
+          "max_tokens": 57,
+          "median_tokens": 32
+        },
+        "uk": {
+          "max_tokens": 82,
+          "median_tokens": 26
+        },
+        "ur": {
+          "max_tokens": 260,
+          "median_tokens": 93
+        },
+        "zh": {
+          "max_tokens": 69,
+          "median_tokens": 30
+        }
+      },
+      "probe_layers": [
+        41
+      ],
+      "setup_name": "pud21_ud6"
+    },
+    "pud9": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "pt": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 70,
+          "median_tokens": 35
+        },
+        "cs": {
+          "max_tokens": 66,
+          "median_tokens": 31
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 55,
+          "median_tokens": 28
+        },
+        "fr": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "hi": {
+          "max_tokens": 83,
+          "median_tokens": 39
+        },
+        "id": {
+          "max_tokens": 84,
+          "median_tokens": 40
+        },
+        "is": {
+          "max_tokens": 132,
+          "median_tokens": 44
+        },
+        "pt": {
+          "max_tokens": 56,
+          "median_tokens": 27
+        }
+      },
+      "probe_layers": [
+        41
+      ],
+      "setup_name": "pud9"
+    },
+    "pud9_ud6": {
+      "batch_size": 100,
+      "failed": false,
+      "per_lang": {
+        "ar": 100,
+        "bg": 100,
+        "cs": 100,
+        "en": 100,
+        "es": 100,
+        "fa": 100,
+        "fr": 100,
+        "hi": 100,
+        "id": 100,
+        "is": 100,
+        "mr": 100,
+        "pt": 100,
+        "sr": 100,
+        "uk": 100,
+        "ur": 100
+      },
+      "per_lang_token_lengths": {
+        "ar": {
+          "max_tokens": 70,
+          "median_tokens": 35
+        },
+        "bg": {
+          "max_tokens": 76,
+          "median_tokens": 22
+        },
+        "cs": {
+          "max_tokens": 66,
+          "median_tokens": 31
+        },
+        "en": {
+          "max_tokens": 48,
+          "median_tokens": 24
+        },
+        "es": {
+          "max_tokens": 55,
+          "median_tokens": 28
+        },
+        "fa": {
+          "max_tokens": 206,
+          "median_tokens": 58
+        },
+        "fr": {
+          "max_tokens": 65,
+          "median_tokens": 31
+        },
+        "hi": {
+          "max_tokens": 83,
+          "median_tokens": 39
+        },
+        "id": {
+          "max_tokens": 84,
+          "median_tokens": 40
+        },
+        "is": {
+          "max_tokens": 132,
+          "median_tokens": 44
+        },
+        "mr": {
+          "max_tokens": 47,
+          "median_tokens": 16
+        },
+        "pt": {
+          "max_tokens": 56,
+          "median_tokens": 27
+        },
+        "sr": {
+          "max_tokens": 93,
+          "median_tokens": 36
+        },
+        "uk": {
+          "max_tokens": 82,
+          "median_tokens": 26
+        },
+        "ur": {
+          "max_tokens": 260,
+          "median_tokens": 93
+        }
+      },
+      "probe_layers": [
+        41
+      ],
+      "setup_name": "pud9_ud6"
+    }
+  }
+}
